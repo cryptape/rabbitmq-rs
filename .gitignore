@@ -1,0 +1,36 @@
+# Compiled files
+*.o
+*.so
+*.rlib
+*.dll
+
+# Executables
+*.exe
+
+# Cargo lock in subs
+*/Cargo.lock
+Cargo.lock
+
+**/target/
+
+# vim stuff
+*.swp
+
+# emacs stuff
+*~
+
+# mac stuff
+.DS_Store
+
+# gdb files
+.gdb_history
+
+.idea
+*.iml
+out/
+*.log
+bin/
+.env
+.vscode
+Vagrantfile
+.vagrant

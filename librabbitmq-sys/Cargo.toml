@@ -1,0 +1,19 @@
+[package]
+name = "librabbitmq-sys"
+version = "0.1.0"
+authors = ["zhangsoledad <787953403@qq.com>"]
+links = "librabbitmq"
+build = "build.rs"
+
+[lib]
+name = "librabbitmq_sys"
+path = "lib.rs"
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+pkg-config = "0.3"
+cmake = "0.1.2"
+cc = "1.0"
+bindgen = "0.30.0"

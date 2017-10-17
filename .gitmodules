@@ -1,0 +1,6 @@
+[submodule "librabbitmq"]
+	path = librabbitmq
+	url = ./librabbitmq-sys/librabbitmq/
+[submodule "librabbitmq-sys/librabbitmq"]
+	path = librabbitmq-sys/librabbitmq
+	url = https://github.com/alanxz/rabbitmq-c

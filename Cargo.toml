@@ -1,0 +1,6 @@
+[package]
+name = "rabbitmq"
+version = "0.1.0"
+authors = ["zhangsoledad <787953403@qq.com>"]
+
+[dependencies]
