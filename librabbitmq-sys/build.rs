@@ -10,13 +10,6 @@ use std::io::prelude::*;
 use std::path::{Path, PathBuf};
 use std::process::Command;
 
-macro_rules! t {
-    ($e:expr) => (match $e{
-        Ok(e) => e,
-        Err(e) => panic!("{} failed with {}", stringify!($e), e),
-    })
-}
-
 fn main() {
     build_librabbitmq();
 
@@ -57,7 +50,6 @@ fn build_librabbitmq() {
     let dst = cfg.define("BUILD_SHARED_LIBS", "OFF")
                  .define("BUILD_STATIC_LIBS", "ON")
                  .define("BUILD_EXAMPLES", "OFF")
-                 .register_dep("Z")
                  .build();
 
     println!("cargo:rustc-link-lib=static=librabbitmq");
