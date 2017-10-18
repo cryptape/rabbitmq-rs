@@ -3,10 +3,10 @@
 pub const __llvm__: ::std::os::raw::c_uint = 1;
 pub const __clang__: ::std::os::raw::c_uint = 1;
 pub const __clang_major__: ::std::os::raw::c_uint = 3;
-pub const __clang_minor__: ::std::os::raw::c_uint = 9;
-pub const __clang_patchlevel__: ::std::os::raw::c_uint = 1;
-pub const __clang_version__: &'static [u8; 29usize] =
-    b"3.9.1 (tags/RELEASE_391/rc2)\x00";
+pub const __clang_minor__: ::std::os::raw::c_uint = 8;
+pub const __clang_patchlevel__: ::std::os::raw::c_uint = 0;
+pub const __clang_version__: &'static [u8; 31usize] =
+    b"3.8.0 (tags/RELEASE_380/final)\x00";
 pub const __GNUC_MINOR__: ::std::os::raw::c_uint = 2;
 pub const __GNUC_PATCHLEVEL__: ::std::os::raw::c_uint = 1;
 pub const __GNUC__: ::std::os::raw::c_uint = 4;
@@ -18,9 +18,10 @@ pub const __ATOMIC_RELEASE: ::std::os::raw::c_uint = 3;
 pub const __ATOMIC_ACQ_REL: ::std::os::raw::c_uint = 4;
 pub const __ATOMIC_SEQ_CST: ::std::os::raw::c_uint = 5;
 pub const __PRAGMA_REDEFINE_EXTNAME: ::std::os::raw::c_uint = 1;
-pub const __VERSION__: &'static [u8; 52usize] =
-    b"4.2.1 Compatible Clang 3.9.1 (tags/RELEASE_391/rc2)\x00";
+pub const __VERSION__: &'static [u8; 54usize] =
+    b"4.2.1 Compatible Clang 3.8.0 (tags/RELEASE_380/final)\x00";
 pub const __CONSTANT_CFSTRINGS__: ::std::os::raw::c_uint = 1;
+pub const __GXX_RTTI: ::std::os::raw::c_uint = 1;
 pub const __ORDER_LITTLE_ENDIAN__: ::std::os::raw::c_uint = 1234;
 pub const __ORDER_BIG_ENDIAN__: ::std::os::raw::c_uint = 4321;
 pub const __ORDER_PDP_ENDIAN__: ::std::os::raw::c_uint = 3412;
@@ -257,7 +258,6 @@ pub const __linux: ::std::os::raw::c_uint = 1;
 pub const __linux__: ::std::os::raw::c_uint = 1;
 pub const __gnu_linux__: ::std::os::raw::c_uint = 1;
 pub const __ELF__: ::std::os::raw::c_uint = 1;
-pub const __FLOAT128__: ::std::os::raw::c_uint = 1;
 pub const __STDC__: ::std::os::raw::c_uint = 1;
 pub const __STDC_HOSTED__: ::std::os::raw::c_uint = 1;
 pub const __STDC_VERSION__: ::std::os::raw::c_uint = 201112;
@@ -4217,4 +4217,62 @@ extern "C" {
 extern "C" {
     pub fn amqp_get_client_properties(state: amqp_connection_state_t)
      -> *mut amqp_table_t;
+}
+extern "C" {
+    pub fn amqp_tcp_socket_new(state: amqp_connection_state_t)
+     -> *mut amqp_socket_t;
+}
+extern "C" {
+    pub fn amqp_tcp_socket_set_sockfd(self_: *mut amqp_socket_t,
+                                      sockfd: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn amqp_ssl_socket_new(state: amqp_connection_state_t)
+     -> *mut amqp_socket_t;
+}
+extern "C" {
+    pub fn amqp_ssl_socket_set_cacert(self_: *mut amqp_socket_t,
+                                      cacert: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn amqp_ssl_socket_set_key(self_: *mut amqp_socket_t,
+                                   cert: *const ::std::os::raw::c_char,
+                                   key: *const ::std::os::raw::c_char)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn amqp_ssl_socket_set_key_buffer(self_: *mut amqp_socket_t,
+                                          cert: *const ::std::os::raw::c_char,
+                                          key: *const ::std::os::raw::c_void,
+                                          n: usize) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn amqp_ssl_socket_set_verify(self_: *mut amqp_socket_t,
+                                      verify: amqp_boolean_t);
+}
+extern "C" {
+    pub fn amqp_ssl_socket_set_verify_peer(self_: *mut amqp_socket_t,
+                                           verify: amqp_boolean_t);
+}
+extern "C" {
+    pub fn amqp_ssl_socket_set_verify_hostname(self_: *mut amqp_socket_t,
+                                               verify: amqp_boolean_t);
+}
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum amqp_tls_version_t {
+    AMQP_TLSv1 = 1,
+    AMQP_TLSv1_1 = 2,
+    AMQP_TLSv1_2 = 3,
+    AMQP_TLSvLATEST = 65535,
+}
+extern "C" {
+    pub fn amqp_ssl_socket_set_ssl_versions(self_: *mut amqp_socket_t,
+                                            min: amqp_tls_version_t,
+                                            max: amqp_tls_version_t)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn amqp_set_initialize_ssl_library(do_initialize: amqp_boolean_t);
 }
