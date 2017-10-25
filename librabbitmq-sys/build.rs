@@ -1,7 +1,5 @@
-extern crate bindgen;
 extern crate cc;
 extern crate cmake;
-extern crate pkg_config;
 
 use std::path::Path;
 use std::process::Command;

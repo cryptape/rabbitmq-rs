@@ -12,11 +12,8 @@ path = "lib.rs"
 libc = "0.2"
 
 [build-dependencies]
-pkg-config = "0.3"
 cmake = "0.1"
 cc = "1.0"
-bindgen = "0.30.0"
-
 
 [target.'cfg(unix)'.dependencies]
 openssl-sys = { version = "0.9" }
