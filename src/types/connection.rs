@@ -1,7 +1,6 @@
 use raw_rabbitmq;
 use error::Error;
 use std::ffi::CString;
-use libc::{c_char, c_int, c_uchar, c_uint, c_void, size_t};
 
 #[derive(Debug)]
 pub struct Connection {

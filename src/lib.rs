@@ -7,7 +7,7 @@ mod types;
 #[cfg(test)]
 mod tests {
     #[test]
-    fn connection() {
+    fn basic() {
         use super::*;
         let conn = types::connection::Connection::new("localhost", 5672);
 
@@ -15,5 +15,7 @@ mod tests {
         let conn = conn.unwrap();
         let login = conn.login("/", 0, 131072, 0, "guest", "guest");
         assert!(login.is_ok());
+
+        let channel = types::channel::Channel::new(&conn, 1);
     }
 }
