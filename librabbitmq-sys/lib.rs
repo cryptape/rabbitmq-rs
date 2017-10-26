@@ -13,68 +13,68 @@ mod tests {
     use std::mem;
     use std::ffi::{CStr, CString};
 
-    #[test]
-    fn amqp_sendstring() {
-        unsafe {
-            let conn = amqp_new_connection();
-            let socket = amqp_tcp_socket_new(conn);
-            let status = amqp_socket_open(socket, b"localhost\0".as_ptr() as *const c_char, 5672);
-            println!("status {}", status);
-            let login = amqp_login(
-                conn,
-                b"/\0".as_ptr() as *const c_char,
-                0,
-                131072,
-                0,
-                amqp_sasl_method_enum::AMQP_SASL_METHOD_PLAIN,
-                b"guest\0".as_ptr() as *const c_char,
-                b"guest\0".as_ptr() as *const c_char,
-            );
+    // #[test]
+    // fn amqp_sendstring() {
+    //     unsafe {
+    //         let conn = amqp_new_connection();
+    //         let socket = amqp_tcp_socket_new(conn);
+    //         let status = amqp_socket_open(socket, b"localhost\0".as_ptr() as *const c_char, 5672);
+    //         println!("status {}", status);
+    //         let login = amqp_login(
+    //             conn,
+    //             b"/\0".as_ptr() as *const c_char,
+    //             0,
+    //             131072,
+    //             0,
+    //             amqp_sasl_method_enum::AMQP_SASL_METHOD_PLAIN,
+    //             b"guest\0".as_ptr() as *const c_char,
+    //             b"guest\0".as_ptr() as *const c_char,
+    //         );
 
-            println!("login {:?}", login);
-            let channel = amqp_channel_open(conn, 1);
-            let reply = amqp_get_rpc_reply(conn);
-            println!("reply {:?}", reply);
+    //         println!("login {:?}", login);
+    //         let channel = amqp_channel_open(conn, 1);
+    //         let reply = amqp_get_rpc_reply(conn);
+    //         println!("reply {:?}", reply);
 
-            {
-                let props: *mut amqp_basic_properties_t =
-                    libc::malloc(mem::size_of::<amqp_basic_properties_t>())
-                        as *mut amqp_basic_properties_t;
-                (*props)._flags = AMQP_BASIC_CONTENT_TYPE_FLAG | AMQP_BASIC_DELIVERY_MODE_FLAG;
-                (*props).content_type =
-                    amqp_cstring_bytes(b"text/plain\0".as_ptr() as *const c_char);
-                (*props).delivery_mode = 2;
-                println!(
-                    "amqp_basic_publish {:?}",
-                    amqp_basic_publish(
-                        conn,
-                        1,
-                        amqp_cstring_bytes(b"amq.direct\0".as_ptr() as *const c_char),
-                        amqp_cstring_bytes(b"test\0".as_ptr() as *const c_char),
-                        0,
-                        0,
-                        props,
-                        amqp_cstring_bytes(b"Hello World\0".as_ptr() as *const c_char),
-                    )
-                );
+    //         {
+    //             let props: *mut amqp_basic_properties_t =
+    //                 libc::malloc(mem::size_of::<amqp_basic_properties_t>())
+    //                     as *mut amqp_basic_properties_t;
+    //             (*props)._flags = AMQP_BASIC_CONTENT_TYPE_FLAG | AMQP_BASIC_DELIVERY_MODE_FLAG;
+    //             (*props).content_type =
+    //                 amqp_cstring_bytes(b"text/plain\0".as_ptr() as *const c_char);
+    //             (*props).delivery_mode = 2;
+    //             println!(
+    //                 "amqp_basic_publish {:?}",
+    //                 amqp_basic_publish(
+    //                     conn,
+    //                     1,
+    //                     amqp_cstring_bytes(b"amq.direct\0".as_ptr() as *const c_char),
+    //                     amqp_cstring_bytes(b"test\0".as_ptr() as *const c_char),
+    //                     0,
+    //                     0,
+    //                     props,
+    //                     amqp_cstring_bytes(b"Hello World\0".as_ptr() as *const c_char),
+    //                 )
+    //             );
 
-                libc::free(props as *mut _);
-            }
+    //             libc::free(props as *mut _);
+    //         }
 
-            println!(
-                "amqp_channel_close {:?}",
-                amqp_channel_close(conn, 1, AMQP_REPLY_SUCCESS as c_int)
-            );
-            println!(
-                "amqp_connection_close {:?}",
-                amqp_connection_close(conn, AMQP_REPLY_SUCCESS as c_int)
-            );
-            println!(
-                "amqp_destroy_connection {:?}",
-                amqp_destroy_connection(conn)
-            );
-        }
-    }
+    //         println!(
+    //             "amqp_channel_close {:?}",
+    //             amqp_channel_close(conn, 1, AMQP_REPLY_SUCCESS as c_int)
+    //         );
+    //         println!(
+    //             "amqp_connection_close {:?}",
+    //             amqp_connection_close(conn, AMQP_REPLY_SUCCESS as c_int)
+    //         );
+    //         println!(
+    //             "amqp_destroy_connection {:?}",
+    //             amqp_destroy_connection(conn)
+    //         );
+    //     }
+    // }
 
     #[test]
     fn amqp_listen() {

@@ -5,15 +5,14 @@ use types::connection::Connection;
 
 #[derive(Debug)]
 pub struct Channel<'a> {
-    id: u16,
-    conn: &'a Connection,
+    pub id: u16,
+    pub conn: &'a Connection,
 }
 
 
 impl<'a> Channel<'a> {
     pub fn new(conn: &Connection, id: u16) -> Result<Channel, Error> {
         let channel_open_t = unsafe { raw_rabbitmq::amqp_channel_open(conn.ptr(), id) };
-        println!("connection {:?}", channel_open_t);
         Ok(Channel { id: id, conn: conn })
     }
 }

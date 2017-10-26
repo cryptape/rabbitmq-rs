@@ -1,6 +1,11 @@
 use raw_rabbitmq;
 use error::Error;
 use std::ffi::CString;
+use std::time::Duration;
+use libc::timeval;
+use std::ptr;
+use util::duration_to_timeval;
+use std::mem;
 
 #[derive(Debug)]
 pub struct Connection {
@@ -10,7 +15,7 @@ pub struct Connection {
 
 
 impl Connection {
-    pub fn new(hostname: &str, port: i32) -> Result<Connection, Error> {
+    pub fn new(hostname: &str, port: i32, timeout: Option<Duration>) -> Result<Connection, Error> {
         let raw_ptr = unsafe { raw_rabbitmq::amqp_new_connection() };
 
         let socket = unsafe { raw_rabbitmq::amqp_tcp_socket_new(raw_ptr) };
@@ -22,7 +27,14 @@ impl Connection {
 
         let hostname = CString::new(hostname)?;
 
-        let status = unsafe { raw_rabbitmq::amqp_socket_open(socket, hostname.as_ptr(), port) };
+
+        let tv: *mut raw_rabbitmq::timeval = match timeout {
+            Some(dur) => unsafe { mem::transmute(&duration_to_timeval(dur)) },
+            None => ptr::null_mut(),
+        };
+
+        let status =
+            unsafe { raw_rabbitmq::amqp_socket_open_noblock(socket, hostname.as_ptr(), port, tv) };
 
         println!("status {:?}", status);
 
