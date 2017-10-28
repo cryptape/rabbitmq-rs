@@ -30,9 +30,6 @@ impl<'a> Queue<'a> {
         let conn = channel.conn.ptr();
         let cstring_name = CString::new(name)?;
         let cstring_name_bytes = unsafe { raw_rabbitmq::amqp_cstring_bytes(cstring_name.as_ptr()) };
-        println!("{:?}", unsafe {
-            CStr::from_ptr(cstring_name_bytes.bytes as *const c_char)
-        });
         let queue_declare_r = unsafe {
             raw_rabbitmq::amqp_queue_declare(
                 conn,
@@ -58,9 +55,6 @@ impl<'a> Queue<'a> {
         if reply_to_queue.bytes.is_null() {
             return Err(Error::Reply);
         }
-        println!("{:?}", unsafe {
-            CStr::from_ptr(reply_to_queue.bytes as *const c_char)
-        });
 
         Ok(Queue {
             channel: channel,

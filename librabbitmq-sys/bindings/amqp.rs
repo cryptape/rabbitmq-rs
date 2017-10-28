@@ -5,8 +5,7 @@ pub const __clang__: ::std::os::raw::c_uint = 1;
 pub const __clang_major__: ::std::os::raw::c_uint = 3;
 pub const __clang_minor__: ::std::os::raw::c_uint = 8;
 pub const __clang_patchlevel__: ::std::os::raw::c_uint = 0;
-pub const __clang_version__: &'static [u8; 31usize] =
-    b"3.8.0 (tags/RELEASE_380/final)\x00";
+pub const __clang_version__: &'static [u8; 31usize] = b"3.8.0 (tags/RELEASE_380/final)\0";
 pub const __GNUC_MINOR__: ::std::os::raw::c_uint = 2;
 pub const __GNUC_PATCHLEVEL__: ::std::os::raw::c_uint = 1;
 pub const __GNUC__: ::std::os::raw::c_uint = 4;
@@ -19,7 +18,7 @@ pub const __ATOMIC_ACQ_REL: ::std::os::raw::c_uint = 4;
 pub const __ATOMIC_SEQ_CST: ::std::os::raw::c_uint = 5;
 pub const __PRAGMA_REDEFINE_EXTNAME: ::std::os::raw::c_uint = 1;
 pub const __VERSION__: &'static [u8; 54usize] =
-    b"4.2.1 Compatible Clang 3.8.0 (tags/RELEASE_380/final)\x00";
+    b"4.2.1 Compatible Clang 3.8.0 (tags/RELEASE_380/final)\0";
 pub const __CONSTANT_CFSTRINGS__: ::std::os::raw::c_uint = 1;
 pub const __GXX_RTTI: ::std::os::raw::c_uint = 1;
 pub const __ORDER_LITTLE_ENDIAN__: ::std::os::raw::c_uint = 1234;
@@ -34,8 +33,7 @@ pub const __SCHAR_MAX__: ::std::os::raw::c_uint = 127;
 pub const __SHRT_MAX__: ::std::os::raw::c_uint = 32767;
 pub const __INT_MAX__: ::std::os::raw::c_uint = 2147483647;
 pub const __LONG_MAX__: ::std::os::raw::c_ulonglong = 9223372036854775807;
-pub const __LONG_LONG_MAX__: ::std::os::raw::c_ulonglong =
-    9223372036854775807;
+pub const __LONG_LONG_MAX__: ::std::os::raw::c_ulonglong = 9223372036854775807;
 pub const __WCHAR_MAX__: ::std::os::raw::c_uint = 2147483647;
 pub const __INTMAX_MAX__: ::std::os::raw::c_ulonglong = 9223372036854775807;
 pub const __SIZE_MAX__: ::std::os::raw::c_int = -1;
@@ -56,33 +54,33 @@ pub const __SIZEOF_SIZE_T__: ::std::os::raw::c_uint = 8;
 pub const __SIZEOF_WCHAR_T__: ::std::os::raw::c_uint = 4;
 pub const __SIZEOF_WINT_T__: ::std::os::raw::c_uint = 4;
 pub const __SIZEOF_INT128__: ::std::os::raw::c_uint = 16;
-pub const __INTMAX_FMTd__: &'static [u8; 3usize] = b"ld\x00";
-pub const __INTMAX_FMTi__: &'static [u8; 3usize] = b"li\x00";
-pub const __UINTMAX_FMTo__: &'static [u8; 3usize] = b"lo\x00";
-pub const __UINTMAX_FMTu__: &'static [u8; 3usize] = b"lu\x00";
-pub const __UINTMAX_FMTx__: &'static [u8; 3usize] = b"lx\x00";
-pub const __UINTMAX_FMTX__: &'static [u8; 3usize] = b"lX\x00";
+pub const __INTMAX_FMTd__: &'static [u8; 3usize] = b"ld\0";
+pub const __INTMAX_FMTi__: &'static [u8; 3usize] = b"li\0";
+pub const __UINTMAX_FMTo__: &'static [u8; 3usize] = b"lo\0";
+pub const __UINTMAX_FMTu__: &'static [u8; 3usize] = b"lu\0";
+pub const __UINTMAX_FMTx__: &'static [u8; 3usize] = b"lx\0";
+pub const __UINTMAX_FMTX__: &'static [u8; 3usize] = b"lX\0";
 pub const __INTMAX_WIDTH__: ::std::os::raw::c_uint = 64;
-pub const __PTRDIFF_FMTd__: &'static [u8; 3usize] = b"ld\x00";
-pub const __PTRDIFF_FMTi__: &'static [u8; 3usize] = b"li\x00";
+pub const __PTRDIFF_FMTd__: &'static [u8; 3usize] = b"ld\0";
+pub const __PTRDIFF_FMTi__: &'static [u8; 3usize] = b"li\0";
 pub const __PTRDIFF_WIDTH__: ::std::os::raw::c_uint = 64;
-pub const __INTPTR_FMTd__: &'static [u8; 3usize] = b"ld\x00";
-pub const __INTPTR_FMTi__: &'static [u8; 3usize] = b"li\x00";
+pub const __INTPTR_FMTd__: &'static [u8; 3usize] = b"ld\0";
+pub const __INTPTR_FMTi__: &'static [u8; 3usize] = b"li\0";
 pub const __INTPTR_WIDTH__: ::std::os::raw::c_uint = 64;
-pub const __SIZE_FMTo__: &'static [u8; 3usize] = b"lo\x00";
-pub const __SIZE_FMTu__: &'static [u8; 3usize] = b"lu\x00";
-pub const __SIZE_FMTx__: &'static [u8; 3usize] = b"lx\x00";
-pub const __SIZE_FMTX__: &'static [u8; 3usize] = b"lX\x00";
+pub const __SIZE_FMTo__: &'static [u8; 3usize] = b"lo\0";
+pub const __SIZE_FMTu__: &'static [u8; 3usize] = b"lu\0";
+pub const __SIZE_FMTx__: &'static [u8; 3usize] = b"lx\0";
+pub const __SIZE_FMTX__: &'static [u8; 3usize] = b"lX\0";
 pub const __SIZE_WIDTH__: ::std::os::raw::c_uint = 64;
 pub const __WCHAR_WIDTH__: ::std::os::raw::c_uint = 32;
 pub const __WINT_WIDTH__: ::std::os::raw::c_uint = 32;
 pub const __SIG_ATOMIC_WIDTH__: ::std::os::raw::c_uint = 32;
 pub const __SIG_ATOMIC_MAX__: ::std::os::raw::c_uint = 2147483647;
 pub const __UINTMAX_WIDTH__: ::std::os::raw::c_uint = 64;
-pub const __UINTPTR_FMTo__: &'static [u8; 3usize] = b"lo\x00";
-pub const __UINTPTR_FMTu__: &'static [u8; 3usize] = b"lu\x00";
-pub const __UINTPTR_FMTx__: &'static [u8; 3usize] = b"lx\x00";
-pub const __UINTPTR_FMTX__: &'static [u8; 3usize] = b"lX\x00";
+pub const __UINTPTR_FMTo__: &'static [u8; 3usize] = b"lo\0";
+pub const __UINTPTR_FMTu__: &'static [u8; 3usize] = b"lu\0";
+pub const __UINTPTR_FMTx__: &'static [u8; 3usize] = b"lx\0";
+pub const __UINTPTR_FMTX__: &'static [u8; 3usize] = b"lX\0";
 pub const __UINTPTR_WIDTH__: ::std::os::raw::c_uint = 64;
 pub const __FLT_HAS_DENORM__: ::std::os::raw::c_uint = 1;
 pub const __FLT_DIG__: ::std::os::raw::c_uint = 6;
@@ -117,104 +115,102 @@ pub const __LDBL_MIN_EXP__: ::std::os::raw::c_int = -16381;
 pub const __POINTER_WIDTH__: ::std::os::raw::c_uint = 64;
 pub const __BIGGEST_ALIGNMENT__: ::std::os::raw::c_uint = 16;
 pub const __WINT_UNSIGNED__: ::std::os::raw::c_uint = 1;
-pub const __INT8_FMTd__: &'static [u8; 4usize] = b"hhd\x00";
-pub const __INT8_FMTi__: &'static [u8; 4usize] = b"hhi\x00";
-pub const __INT16_FMTd__: &'static [u8; 3usize] = b"hd\x00";
-pub const __INT16_FMTi__: &'static [u8; 3usize] = b"hi\x00";
-pub const __INT32_FMTd__: &'static [u8; 2usize] = b"d\x00";
-pub const __INT32_FMTi__: &'static [u8; 2usize] = b"i\x00";
-pub const __INT64_FMTd__: &'static [u8; 3usize] = b"ld\x00";
-pub const __INT64_FMTi__: &'static [u8; 3usize] = b"li\x00";
-pub const __UINT8_FMTo__: &'static [u8; 4usize] = b"hho\x00";
-pub const __UINT8_FMTu__: &'static [u8; 4usize] = b"hhu\x00";
-pub const __UINT8_FMTx__: &'static [u8; 4usize] = b"hhx\x00";
-pub const __UINT8_FMTX__: &'static [u8; 4usize] = b"hhX\x00";
+pub const __INT8_FMTd__: &'static [u8; 4usize] = b"hhd\0";
+pub const __INT8_FMTi__: &'static [u8; 4usize] = b"hhi\0";
+pub const __INT16_FMTd__: &'static [u8; 3usize] = b"hd\0";
+pub const __INT16_FMTi__: &'static [u8; 3usize] = b"hi\0";
+pub const __INT32_FMTd__: &'static [u8; 2usize] = b"d\0";
+pub const __INT32_FMTi__: &'static [u8; 2usize] = b"i\0";
+pub const __INT64_FMTd__: &'static [u8; 3usize] = b"ld\0";
+pub const __INT64_FMTi__: &'static [u8; 3usize] = b"li\0";
+pub const __UINT8_FMTo__: &'static [u8; 4usize] = b"hho\0";
+pub const __UINT8_FMTu__: &'static [u8; 4usize] = b"hhu\0";
+pub const __UINT8_FMTx__: &'static [u8; 4usize] = b"hhx\0";
+pub const __UINT8_FMTX__: &'static [u8; 4usize] = b"hhX\0";
 pub const __UINT8_MAX__: ::std::os::raw::c_uint = 255;
 pub const __INT8_MAX__: ::std::os::raw::c_uint = 127;
-pub const __UINT16_FMTo__: &'static [u8; 3usize] = b"ho\x00";
-pub const __UINT16_FMTu__: &'static [u8; 3usize] = b"hu\x00";
-pub const __UINT16_FMTx__: &'static [u8; 3usize] = b"hx\x00";
-pub const __UINT16_FMTX__: &'static [u8; 3usize] = b"hX\x00";
+pub const __UINT16_FMTo__: &'static [u8; 3usize] = b"ho\0";
+pub const __UINT16_FMTu__: &'static [u8; 3usize] = b"hu\0";
+pub const __UINT16_FMTx__: &'static [u8; 3usize] = b"hx\0";
+pub const __UINT16_FMTX__: &'static [u8; 3usize] = b"hX\0";
 pub const __UINT16_MAX__: ::std::os::raw::c_uint = 65535;
 pub const __INT16_MAX__: ::std::os::raw::c_uint = 32767;
-pub const __UINT32_FMTo__: &'static [u8; 2usize] = b"o\x00";
-pub const __UINT32_FMTu__: &'static [u8; 2usize] = b"u\x00";
-pub const __UINT32_FMTx__: &'static [u8; 2usize] = b"x\x00";
-pub const __UINT32_FMTX__: &'static [u8; 2usize] = b"X\x00";
+pub const __UINT32_FMTo__: &'static [u8; 2usize] = b"o\0";
+pub const __UINT32_FMTu__: &'static [u8; 2usize] = b"u\0";
+pub const __UINT32_FMTx__: &'static [u8; 2usize] = b"x\0";
+pub const __UINT32_FMTX__: &'static [u8; 2usize] = b"X\0";
 pub const __UINT32_MAX__: ::std::os::raw::c_uint = 4294967295;
 pub const __INT32_MAX__: ::std::os::raw::c_uint = 2147483647;
-pub const __UINT64_FMTo__: &'static [u8; 3usize] = b"lo\x00";
-pub const __UINT64_FMTu__: &'static [u8; 3usize] = b"lu\x00";
-pub const __UINT64_FMTx__: &'static [u8; 3usize] = b"lx\x00";
-pub const __UINT64_FMTX__: &'static [u8; 3usize] = b"lX\x00";
+pub const __UINT64_FMTo__: &'static [u8; 3usize] = b"lo\0";
+pub const __UINT64_FMTu__: &'static [u8; 3usize] = b"lu\0";
+pub const __UINT64_FMTx__: &'static [u8; 3usize] = b"lx\0";
+pub const __UINT64_FMTX__: &'static [u8; 3usize] = b"lX\0";
 pub const __UINT64_MAX__: ::std::os::raw::c_int = -1;
 pub const __INT64_MAX__: ::std::os::raw::c_ulonglong = 9223372036854775807;
 pub const __INT_LEAST8_MAX__: ::std::os::raw::c_uint = 127;
-pub const __INT_LEAST8_FMTd__: &'static [u8; 4usize] = b"hhd\x00";
-pub const __INT_LEAST8_FMTi__: &'static [u8; 4usize] = b"hhi\x00";
+pub const __INT_LEAST8_FMTd__: &'static [u8; 4usize] = b"hhd\0";
+pub const __INT_LEAST8_FMTi__: &'static [u8; 4usize] = b"hhi\0";
 pub const __UINT_LEAST8_MAX__: ::std::os::raw::c_uint = 255;
-pub const __UINT_LEAST8_FMTo__: &'static [u8; 4usize] = b"hho\x00";
-pub const __UINT_LEAST8_FMTu__: &'static [u8; 4usize] = b"hhu\x00";
-pub const __UINT_LEAST8_FMTx__: &'static [u8; 4usize] = b"hhx\x00";
-pub const __UINT_LEAST8_FMTX__: &'static [u8; 4usize] = b"hhX\x00";
+pub const __UINT_LEAST8_FMTo__: &'static [u8; 4usize] = b"hho\0";
+pub const __UINT_LEAST8_FMTu__: &'static [u8; 4usize] = b"hhu\0";
+pub const __UINT_LEAST8_FMTx__: &'static [u8; 4usize] = b"hhx\0";
+pub const __UINT_LEAST8_FMTX__: &'static [u8; 4usize] = b"hhX\0";
 pub const __INT_LEAST16_MAX__: ::std::os::raw::c_uint = 32767;
-pub const __INT_LEAST16_FMTd__: &'static [u8; 3usize] = b"hd\x00";
-pub const __INT_LEAST16_FMTi__: &'static [u8; 3usize] = b"hi\x00";
+pub const __INT_LEAST16_FMTd__: &'static [u8; 3usize] = b"hd\0";
+pub const __INT_LEAST16_FMTi__: &'static [u8; 3usize] = b"hi\0";
 pub const __UINT_LEAST16_MAX__: ::std::os::raw::c_uint = 65535;
-pub const __UINT_LEAST16_FMTo__: &'static [u8; 3usize] = b"ho\x00";
-pub const __UINT_LEAST16_FMTu__: &'static [u8; 3usize] = b"hu\x00";
-pub const __UINT_LEAST16_FMTx__: &'static [u8; 3usize] = b"hx\x00";
-pub const __UINT_LEAST16_FMTX__: &'static [u8; 3usize] = b"hX\x00";
+pub const __UINT_LEAST16_FMTo__: &'static [u8; 3usize] = b"ho\0";
+pub const __UINT_LEAST16_FMTu__: &'static [u8; 3usize] = b"hu\0";
+pub const __UINT_LEAST16_FMTx__: &'static [u8; 3usize] = b"hx\0";
+pub const __UINT_LEAST16_FMTX__: &'static [u8; 3usize] = b"hX\0";
 pub const __INT_LEAST32_MAX__: ::std::os::raw::c_uint = 2147483647;
-pub const __INT_LEAST32_FMTd__: &'static [u8; 2usize] = b"d\x00";
-pub const __INT_LEAST32_FMTi__: &'static [u8; 2usize] = b"i\x00";
+pub const __INT_LEAST32_FMTd__: &'static [u8; 2usize] = b"d\0";
+pub const __INT_LEAST32_FMTi__: &'static [u8; 2usize] = b"i\0";
 pub const __UINT_LEAST32_MAX__: ::std::os::raw::c_uint = 4294967295;
-pub const __UINT_LEAST32_FMTo__: &'static [u8; 2usize] = b"o\x00";
-pub const __UINT_LEAST32_FMTu__: &'static [u8; 2usize] = b"u\x00";
-pub const __UINT_LEAST32_FMTx__: &'static [u8; 2usize] = b"x\x00";
-pub const __UINT_LEAST32_FMTX__: &'static [u8; 2usize] = b"X\x00";
-pub const __INT_LEAST64_MAX__: ::std::os::raw::c_ulonglong =
-    9223372036854775807;
-pub const __INT_LEAST64_FMTd__: &'static [u8; 3usize] = b"ld\x00";
-pub const __INT_LEAST64_FMTi__: &'static [u8; 3usize] = b"li\x00";
+pub const __UINT_LEAST32_FMTo__: &'static [u8; 2usize] = b"o\0";
+pub const __UINT_LEAST32_FMTu__: &'static [u8; 2usize] = b"u\0";
+pub const __UINT_LEAST32_FMTx__: &'static [u8; 2usize] = b"x\0";
+pub const __UINT_LEAST32_FMTX__: &'static [u8; 2usize] = b"X\0";
+pub const __INT_LEAST64_MAX__: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const __INT_LEAST64_FMTd__: &'static [u8; 3usize] = b"ld\0";
+pub const __INT_LEAST64_FMTi__: &'static [u8; 3usize] = b"li\0";
 pub const __UINT_LEAST64_MAX__: ::std::os::raw::c_int = -1;
-pub const __UINT_LEAST64_FMTo__: &'static [u8; 3usize] = b"lo\x00";
-pub const __UINT_LEAST64_FMTu__: &'static [u8; 3usize] = b"lu\x00";
-pub const __UINT_LEAST64_FMTx__: &'static [u8; 3usize] = b"lx\x00";
-pub const __UINT_LEAST64_FMTX__: &'static [u8; 3usize] = b"lX\x00";
+pub const __UINT_LEAST64_FMTo__: &'static [u8; 3usize] = b"lo\0";
+pub const __UINT_LEAST64_FMTu__: &'static [u8; 3usize] = b"lu\0";
+pub const __UINT_LEAST64_FMTx__: &'static [u8; 3usize] = b"lx\0";
+pub const __UINT_LEAST64_FMTX__: &'static [u8; 3usize] = b"lX\0";
 pub const __INT_FAST8_MAX__: ::std::os::raw::c_uint = 127;
-pub const __INT_FAST8_FMTd__: &'static [u8; 4usize] = b"hhd\x00";
-pub const __INT_FAST8_FMTi__: &'static [u8; 4usize] = b"hhi\x00";
+pub const __INT_FAST8_FMTd__: &'static [u8; 4usize] = b"hhd\0";
+pub const __INT_FAST8_FMTi__: &'static [u8; 4usize] = b"hhi\0";
 pub const __UINT_FAST8_MAX__: ::std::os::raw::c_uint = 255;
-pub const __UINT_FAST8_FMTo__: &'static [u8; 4usize] = b"hho\x00";
-pub const __UINT_FAST8_FMTu__: &'static [u8; 4usize] = b"hhu\x00";
-pub const __UINT_FAST8_FMTx__: &'static [u8; 4usize] = b"hhx\x00";
-pub const __UINT_FAST8_FMTX__: &'static [u8; 4usize] = b"hhX\x00";
+pub const __UINT_FAST8_FMTo__: &'static [u8; 4usize] = b"hho\0";
+pub const __UINT_FAST8_FMTu__: &'static [u8; 4usize] = b"hhu\0";
+pub const __UINT_FAST8_FMTx__: &'static [u8; 4usize] = b"hhx\0";
+pub const __UINT_FAST8_FMTX__: &'static [u8; 4usize] = b"hhX\0";
 pub const __INT_FAST16_MAX__: ::std::os::raw::c_uint = 32767;
-pub const __INT_FAST16_FMTd__: &'static [u8; 3usize] = b"hd\x00";
-pub const __INT_FAST16_FMTi__: &'static [u8; 3usize] = b"hi\x00";
+pub const __INT_FAST16_FMTd__: &'static [u8; 3usize] = b"hd\0";
+pub const __INT_FAST16_FMTi__: &'static [u8; 3usize] = b"hi\0";
 pub const __UINT_FAST16_MAX__: ::std::os::raw::c_uint = 65535;
-pub const __UINT_FAST16_FMTo__: &'static [u8; 3usize] = b"ho\x00";
-pub const __UINT_FAST16_FMTu__: &'static [u8; 3usize] = b"hu\x00";
-pub const __UINT_FAST16_FMTx__: &'static [u8; 3usize] = b"hx\x00";
-pub const __UINT_FAST16_FMTX__: &'static [u8; 3usize] = b"hX\x00";
+pub const __UINT_FAST16_FMTo__: &'static [u8; 3usize] = b"ho\0";
+pub const __UINT_FAST16_FMTu__: &'static [u8; 3usize] = b"hu\0";
+pub const __UINT_FAST16_FMTx__: &'static [u8; 3usize] = b"hx\0";
+pub const __UINT_FAST16_FMTX__: &'static [u8; 3usize] = b"hX\0";
 pub const __INT_FAST32_MAX__: ::std::os::raw::c_uint = 2147483647;
-pub const __INT_FAST32_FMTd__: &'static [u8; 2usize] = b"d\x00";
-pub const __INT_FAST32_FMTi__: &'static [u8; 2usize] = b"i\x00";
+pub const __INT_FAST32_FMTd__: &'static [u8; 2usize] = b"d\0";
+pub const __INT_FAST32_FMTi__: &'static [u8; 2usize] = b"i\0";
 pub const __UINT_FAST32_MAX__: ::std::os::raw::c_uint = 4294967295;
-pub const __UINT_FAST32_FMTo__: &'static [u8; 2usize] = b"o\x00";
-pub const __UINT_FAST32_FMTu__: &'static [u8; 2usize] = b"u\x00";
-pub const __UINT_FAST32_FMTx__: &'static [u8; 2usize] = b"x\x00";
-pub const __UINT_FAST32_FMTX__: &'static [u8; 2usize] = b"X\x00";
-pub const __INT_FAST64_MAX__: ::std::os::raw::c_ulonglong =
-    9223372036854775807;
-pub const __INT_FAST64_FMTd__: &'static [u8; 3usize] = b"ld\x00";
-pub const __INT_FAST64_FMTi__: &'static [u8; 3usize] = b"li\x00";
+pub const __UINT_FAST32_FMTo__: &'static [u8; 2usize] = b"o\0";
+pub const __UINT_FAST32_FMTu__: &'static [u8; 2usize] = b"u\0";
+pub const __UINT_FAST32_FMTx__: &'static [u8; 2usize] = b"x\0";
+pub const __UINT_FAST32_FMTX__: &'static [u8; 2usize] = b"X\0";
+pub const __INT_FAST64_MAX__: ::std::os::raw::c_ulonglong = 9223372036854775807;
+pub const __INT_FAST64_FMTd__: &'static [u8; 3usize] = b"ld\0";
+pub const __INT_FAST64_FMTi__: &'static [u8; 3usize] = b"li\0";
 pub const __UINT_FAST64_MAX__: ::std::os::raw::c_int = -1;
-pub const __UINT_FAST64_FMTo__: &'static [u8; 3usize] = b"lo\x00";
-pub const __UINT_FAST64_FMTu__: &'static [u8; 3usize] = b"lu\x00";
-pub const __UINT_FAST64_FMTx__: &'static [u8; 3usize] = b"lx\x00";
-pub const __UINT_FAST64_FMTX__: &'static [u8; 3usize] = b"lX\x00";
+pub const __UINT_FAST64_FMTo__: &'static [u8; 3usize] = b"lo\0";
+pub const __UINT_FAST64_FMTu__: &'static [u8; 3usize] = b"lu\0";
+pub const __UINT_FAST64_FMTx__: &'static [u8; 3usize] = b"lx\0";
+pub const __UINT_FAST64_FMTX__: &'static [u8; 3usize] = b"lX\0";
 pub const __FINITE_MATH_ONLY__: ::std::os::raw::c_uint = 0;
 pub const __GNUC_STDC_INLINE__: ::std::os::raw::c_uint = 1;
 pub const __GCC_ATOMIC_TEST_AND_SET_TRUEVAL: ::std::os::raw::c_uint = 1;
@@ -396,7 +392,7 @@ pub const AMQP_TX_CLASS: ::std::os::raw::c_uint = 90;
 pub const AMQP_CONFIRM_CLASS: ::std::os::raw::c_uint = 85;
 pub type wchar_t = ::std::os::raw::c_int;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct max_align_t {
     pub __clang_max_align_nonce1: ::std::os::raw::c_longlong,
     pub __bindgen_padding_0: u64,
@@ -404,23 +400,31 @@ pub struct max_align_t {
 }
 #[test]
 fn bindgen_test_layout_max_align_t() {
-    assert_eq!(::std::mem::size_of::<max_align_t>() , 32usize , concat ! (
-               "Size of: " , stringify ! ( max_align_t ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const max_align_t ) ) .
-                __clang_max_align_nonce1 as * const _ as usize } , 0usize ,
-                concat ! (
-                "Alignment of field: " , stringify ! ( max_align_t ) , "::" ,
-                stringify ! ( __clang_max_align_nonce1 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const max_align_t ) ) .
-                __clang_max_align_nonce2 as * const _ as usize } , 16usize ,
-                concat ! (
-                "Alignment of field: " , stringify ! ( max_align_t ) , "::" ,
-                stringify ! ( __clang_max_align_nonce2 ) ));
-}
-impl Clone for max_align_t {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<max_align_t>(),
+        32usize,
+        concat!("Size of: ", stringify!(max_align_t))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const max_align_t)).__clang_max_align_nonce1 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(max_align_t),
+            "::",
+            stringify!(__clang_max_align_nonce1)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const max_align_t)).__clang_max_align_nonce2 as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(max_align_t),
+            "::",
+            stringify!(__clang_max_align_nonce2)
+        )
+    );
 }
 pub type int_least8_t = ::std::os::raw::c_schar;
 pub type int_least16_t = ::std::os::raw::c_short;
@@ -456,121 +460,173 @@ pub type amqp_method_number_t = u32;
 pub type amqp_flags_t = u32;
 pub type amqp_channel_t = u16;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_bytes_t_ {
     pub len: usize,
     pub bytes: *mut ::std::os::raw::c_void,
 }
 #[test]
 fn bindgen_test_layout_amqp_bytes_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_bytes_t_>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( amqp_bytes_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_bytes_t_>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_bytes_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_bytes_t_ ) ) . len as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_bytes_t_ ) , "::"
-                , stringify ! ( len ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_bytes_t_ ) ) . bytes as * const _ as
-                usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_bytes_t_ ) , "::"
-                , stringify ! ( bytes ) ));
-}
-impl Clone for amqp_bytes_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_bytes_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_bytes_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_bytes_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_bytes_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_bytes_t_)).len as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_bytes_t_),
+            "::",
+            stringify!(len)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_bytes_t_)).bytes as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_bytes_t_),
+            "::",
+            stringify!(bytes)
+        )
+    );
 }
 pub type amqp_bytes_t = amqp_bytes_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_decimal_t_ {
     pub decimals: u8,
     pub value: u32,
 }
 #[test]
 fn bindgen_test_layout_amqp_decimal_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_decimal_t_>() , 8usize , concat ! (
-               "Size of: " , stringify ! ( amqp_decimal_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_decimal_t_>() , 4usize , concat !
-                ( "Alignment of " , stringify ! ( amqp_decimal_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_decimal_t_ ) ) . decimals as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_decimal_t_ ) ,
-                "::" , stringify ! ( decimals ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_decimal_t_ ) ) . value as * const _
-                as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_decimal_t_ ) ,
-                "::" , stringify ! ( value ) ));
-}
-impl Clone for amqp_decimal_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_decimal_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_decimal_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_decimal_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_decimal_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_decimal_t_)).decimals as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_decimal_t_),
+            "::",
+            stringify!(decimals)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_decimal_t_)).value as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_decimal_t_),
+            "::",
+            stringify!(value)
+        )
+    );
 }
 pub type amqp_decimal_t = amqp_decimal_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_table_t_ {
     pub num_entries: ::std::os::raw::c_int,
     pub entries: *mut amqp_table_entry_t_,
 }
 #[test]
 fn bindgen_test_layout_amqp_table_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_table_t_>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( amqp_table_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_table_t_>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_table_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_table_t_ ) ) . num_entries as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_table_t_ ) , "::"
-                , stringify ! ( num_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_table_t_ ) ) . entries as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_table_t_ ) , "::"
-                , stringify ! ( entries ) ));
-}
-impl Clone for amqp_table_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_table_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_table_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_table_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_table_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_table_t_)).num_entries as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_table_t_),
+            "::",
+            stringify!(num_entries)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_table_t_)).entries as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_table_t_),
+            "::",
+            stringify!(entries)
+        )
+    );
 }
 pub type amqp_table_t = amqp_table_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_array_t_ {
     pub num_entries: ::std::os::raw::c_int,
     pub entries: *mut amqp_field_value_t_,
 }
 #[test]
 fn bindgen_test_layout_amqp_array_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_array_t_>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( amqp_array_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_array_t_>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_array_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_array_t_ ) ) . num_entries as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_array_t_ ) , "::"
-                , stringify ! ( num_entries ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_array_t_ ) ) . entries as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_array_t_ ) , "::"
-                , stringify ! ( entries ) ));
-}
-impl Clone for amqp_array_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_array_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_array_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_array_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_array_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_array_t_)).num_entries as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_array_t_),
+            "::",
+            stringify!(num_entries)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_array_t_)).entries as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_array_t_),
+            "::",
+            stringify!(entries)
+        )
+    );
 }
 pub type amqp_array_t = amqp_array_t_;
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Copy, Clone)]
 pub struct amqp_field_value_t_ {
     pub kind: u8,
     pub value: amqp_field_value_t___bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Copy, Clone)]
 pub union amqp_field_value_t___bindgen_ty_1 {
     pub boolean: amqp_boolean_t,
     pub i8: i8,
@@ -591,211 +647,305 @@ pub union amqp_field_value_t___bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout_amqp_field_value_t___bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<amqp_field_value_t___bindgen_ty_1>() ,
-               16usize , concat ! (
-               "Size of: " , stringify ! ( amqp_field_value_t___bindgen_ty_1 )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_field_value_t___bindgen_ty_1>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                boolean as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! (
-                boolean ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                i8 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( i8
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                u8 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( u8
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                i16 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( i16
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                u16 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( u16
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                i32 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( i32
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                u32 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( u32
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                i64 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( i64
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                u64 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( u64
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                f32 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( f32
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                f64 as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! ( f64
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                decimal as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! (
-                decimal ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                bytes as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! (
-                bytes ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                table as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! (
-                table ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t___bindgen_ty_1 ) ) .
-                array as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_field_value_t___bindgen_ty_1 ) , "::" , stringify ! (
-                array ) ));
-}
-impl Clone for amqp_field_value_t___bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_field_value_t___bindgen_ty_1>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_field_value_t___bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_field_value_t___bindgen_ty_1>(),
+        8usize,
+        concat!(
+            "Alignment of ",
+            stringify!(amqp_field_value_t___bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).boolean as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(boolean)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).i8 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(i8)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).u8 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(u8)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).i16 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(i16)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).u16 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(u16)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).i32 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(i32)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).u32 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(u32)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).i64 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(i64)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).u64 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(u64)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).f32 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(f32)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).f64 as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(f64)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).decimal as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(decimal)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).bytes as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(bytes)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).table as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(table)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t___bindgen_ty_1)).array as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t___bindgen_ty_1),
+            "::",
+            stringify!(array)
+        )
+    );
 }
 #[test]
 fn bindgen_test_layout_amqp_field_value_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_field_value_t_>() , 24usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_field_value_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_field_value_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_field_value_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t_ ) ) . kind as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_field_value_t_ ) ,
-                "::" , stringify ! ( kind ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_field_value_t_ ) ) . value as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_field_value_t_ ) ,
-                "::" , stringify ! ( value ) ));
-}
-impl Clone for amqp_field_value_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_field_value_t_>(),
+        24usize,
+        concat!("Size of: ", stringify!(amqp_field_value_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_field_value_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_field_value_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t_)).kind as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t_),
+            "::",
+            stringify!(kind)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_field_value_t_)).value as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_field_value_t_),
+            "::",
+            stringify!(value)
+        )
+    );
 }
 pub type amqp_field_value_t = amqp_field_value_t_;
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Copy, Clone)]
 pub struct amqp_table_entry_t_ {
     pub key: amqp_bytes_t,
     pub value: amqp_field_value_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_table_entry_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_table_entry_t_>() , 40usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_table_entry_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_table_entry_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_table_entry_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_table_entry_t_ ) ) . key as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_table_entry_t_ ) ,
-                "::" , stringify ! ( key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_table_entry_t_ ) ) . value as *
-                const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_table_entry_t_ ) ,
-                "::" , stringify ! ( value ) ));
-}
-impl Clone for amqp_table_entry_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_table_entry_t_>(),
+        40usize,
+        concat!("Size of: ", stringify!(amqp_table_entry_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_table_entry_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_table_entry_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_table_entry_t_)).key as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_table_entry_t_),
+            "::",
+            stringify!(key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_table_entry_t_)).value as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_table_entry_t_),
+            "::",
+            stringify!(value)
+        )
+    );
 }
 pub type amqp_table_entry_t = amqp_table_entry_t_;
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum amqp_field_value_kind_t {
-    AMQP_FIELD_KIND_BOOLEAN = 116,
-    AMQP_FIELD_KIND_I8 = 98,
-    AMQP_FIELD_KIND_U8 = 66,
-    AMQP_FIELD_KIND_I16 = 115,
-    AMQP_FIELD_KIND_U16 = 117,
-    AMQP_FIELD_KIND_I32 = 73,
-    AMQP_FIELD_KIND_U32 = 105,
-    AMQP_FIELD_KIND_I64 = 108,
-    AMQP_FIELD_KIND_U64 = 76,
-    AMQP_FIELD_KIND_F32 = 102,
-    AMQP_FIELD_KIND_F64 = 100,
-    AMQP_FIELD_KIND_DECIMAL = 68,
-    AMQP_FIELD_KIND_UTF8 = 83,
-    AMQP_FIELD_KIND_ARRAY = 65,
-    AMQP_FIELD_KIND_TIMESTAMP = 84,
-    AMQP_FIELD_KIND_TABLE = 70,
-    AMQP_FIELD_KIND_VOID = 86,
-    AMQP_FIELD_KIND_BYTES = 120,
-}
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_BOOLEAN: amqp_field_value_kind_t = 116;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_I8: amqp_field_value_kind_t = 98;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_U8: amqp_field_value_kind_t = 66;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_I16: amqp_field_value_kind_t = 115;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_U16: amqp_field_value_kind_t = 117;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_I32: amqp_field_value_kind_t = 73;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_U32: amqp_field_value_kind_t = 105;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_I64: amqp_field_value_kind_t = 108;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_U64: amqp_field_value_kind_t = 76;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_F32: amqp_field_value_kind_t = 102;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_F64: amqp_field_value_kind_t = 100;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_DECIMAL: amqp_field_value_kind_t = 68;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_UTF8: amqp_field_value_kind_t = 83;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_ARRAY: amqp_field_value_kind_t = 65;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_TIMESTAMP: amqp_field_value_kind_t = 84;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_TABLE: amqp_field_value_kind_t = 70;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_VOID: amqp_field_value_kind_t = 86;
+pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_BYTES: amqp_field_value_kind_t = 120;
+pub type amqp_field_value_kind_t = ::std::os::raw::c_uint;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_pool_blocklist_t_ {
     pub num_blocks: ::std::os::raw::c_int,
     pub blocklist: *mut *mut ::std::os::raw::c_void,
 }
 #[test]
 fn bindgen_test_layout_amqp_pool_blocklist_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_pool_blocklist_t_>() , 16usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_pool_blocklist_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_pool_blocklist_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_pool_blocklist_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_blocklist_t_ ) ) . num_blocks
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_blocklist_t_
-                ) , "::" , stringify ! ( num_blocks ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_blocklist_t_ ) ) . blocklist as
-                * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_blocklist_t_
-                ) , "::" , stringify ! ( blocklist ) ));
-}
-impl Clone for amqp_pool_blocklist_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_pool_blocklist_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_pool_blocklist_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_pool_blocklist_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_pool_blocklist_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_blocklist_t_)).num_blocks as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_blocklist_t_),
+            "::",
+            stringify!(num_blocks)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_blocklist_t_)).blocklist as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_blocklist_t_),
+            "::",
+            stringify!(blocklist)
+        )
+    );
 }
 pub type amqp_pool_blocklist_t = amqp_pool_blocklist_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_pool_t_ {
     pub pagesize: usize,
     pub pages: amqp_pool_blocklist_t,
@@ -806,81 +956,127 @@ pub struct amqp_pool_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_pool_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_pool_t_>() , 64usize , concat ! (
-               "Size of: " , stringify ! ( amqp_pool_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_pool_t_>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_pool_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_t_ ) ) . pagesize as * const _
-                as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_t_ ) , "::" ,
-                stringify ! ( pagesize ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_t_ ) ) . pages as * const _ as
-                usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_t_ ) , "::" ,
-                stringify ! ( pages ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_t_ ) ) . large_blocks as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_t_ ) , "::" ,
-                stringify ! ( large_blocks ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_t_ ) ) . next_page as * const _
-                as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_t_ ) , "::" ,
-                stringify ! ( next_page ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_t_ ) ) . alloc_block as * const
-                _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_t_ ) , "::" ,
-                stringify ! ( alloc_block ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_pool_t_ ) ) . alloc_used as * const
-                _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_pool_t_ ) , "::" ,
-                stringify ! ( alloc_used ) ));
-}
-impl Clone for amqp_pool_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_pool_t_>(),
+        64usize,
+        concat!("Size of: ", stringify!(amqp_pool_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_pool_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_pool_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_t_)).pagesize as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_t_),
+            "::",
+            stringify!(pagesize)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_t_)).pages as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_t_),
+            "::",
+            stringify!(pages)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_t_)).large_blocks as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_t_),
+            "::",
+            stringify!(large_blocks)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_t_)).next_page as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_t_),
+            "::",
+            stringify!(next_page)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_t_)).alloc_block as *const _ as usize },
+        48usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_t_),
+            "::",
+            stringify!(alloc_block)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_pool_t_)).alloc_used as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_pool_t_),
+            "::",
+            stringify!(alloc_used)
+        )
+    );
 }
 pub type amqp_pool_t = amqp_pool_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_method_t_ {
     pub id: amqp_method_number_t,
     pub decoded: *mut ::std::os::raw::c_void,
 }
 #[test]
 fn bindgen_test_layout_amqp_method_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_method_t_>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( amqp_method_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_method_t_>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_method_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_method_t_ ) ) . id as * const _ as
-                usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_method_t_ ) , "::"
-                , stringify ! ( id ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_method_t_ ) ) . decoded as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_method_t_ ) , "::"
-                , stringify ! ( decoded ) ));
-}
-impl Clone for amqp_method_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_method_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_method_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_method_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_method_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_method_t_)).id as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_method_t_),
+            "::",
+            stringify!(id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_method_t_)).decoded as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_method_t_),
+            "::",
+            stringify!(decoded)
+        )
+    );
 }
 pub type amqp_method_t = amqp_method_t_;
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Copy, Clone)]
 pub struct amqp_frame_t_ {
     pub frame_type: u8,
     pub channel: amqp_channel_t,
     pub payload: amqp_frame_t___bindgen_ty_1,
 }
 #[repr(C)]
-#[derive(Copy)]
+#[derive(Copy, Clone)]
 pub union amqp_frame_t___bindgen_ty_1 {
     pub method: amqp_method_t,
     pub properties: amqp_frame_t___bindgen_ty_1__bindgen_ty_1,
@@ -889,7 +1085,7 @@ pub union amqp_frame_t___bindgen_ty_1 {
     _bindgen_union_align: [u64; 5usize],
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_frame_t___bindgen_ty_1__bindgen_ty_1 {
     pub class_id: u16,
     pub body_size: u64,
@@ -898,48 +1094,75 @@ pub struct amqp_frame_t___bindgen_ty_1__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout_amqp_frame_t___bindgen_ty_1__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_1>()
-               , 40usize , concat ! (
-               "Size of: " , stringify ! (
-               amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_1>()
-                , 8usize , concat ! (
-                "Alignment of " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) )
-                . class_id as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) , "::" , stringify
-                ! ( class_id ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) )
-                . body_size as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) , "::" , stringify
-                ! ( body_size ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) )
-                . decoded as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) , "::" , stringify
-                ! ( decoded ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) )
-                . raw as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_1 ) , "::" , stringify
-                ! ( raw ) ));
-}
-impl Clone for amqp_frame_t___bindgen_ty_1__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_1>(),
+        40usize,
+        concat!(
+            "Size of: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_1>(),
+        8usize,
+        concat!(
+            "Alignment of ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_1)).class_id as *const _
+                as usize
+        },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_1),
+            "::",
+            stringify!(class_id)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_1)).body_size as *const _
+                as usize
+        },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_1),
+            "::",
+            stringify!(body_size)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_1)).decoded as *const _ as usize
+        },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_1),
+            "::",
+            stringify!(decoded)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_1)).raw as *const _ as usize
+        },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_1),
+            "::",
+            stringify!(raw)
+        )
+    );
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_frame_t___bindgen_ty_1__bindgen_ty_2 {
     pub transport_high: u8,
     pub transport_low: u8,
@@ -948,122 +1171,182 @@ pub struct amqp_frame_t___bindgen_ty_1__bindgen_ty_2 {
 }
 #[test]
 fn bindgen_test_layout_amqp_frame_t___bindgen_ty_1__bindgen_ty_2() {
-    assert_eq!(::std::mem::size_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_2>()
-               , 4usize , concat ! (
-               "Size of: " , stringify ! (
-               amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) ));
-    assert_eq! (::std::mem::align_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_2>()
-                , 1usize , concat ! (
-                "Alignment of " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) )
-                . transport_high as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) , "::" , stringify
-                ! ( transport_high ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) )
-                . transport_low as * const _ as usize } , 1usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) , "::" , stringify
-                ! ( transport_low ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) )
-                . protocol_version_major as * const _ as usize } , 2usize ,
-                concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) , "::" , stringify
-                ! ( protocol_version_major ) ));
-    assert_eq! (unsafe {
-                & (
-                * ( 0 as * const amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) )
-                . protocol_version_minor as * const _ as usize } , 3usize ,
-                concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1__bindgen_ty_2 ) , "::" , stringify
-                ! ( protocol_version_minor ) ));
-}
-impl Clone for amqp_frame_t___bindgen_ty_1__bindgen_ty_2 {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_2>(),
+        4usize,
+        concat!(
+            "Size of: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_2)
+        )
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_frame_t___bindgen_ty_1__bindgen_ty_2>(),
+        1usize,
+        concat!(
+            "Alignment of ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_2)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_2)).transport_high as *const _
+                as usize
+        },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_2),
+            "::",
+            stringify!(transport_high)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_2)).transport_low as *const _
+                as usize
+        },
+        1usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_2),
+            "::",
+            stringify!(transport_low)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_2)).protocol_version_major
+                as *const _ as usize
+        },
+        2usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_2),
+            "::",
+            stringify!(protocol_version_major)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1__bindgen_ty_2)).protocol_version_minor
+                as *const _ as usize
+        },
+        3usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1__bindgen_ty_2),
+            "::",
+            stringify!(protocol_version_minor)
+        )
+    );
 }
 #[test]
 fn bindgen_test_layout_amqp_frame_t___bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<amqp_frame_t___bindgen_ty_1>() , 40usize
-               , concat ! (
-               "Size of: " , stringify ! ( amqp_frame_t___bindgen_ty_1 ) ));
-    assert_eq! (::std::mem::align_of::<amqp_frame_t___bindgen_ty_1>() , 8usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_frame_t___bindgen_ty_1 )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_frame_t___bindgen_ty_1 ) ) . method
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1 ) , "::" , stringify ! ( method )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_frame_t___bindgen_ty_1 ) ) .
-                properties as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1 ) , "::" , stringify ! (
-                properties ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_frame_t___bindgen_ty_1 ) ) .
-                body_fragment as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1 ) , "::" , stringify ! (
-                body_fragment ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_frame_t___bindgen_ty_1 ) ) .
-                protocol_header as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_frame_t___bindgen_ty_1 ) , "::" , stringify ! (
-                protocol_header ) ));
-}
-impl Clone for amqp_frame_t___bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_frame_t___bindgen_ty_1>(),
+        40usize,
+        concat!("Size of: ", stringify!(amqp_frame_t___bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_frame_t___bindgen_ty_1>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_frame_t___bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_frame_t___bindgen_ty_1)).method as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1),
+            "::",
+            stringify!(method)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_frame_t___bindgen_ty_1)).properties as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1),
+            "::",
+            stringify!(properties)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_frame_t___bindgen_ty_1)).body_fragment as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1),
+            "::",
+            stringify!(body_fragment)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_frame_t___bindgen_ty_1)).protocol_header as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t___bindgen_ty_1),
+            "::",
+            stringify!(protocol_header)
+        )
+    );
 }
 #[test]
 fn bindgen_test_layout_amqp_frame_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_frame_t_>() , 48usize , concat ! (
-               "Size of: " , stringify ! ( amqp_frame_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_frame_t_>() , 8usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_frame_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_frame_t_ ) ) . frame_type as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_frame_t_ ) , "::"
-                , stringify ! ( frame_type ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_frame_t_ ) ) . channel as * const _
-                as usize } , 2usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_frame_t_ ) , "::"
-                , stringify ! ( channel ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_frame_t_ ) ) . payload as * const _
-                as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_frame_t_ ) , "::"
-                , stringify ! ( payload ) ));
-}
-impl Clone for amqp_frame_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_frame_t_>(),
+        48usize,
+        concat!("Size of: ", stringify!(amqp_frame_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_frame_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_frame_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_frame_t_)).frame_type as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t_),
+            "::",
+            stringify!(frame_type)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_frame_t_)).channel as *const _ as usize },
+        2usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t_),
+            "::",
+            stringify!(channel)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_frame_t_)).payload as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_frame_t_),
+            "::",
+            stringify!(payload)
+        )
+    );
 }
 pub type amqp_frame_t = amqp_frame_t_;
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum amqp_response_type_enum_ {
-    AMQP_RESPONSE_NONE = 0,
-    AMQP_RESPONSE_NORMAL = 1,
-    AMQP_RESPONSE_LIBRARY_EXCEPTION = 2,
-    AMQP_RESPONSE_SERVER_EXCEPTION = 3,
-}
+pub const amqp_response_type_enum__AMQP_RESPONSE_NONE: amqp_response_type_enum_ = 0;
+pub const amqp_response_type_enum__AMQP_RESPONSE_NORMAL: amqp_response_type_enum_ = 1;
+pub const amqp_response_type_enum__AMQP_RESPONSE_LIBRARY_EXCEPTION: amqp_response_type_enum_ = 2;
+pub const amqp_response_type_enum__AMQP_RESPONSE_SERVER_EXCEPTION: amqp_response_type_enum_ = 3;
+pub type amqp_response_type_enum_ = ::std::os::raw::c_uint;
 pub use self::amqp_response_type_enum_ as amqp_response_type_enum;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_rpc_reply_t_ {
     pub reply_type: amqp_response_type_enum,
     pub reply: amqp_method_t,
@@ -1071,37 +1354,52 @@ pub struct amqp_rpc_reply_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_rpc_reply_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_rpc_reply_t_>() , 32usize , concat !
-               ( "Size of: " , stringify ! ( amqp_rpc_reply_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_rpc_reply_t_>() , 8usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_rpc_reply_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_rpc_reply_t_ ) ) . reply_type as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_rpc_reply_t_ ) ,
-                "::" , stringify ! ( reply_type ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_rpc_reply_t_ ) ) . reply as * const
-                _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_rpc_reply_t_ ) ,
-                "::" , stringify ! ( reply ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_rpc_reply_t_ ) ) . library_error as
-                * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_rpc_reply_t_ ) ,
-                "::" , stringify ! ( library_error ) ));
-}
-impl Clone for amqp_rpc_reply_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_rpc_reply_t_>(),
+        32usize,
+        concat!("Size of: ", stringify!(amqp_rpc_reply_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_rpc_reply_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_rpc_reply_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_rpc_reply_t_)).reply_type as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_rpc_reply_t_),
+            "::",
+            stringify!(reply_type)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_rpc_reply_t_)).reply as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_rpc_reply_t_),
+            "::",
+            stringify!(reply)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_rpc_reply_t_)).library_error as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_rpc_reply_t_),
+            "::",
+            stringify!(library_error)
+        )
+    );
 }
 pub type amqp_rpc_reply_t = amqp_rpc_reply_t_;
-#[repr(i32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum amqp_sasl_method_enum_ {
-    AMQP_SASL_METHOD_UNDEFINED = -1,
-    AMQP_SASL_METHOD_PLAIN = 0,
-    AMQP_SASL_METHOD_EXTERNAL = 1,
-}
+pub const amqp_sasl_method_enum__AMQP_SASL_METHOD_UNDEFINED: amqp_sasl_method_enum_ = -1;
+pub const amqp_sasl_method_enum__AMQP_SASL_METHOD_PLAIN: amqp_sasl_method_enum_ = 0;
+pub const amqp_sasl_method_enum__AMQP_SASL_METHOD_EXTERNAL: amqp_sasl_method_enum_ = 1;
+pub type amqp_sasl_method_enum_ = ::std::os::raw::c_int;
 pub use self::amqp_sasl_method_enum_ as amqp_sasl_method_enum;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -1115,88 +1413,87 @@ pub struct amqp_socket_t_ {
     _unused: [u8; 0],
 }
 pub type amqp_socket_t = amqp_socket_t_;
-#[repr(i32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum amqp_status_enum_ {
-    AMQP_STATUS_OK = 0,
-    AMQP_STATUS_NO_MEMORY = -1,
-    AMQP_STATUS_BAD_AMQP_DATA = -2,
-    AMQP_STATUS_UNKNOWN_CLASS = -3,
-    AMQP_STATUS_UNKNOWN_METHOD = -4,
-    AMQP_STATUS_HOSTNAME_RESOLUTION_FAILED = -5,
-    AMQP_STATUS_INCOMPATIBLE_AMQP_VERSION = -6,
-    AMQP_STATUS_CONNECTION_CLOSED = -7,
-    AMQP_STATUS_BAD_URL = -8,
-    AMQP_STATUS_SOCKET_ERROR = -9,
-    AMQP_STATUS_INVALID_PARAMETER = -10,
-    AMQP_STATUS_TABLE_TOO_BIG = -11,
-    AMQP_STATUS_WRONG_METHOD = -12,
-    AMQP_STATUS_TIMEOUT = -13,
-    AMQP_STATUS_TIMER_FAILURE = -14,
-    AMQP_STATUS_HEARTBEAT_TIMEOUT = -15,
-    AMQP_STATUS_UNEXPECTED_STATE = -16,
-    AMQP_STATUS_SOCKET_CLOSED = -17,
-    AMQP_STATUS_SOCKET_INUSE = -18,
-    AMQP_STATUS_BROKER_UNSUPPORTED_SASL_METHOD = -19,
-    AMQP_STATUS_UNSUPPORTED = -20,
-    _AMQP_STATUS_NEXT_VALUE = -21,
-    AMQP_STATUS_TCP_ERROR = -256,
-    AMQP_STATUS_TCP_SOCKETLIB_INIT_ERROR = -257,
-    _AMQP_STATUS_TCP_NEXT_VALUE = -258,
-    AMQP_STATUS_SSL_ERROR = -512,
-    AMQP_STATUS_SSL_HOSTNAME_VERIFY_FAILED = -513,
-    AMQP_STATUS_SSL_PEER_VERIFY_FAILED = -514,
-    AMQP_STATUS_SSL_CONNECTION_FAILED = -515,
-    _AMQP_STATUS_SSL_NEXT_VALUE = -516,
-}
+pub const amqp_status_enum__AMQP_STATUS_OK: amqp_status_enum_ = 0;
+pub const amqp_status_enum__AMQP_STATUS_NO_MEMORY: amqp_status_enum_ = -1;
+pub const amqp_status_enum__AMQP_STATUS_BAD_AMQP_DATA: amqp_status_enum_ = -2;
+pub const amqp_status_enum__AMQP_STATUS_UNKNOWN_CLASS: amqp_status_enum_ = -3;
+pub const amqp_status_enum__AMQP_STATUS_UNKNOWN_METHOD: amqp_status_enum_ = -4;
+pub const amqp_status_enum__AMQP_STATUS_HOSTNAME_RESOLUTION_FAILED: amqp_status_enum_ = -5;
+pub const amqp_status_enum__AMQP_STATUS_INCOMPATIBLE_AMQP_VERSION: amqp_status_enum_ = -6;
+pub const amqp_status_enum__AMQP_STATUS_CONNECTION_CLOSED: amqp_status_enum_ = -7;
+pub const amqp_status_enum__AMQP_STATUS_BAD_URL: amqp_status_enum_ = -8;
+pub const amqp_status_enum__AMQP_STATUS_SOCKET_ERROR: amqp_status_enum_ = -9;
+pub const amqp_status_enum__AMQP_STATUS_INVALID_PARAMETER: amqp_status_enum_ = -10;
+pub const amqp_status_enum__AMQP_STATUS_TABLE_TOO_BIG: amqp_status_enum_ = -11;
+pub const amqp_status_enum__AMQP_STATUS_WRONG_METHOD: amqp_status_enum_ = -12;
+pub const amqp_status_enum__AMQP_STATUS_TIMEOUT: amqp_status_enum_ = -13;
+pub const amqp_status_enum__AMQP_STATUS_TIMER_FAILURE: amqp_status_enum_ = -14;
+pub const amqp_status_enum__AMQP_STATUS_HEARTBEAT_TIMEOUT: amqp_status_enum_ = -15;
+pub const amqp_status_enum__AMQP_STATUS_UNEXPECTED_STATE: amqp_status_enum_ = -16;
+pub const amqp_status_enum__AMQP_STATUS_SOCKET_CLOSED: amqp_status_enum_ = -17;
+pub const amqp_status_enum__AMQP_STATUS_SOCKET_INUSE: amqp_status_enum_ = -18;
+pub const amqp_status_enum__AMQP_STATUS_BROKER_UNSUPPORTED_SASL_METHOD: amqp_status_enum_ = -19;
+pub const amqp_status_enum__AMQP_STATUS_UNSUPPORTED: amqp_status_enum_ = -20;
+pub const amqp_status_enum___AMQP_STATUS_NEXT_VALUE: amqp_status_enum_ = -21;
+pub const amqp_status_enum__AMQP_STATUS_TCP_ERROR: amqp_status_enum_ = -256;
+pub const amqp_status_enum__AMQP_STATUS_TCP_SOCKETLIB_INIT_ERROR: amqp_status_enum_ = -257;
+pub const amqp_status_enum___AMQP_STATUS_TCP_NEXT_VALUE: amqp_status_enum_ = -258;
+pub const amqp_status_enum__AMQP_STATUS_SSL_ERROR: amqp_status_enum_ = -512;
+pub const amqp_status_enum__AMQP_STATUS_SSL_HOSTNAME_VERIFY_FAILED: amqp_status_enum_ = -513;
+pub const amqp_status_enum__AMQP_STATUS_SSL_PEER_VERIFY_FAILED: amqp_status_enum_ = -514;
+pub const amqp_status_enum__AMQP_STATUS_SSL_CONNECTION_FAILED: amqp_status_enum_ = -515;
+pub const amqp_status_enum___AMQP_STATUS_SSL_NEXT_VALUE: amqp_status_enum_ = -516;
+pub type amqp_status_enum_ = ::std::os::raw::c_int;
 pub use self::amqp_status_enum_ as amqp_status_enum;
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum amqp_delivery_mode_enum {
-    AMQP_DELIVERY_NONPERSISTENT = 1,
-    AMQP_DELIVERY_PERSISTENT = 2,
+pub const amqp_delivery_mode_enum_AMQP_DELIVERY_NONPERSISTENT: amqp_delivery_mode_enum = 1;
+pub const amqp_delivery_mode_enum_AMQP_DELIVERY_PERSISTENT: amqp_delivery_mode_enum = 2;
+pub type amqp_delivery_mode_enum = ::std::os::raw::c_uint;
+extern "C" {
+    pub fn amqp_constant_name(
+        constantNumber: ::std::os::raw::c_int,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn amqp_constant_name(constantNumber: ::std::os::raw::c_int)
-     -> *const ::std::os::raw::c_char;
+    pub fn amqp_constant_is_hard_error(constantNumber: ::std::os::raw::c_int) -> amqp_boolean_t;
 }
 extern "C" {
-    pub fn amqp_constant_is_hard_error(constantNumber: ::std::os::raw::c_int)
-     -> amqp_boolean_t;
+    pub fn amqp_method_name(methodNumber: amqp_method_number_t) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn amqp_method_name(methodNumber: amqp_method_number_t)
-     -> *const ::std::os::raw::c_char;
+    pub fn amqp_method_has_content(methodNumber: amqp_method_number_t) -> amqp_boolean_t;
 }
 extern "C" {
-    pub fn amqp_method_has_content(methodNumber: amqp_method_number_t)
-     -> amqp_boolean_t;
+    pub fn amqp_decode_method(
+        methodNumber: amqp_method_number_t,
+        pool: *mut amqp_pool_t,
+        encoded: amqp_bytes_t,
+        decoded: *mut *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_decode_method(methodNumber: amqp_method_number_t,
-                              pool: *mut amqp_pool_t, encoded: amqp_bytes_t,
-                              decoded: *mut *mut ::std::os::raw::c_void)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_decode_properties(
+        class_id: u16,
+        pool: *mut amqp_pool_t,
+        encoded: amqp_bytes_t,
+        decoded: *mut *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_decode_properties(class_id: u16, pool: *mut amqp_pool_t,
-                                  encoded: amqp_bytes_t,
-                                  decoded: *mut *mut ::std::os::raw::c_void)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_encode_method(
+        methodNumber: amqp_method_number_t,
+        decoded: *mut ::std::os::raw::c_void,
+        encoded: amqp_bytes_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_encode_method(methodNumber: amqp_method_number_t,
-                              decoded: *mut ::std::os::raw::c_void,
-                              encoded: amqp_bytes_t) -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn amqp_encode_properties(class_id: u16,
-                                  decoded: *mut ::std::os::raw::c_void,
-                                  encoded: amqp_bytes_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_encode_properties(
+        class_id: u16,
+        decoded: *mut ::std::os::raw::c_void,
+        encoded: amqp_bytes_t,
+    ) -> ::std::os::raw::c_int;
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_start_t_ {
     pub version_major: u8,
     pub version_minor: u8,
@@ -1206,50 +1503,72 @@ pub struct amqp_connection_start_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_start_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_start_t_>() , 56usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_start_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_start_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_start_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_t_ ) ) .
-                version_major as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_t_ ) , "::" , stringify ! (
-                version_major ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_t_ ) ) .
-                version_minor as * const _ as usize } , 1usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_t_ ) , "::" , stringify ! (
-                version_minor ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_t_ ) ) .
-                server_properties as * const _ as usize } , 8usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_t_ ) , "::" , stringify ! (
-                server_properties ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_t_ ) ) . mechanisms
-                as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_t_ ) , "::" , stringify ! ( mechanisms )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_t_ ) ) . locales as
-                * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_t_ ) , "::" , stringify ! ( locales )
-                ));
-}
-impl Clone for amqp_connection_start_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_start_t_>(),
+        56usize,
+        concat!("Size of: ", stringify!(amqp_connection_start_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_start_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_start_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_start_t_)).version_major as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_t_),
+            "::",
+            stringify!(version_major)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_start_t_)).version_minor as *const _ as usize },
+        1usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_t_),
+            "::",
+            stringify!(version_minor)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_connection_start_t_)).server_properties as *const _ as usize
+        },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_t_),
+            "::",
+            stringify!(server_properties)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_start_t_)).mechanisms as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_t_),
+            "::",
+            stringify!(mechanisms)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_start_t_)).locales as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_t_),
+            "::",
+            stringify!(locales)
+        )
+    );
 }
 pub type amqp_connection_start_t = amqp_connection_start_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_start_ok_t_ {
     pub client_properties: amqp_table_t,
     pub mechanism: amqp_bytes_t,
@@ -1258,95 +1577,120 @@ pub struct amqp_connection_start_ok_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_start_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_start_ok_t_>() , 64usize
-               , concat ! (
-               "Size of: " , stringify ! ( amqp_connection_start_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_start_ok_t_>() , 8usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_start_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_ok_t_ ) ) .
-                client_properties as * const _ as usize } , 0usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_ok_t_ ) , "::" , stringify ! (
-                client_properties ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_ok_t_ ) ) .
-                mechanism as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_ok_t_ ) , "::" , stringify ! ( mechanism
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_ok_t_ ) ) .
-                response as * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_ok_t_ ) , "::" , stringify ! ( response
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_start_ok_t_ ) ) . locale
-                as * const _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_start_ok_t_ ) , "::" , stringify ! ( locale )
-                ));
-}
-impl Clone for amqp_connection_start_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_start_ok_t_>(),
+        64usize,
+        concat!("Size of: ", stringify!(amqp_connection_start_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_start_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_start_ok_t_))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(0 as *const amqp_connection_start_ok_t_)).client_properties as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_ok_t_),
+            "::",
+            stringify!(client_properties)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_start_ok_t_)).mechanism as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_ok_t_),
+            "::",
+            stringify!(mechanism)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_start_ok_t_)).response as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_ok_t_),
+            "::",
+            stringify!(response)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_start_ok_t_)).locale as *const _ as usize },
+        48usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_start_ok_t_),
+            "::",
+            stringify!(locale)
+        )
+    );
 }
 pub type amqp_connection_start_ok_t = amqp_connection_start_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_secure_t_ {
     pub challenge: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_secure_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_secure_t_>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_secure_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_secure_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_secure_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_secure_t_ ) ) . challenge
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_secure_t_ ) , "::" , stringify ! ( challenge )
-                ));
-}
-impl Clone for amqp_connection_secure_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_secure_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_connection_secure_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_secure_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_secure_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_secure_t_)).challenge as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_secure_t_),
+            "::",
+            stringify!(challenge)
+        )
+    );
 }
 pub type amqp_connection_secure_t = amqp_connection_secure_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_secure_ok_t_ {
     pub response: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_secure_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_secure_ok_t_>() , 16usize
-               , concat ! (
-               "Size of: " , stringify ! ( amqp_connection_secure_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_secure_ok_t_>() ,
-                8usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_secure_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_secure_ok_t_ ) ) .
-                response as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_secure_ok_t_ ) , "::" , stringify ! ( response
-                ) ));
-}
-impl Clone for amqp_connection_secure_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_secure_ok_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_connection_secure_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_secure_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_secure_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_secure_ok_t_)).response as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_secure_ok_t_),
+            "::",
+            stringify!(response)
+        )
+    );
 }
 pub type amqp_connection_secure_ok_t = amqp_connection_secure_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_tune_t_ {
     pub channel_max: u16,
     pub frame_max: u32,
@@ -1354,34 +1698,50 @@ pub struct amqp_connection_tune_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_tune_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_tune_t_>() , 12usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_tune_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_tune_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_tune_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_tune_t_ ) ) . channel_max
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_tune_t_
-                ) , "::" , stringify ! ( channel_max ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_tune_t_ ) ) . frame_max
-                as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_tune_t_
-                ) , "::" , stringify ! ( frame_max ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_tune_t_ ) ) . heartbeat
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_tune_t_
-                ) , "::" , stringify ! ( heartbeat ) ));
-}
-impl Clone for amqp_connection_tune_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_tune_t_>(),
+        12usize,
+        concat!("Size of: ", stringify!(amqp_connection_tune_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_tune_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_connection_tune_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_tune_t_)).channel_max as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_tune_t_),
+            "::",
+            stringify!(channel_max)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_tune_t_)).frame_max as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_tune_t_),
+            "::",
+            stringify!(frame_max)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_tune_t_)).heartbeat as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_tune_t_),
+            "::",
+            stringify!(heartbeat)
+        )
+    );
 }
 pub type amqp_connection_tune_t = amqp_connection_tune_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_tune_ok_t_ {
     pub channel_max: u16,
     pub frame_max: u32,
@@ -1389,38 +1749,50 @@ pub struct amqp_connection_tune_ok_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_tune_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_tune_ok_t_>() , 12usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_tune_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_tune_ok_t_>() , 4usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_tune_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_tune_ok_t_ ) ) .
-                channel_max as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_tune_ok_t_ ) , "::" , stringify ! (
-                channel_max ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_tune_ok_t_ ) ) .
-                frame_max as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_tune_ok_t_ ) , "::" , stringify ! ( frame_max
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_tune_ok_t_ ) ) .
-                heartbeat as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_tune_ok_t_ ) , "::" , stringify ! ( heartbeat
-                ) ));
-}
-impl Clone for amqp_connection_tune_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_tune_ok_t_>(),
+        12usize,
+        concat!("Size of: ", stringify!(amqp_connection_tune_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_tune_ok_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_connection_tune_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_tune_ok_t_)).channel_max as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_tune_ok_t_),
+            "::",
+            stringify!(channel_max)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_tune_ok_t_)).frame_max as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_tune_ok_t_),
+            "::",
+            stringify!(frame_max)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_tune_ok_t_)).heartbeat as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_tune_ok_t_),
+            "::",
+            stringify!(heartbeat)
+        )
+    );
 }
 pub type amqp_connection_tune_ok_t = amqp_connection_tune_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_open_t_ {
     pub virtual_host: amqp_bytes_t,
     pub capabilities: amqp_bytes_t,
@@ -1428,59 +1800,79 @@ pub struct amqp_connection_open_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_open_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_open_t_>() , 40usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_open_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_open_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_open_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_open_t_ ) ) .
-                virtual_host as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_open_t_
-                ) , "::" , stringify ! ( virtual_host ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_open_t_ ) ) .
-                capabilities as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_open_t_
-                ) , "::" , stringify ! ( capabilities ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_open_t_ ) ) . insist as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_open_t_
-                ) , "::" , stringify ! ( insist ) ));
-}
-impl Clone for amqp_connection_open_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_open_t_>(),
+        40usize,
+        concat!("Size of: ", stringify!(amqp_connection_open_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_open_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_open_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_open_t_)).virtual_host as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_open_t_),
+            "::",
+            stringify!(virtual_host)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_open_t_)).capabilities as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_open_t_),
+            "::",
+            stringify!(capabilities)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_open_t_)).insist as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_open_t_),
+            "::",
+            stringify!(insist)
+        )
+    );
 }
 pub type amqp_connection_open_t = amqp_connection_open_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_open_ok_t_ {
     pub known_hosts: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_open_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_open_ok_t_>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_open_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_open_ok_t_>() , 8usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_open_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_open_ok_t_ ) ) .
-                known_hosts as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_open_ok_t_ ) , "::" , stringify ! (
-                known_hosts ) ));
-}
-impl Clone for amqp_connection_open_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_open_ok_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_connection_open_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_open_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_open_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_open_ok_t_)).known_hosts as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_open_ok_t_),
+            "::",
+            stringify!(known_hosts)
+        )
+    );
 }
 pub type amqp_connection_open_ok_t = amqp_connection_open_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_close_t_ {
     pub reply_code: u16,
     pub reply_text: amqp_bytes_t,
@@ -1489,209 +1881,263 @@ pub struct amqp_connection_close_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_close_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_close_t_>() , 32usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_close_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_close_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_close_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_close_t_ ) ) . reply_code
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_close_t_ ) , "::" , stringify ! ( reply_code )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_close_t_ ) ) . reply_text
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_close_t_ ) , "::" , stringify ! ( reply_text )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_close_t_ ) ) . class_id
-                as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_close_t_ ) , "::" , stringify ! ( class_id )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_close_t_ ) ) . method_id
-                as * const _ as usize } , 26usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_close_t_ ) , "::" , stringify ! ( method_id )
-                ));
-}
-impl Clone for amqp_connection_close_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_close_t_>(),
+        32usize,
+        concat!("Size of: ", stringify!(amqp_connection_close_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_close_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_close_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_close_t_)).reply_code as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_close_t_),
+            "::",
+            stringify!(reply_code)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_close_t_)).reply_text as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_close_t_),
+            "::",
+            stringify!(reply_text)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_close_t_)).class_id as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_close_t_),
+            "::",
+            stringify!(class_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_close_t_)).method_id as *const _ as usize },
+        26usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_close_t_),
+            "::",
+            stringify!(method_id)
+        )
+    );
 }
 pub type amqp_connection_close_t = amqp_connection_close_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_close_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_close_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_close_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_close_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_close_ok_t_>() , 1usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_close_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_close_ok_t_ ) ) . dummy
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_close_ok_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_connection_close_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_close_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_connection_close_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_close_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_connection_close_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_close_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_close_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_connection_close_ok_t = amqp_connection_close_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_blocked_t_ {
     pub reason: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_blocked_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_blocked_t_>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_connection_blocked_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_blocked_t_>() , 8usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_blocked_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_blocked_t_ ) ) . reason
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_blocked_t_ ) , "::" , stringify ! ( reason )
-                ));
-}
-impl Clone for amqp_connection_blocked_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_blocked_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_connection_blocked_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_blocked_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_blocked_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_blocked_t_)).reason as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_blocked_t_),
+            "::",
+            stringify!(reason)
+        )
+    );
 }
 pub type amqp_connection_blocked_t = amqp_connection_blocked_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_unblocked_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_unblocked_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_unblocked_t_>() , 1usize
-               , concat ! (
-               "Size of: " , stringify ! ( amqp_connection_unblocked_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_unblocked_t_>() ,
-                1usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_unblocked_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_unblocked_t_ ) ) . dummy
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_unblocked_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_connection_unblocked_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_unblocked_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_connection_unblocked_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_unblocked_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_connection_unblocked_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_unblocked_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_unblocked_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_connection_unblocked_t = amqp_connection_unblocked_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_channel_open_t_ {
     pub out_of_band: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_channel_open_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_channel_open_t_>() , 16usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_channel_open_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_channel_open_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_channel_open_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_open_t_ ) ) . out_of_band as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_open_t_ )
-                , "::" , stringify ! ( out_of_band ) ));
-}
-impl Clone for amqp_channel_open_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_channel_open_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_channel_open_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_channel_open_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_channel_open_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_open_t_)).out_of_band as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_open_t_),
+            "::",
+            stringify!(out_of_band)
+        )
+    );
 }
 pub type amqp_channel_open_t = amqp_channel_open_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_channel_open_ok_t_ {
     pub channel_id: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_channel_open_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_channel_open_ok_t_>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_channel_open_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_channel_open_ok_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_channel_open_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_open_ok_t_ ) ) . channel_id
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_open_ok_t_
-                ) , "::" , stringify ! ( channel_id ) ));
-}
-impl Clone for amqp_channel_open_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_channel_open_ok_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_channel_open_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_channel_open_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_channel_open_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_open_ok_t_)).channel_id as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_open_ok_t_),
+            "::",
+            stringify!(channel_id)
+        )
+    );
 }
 pub type amqp_channel_open_ok_t = amqp_channel_open_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_channel_flow_t_ {
     pub active: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_channel_flow_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_channel_flow_t_>() , 4usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_channel_flow_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_channel_flow_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_channel_flow_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_flow_t_ ) ) . active as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_flow_t_ )
-                , "::" , stringify ! ( active ) ));
-}
-impl Clone for amqp_channel_flow_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_channel_flow_t_>(),
+        4usize,
+        concat!("Size of: ", stringify!(amqp_channel_flow_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_channel_flow_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_channel_flow_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_flow_t_)).active as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_flow_t_),
+            "::",
+            stringify!(active)
+        )
+    );
 }
 pub type amqp_channel_flow_t = amqp_channel_flow_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_channel_flow_ok_t_ {
     pub active: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_channel_flow_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_channel_flow_ok_t_>() , 4usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_channel_flow_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_channel_flow_ok_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_channel_flow_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_flow_ok_t_ ) ) . active as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_flow_ok_t_
-                ) , "::" , stringify ! ( active ) ));
-}
-impl Clone for amqp_channel_flow_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_channel_flow_ok_t_>(),
+        4usize,
+        concat!("Size of: ", stringify!(amqp_channel_flow_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_channel_flow_ok_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_channel_flow_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_flow_ok_t_)).active as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_flow_ok_t_),
+            "::",
+            stringify!(active)
+        )
+    );
 }
 pub type amqp_channel_flow_ok_t = amqp_channel_flow_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_channel_close_t_ {
     pub reply_code: u16,
     pub reply_text: amqp_bytes_t,
@@ -1700,62 +2146,89 @@ pub struct amqp_channel_close_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_channel_close_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_channel_close_t_>() , 32usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_channel_close_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_channel_close_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_channel_close_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_close_t_ ) ) . reply_code as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_close_t_ )
-                , "::" , stringify ! ( reply_code ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_close_t_ ) ) . reply_text as
-                * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_close_t_ )
-                , "::" , stringify ! ( reply_text ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_close_t_ ) ) . class_id as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_close_t_ )
-                , "::" , stringify ! ( class_id ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_close_t_ ) ) . method_id as
-                * const _ as usize } , 26usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_channel_close_t_ )
-                , "::" , stringify ! ( method_id ) ));
-}
-impl Clone for amqp_channel_close_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_channel_close_t_>(),
+        32usize,
+        concat!("Size of: ", stringify!(amqp_channel_close_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_channel_close_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_channel_close_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_close_t_)).reply_code as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_close_t_),
+            "::",
+            stringify!(reply_code)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_close_t_)).reply_text as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_close_t_),
+            "::",
+            stringify!(reply_text)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_close_t_)).class_id as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_close_t_),
+            "::",
+            stringify!(class_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_close_t_)).method_id as *const _ as usize },
+        26usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_close_t_),
+            "::",
+            stringify!(method_id)
+        )
+    );
 }
 pub type amqp_channel_close_t = amqp_channel_close_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_channel_close_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_channel_close_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_channel_close_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_channel_close_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_channel_close_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_channel_close_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_close_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_channel_close_ok_t_ ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_channel_close_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_channel_close_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_channel_close_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_channel_close_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_channel_close_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_close_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_close_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_channel_close_ok_t = amqp_channel_close_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_access_request_t_ {
     pub realm: amqp_bytes_t,
     pub exclusive: amqp_boolean_t,
@@ -1766,74 +2239,109 @@ pub struct amqp_access_request_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_access_request_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_access_request_t_>() , 40usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_access_request_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_access_request_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_access_request_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_request_t_ ) ) . realm as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_access_request_t_
-                ) , "::" , stringify ! ( realm ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_request_t_ ) ) . exclusive as
-                * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_access_request_t_
-                ) , "::" , stringify ! ( exclusive ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_request_t_ ) ) . passive as *
-                const _ as usize } , 20usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_access_request_t_
-                ) , "::" , stringify ! ( passive ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_request_t_ ) ) . active as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_access_request_t_
-                ) , "::" , stringify ! ( active ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_request_t_ ) ) . write as *
-                const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_access_request_t_
-                ) , "::" , stringify ! ( write ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_request_t_ ) ) . read as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_access_request_t_
-                ) , "::" , stringify ! ( read ) ));
-}
-impl Clone for amqp_access_request_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_access_request_t_>(),
+        40usize,
+        concat!("Size of: ", stringify!(amqp_access_request_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_access_request_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_access_request_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_request_t_)).realm as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_request_t_),
+            "::",
+            stringify!(realm)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_request_t_)).exclusive as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_request_t_),
+            "::",
+            stringify!(exclusive)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_request_t_)).passive as *const _ as usize },
+        20usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_request_t_),
+            "::",
+            stringify!(passive)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_request_t_)).active as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_request_t_),
+            "::",
+            stringify!(active)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_request_t_)).write as *const _ as usize },
+        28usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_request_t_),
+            "::",
+            stringify!(write)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_request_t_)).read as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_request_t_),
+            "::",
+            stringify!(read)
+        )
+    );
 }
 pub type amqp_access_request_t = amqp_access_request_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_access_request_ok_t_ {
     pub ticket: u16,
 }
 #[test]
 fn bindgen_test_layout_amqp_access_request_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_access_request_ok_t_>() , 2usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_access_request_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_access_request_ok_t_>() , 2usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_access_request_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_request_ok_t_ ) ) . ticket as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_access_request_ok_t_ ) , "::" , stringify ! ( ticket )
-                ));
-}
-impl Clone for amqp_access_request_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_access_request_ok_t_>(),
+        2usize,
+        concat!("Size of: ", stringify!(amqp_access_request_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_access_request_ok_t_>(),
+        2usize,
+        concat!("Alignment of ", stringify!(amqp_access_request_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_request_ok_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_request_ok_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
 }
 pub type amqp_access_request_ok_t = amqp_access_request_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_declare_t_ {
     pub ticket: u16,
     pub exchange: amqp_bytes_t,
@@ -1847,95 +2355,139 @@ pub struct amqp_exchange_declare_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_declare_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_declare_t_>() , 80usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_declare_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_declare_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_declare_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . ticket as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . exchange
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( exchange )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . type_ as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( type_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . passive as
-                * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( passive )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . durable as
-                * const _ as usize } , 44usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( durable )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) .
-                auto_delete as * const _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( auto_delete
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . internal
-                as * const _ as usize } , 52usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( internal )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . nowait as
-                * const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( nowait ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_t_ ) ) . arguments
-                as * const _ as usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_t_ ) , "::" , stringify ! ( arguments )
-                ));
-}
-impl Clone for amqp_exchange_declare_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_declare_t_>(),
+        80usize,
+        concat!("Size of: ", stringify!(amqp_exchange_declare_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_declare_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_declare_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).exchange as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).type_ as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(type_)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).passive as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(passive)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).durable as *const _ as usize },
+        44usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(durable)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).auto_delete as *const _ as usize },
+        48usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(auto_delete)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).internal as *const _ as usize },
+        52usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(internal)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).nowait as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_t_)).arguments as *const _ as usize },
+        64usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_t_),
+            "::",
+            stringify!(arguments)
+        )
+    );
 }
 pub type amqp_exchange_declare_t = amqp_exchange_declare_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_declare_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_declare_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_declare_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_declare_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_declare_ok_t_>() , 1usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_declare_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_declare_ok_t_ ) ) . dummy
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_declare_ok_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_exchange_declare_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_declare_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_exchange_declare_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_declare_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_declare_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_declare_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_declare_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_exchange_declare_ok_t = amqp_exchange_declare_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_delete_t_ {
     pub ticket: u16,
     pub exchange: amqp_bytes_t,
@@ -1944,64 +2496,89 @@ pub struct amqp_exchange_delete_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_delete_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_delete_t_>() , 32usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_delete_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_delete_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_delete_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_delete_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_delete_t_
-                ) , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_delete_t_ ) ) . exchange as
-                * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_delete_t_
-                ) , "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_delete_t_ ) ) . if_unused
-                as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_delete_t_
-                ) , "::" , stringify ! ( if_unused ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_delete_t_ ) ) . nowait as *
-                const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_delete_t_
-                ) , "::" , stringify ! ( nowait ) ));
-}
-impl Clone for amqp_exchange_delete_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_delete_t_>(),
+        32usize,
+        concat!("Size of: ", stringify!(amqp_exchange_delete_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_delete_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_delete_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_delete_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_delete_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_delete_t_)).exchange as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_delete_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_delete_t_)).if_unused as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_delete_t_),
+            "::",
+            stringify!(if_unused)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_delete_t_)).nowait as *const _ as usize },
+        28usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_delete_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
 }
 pub type amqp_exchange_delete_t = amqp_exchange_delete_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_delete_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_delete_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_delete_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_delete_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_delete_ok_t_>() , 1usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_delete_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_delete_ok_t_ ) ) . dummy as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_delete_ok_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_exchange_delete_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_delete_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_exchange_delete_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_delete_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_delete_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_delete_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_delete_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_exchange_delete_ok_t = amqp_exchange_delete_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_bind_t_ {
     pub ticket: u16,
     pub destination: amqp_bytes_t,
@@ -2012,72 +2589,109 @@ pub struct amqp_exchange_bind_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_bind_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_bind_t_>() , 80usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_exchange_bind_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_bind_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_bind_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_bind_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_bind_t_ )
-                , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_bind_t_ ) ) . destination
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_bind_t_ )
-                , "::" , stringify ! ( destination ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_bind_t_ ) ) . source as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_bind_t_ )
-                , "::" , stringify ! ( source ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_bind_t_ ) ) . routing_key
-                as * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_bind_t_ )
-                , "::" , stringify ! ( routing_key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_bind_t_ ) ) . nowait as *
-                const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_bind_t_ )
-                , "::" , stringify ! ( nowait ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_bind_t_ ) ) . arguments as
-                * const _ as usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_bind_t_ )
-                , "::" , stringify ! ( arguments ) ));
-}
-impl Clone for amqp_exchange_bind_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_bind_t_>(),
+        80usize,
+        concat!("Size of: ", stringify!(amqp_exchange_bind_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_bind_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_bind_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_bind_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_bind_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_bind_t_)).destination as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_bind_t_),
+            "::",
+            stringify!(destination)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_bind_t_)).source as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_bind_t_),
+            "::",
+            stringify!(source)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_bind_t_)).routing_key as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_bind_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_bind_t_)).nowait as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_bind_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_bind_t_)).arguments as *const _ as usize },
+        64usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_bind_t_),
+            "::",
+            stringify!(arguments)
+        )
+    );
 }
 pub type amqp_exchange_bind_t = amqp_exchange_bind_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_bind_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_bind_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_bind_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_bind_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_bind_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_bind_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_bind_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_bind_ok_t_ ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_exchange_bind_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_bind_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_exchange_bind_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_bind_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_bind_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_bind_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_bind_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_exchange_bind_ok_t = amqp_exchange_bind_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_unbind_t_ {
     pub ticket: u16,
     pub destination: amqp_bytes_t,
@@ -2088,74 +2702,109 @@ pub struct amqp_exchange_unbind_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_unbind_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_unbind_t_>() , 80usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_unbind_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_unbind_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_unbind_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_unbind_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_unbind_t_
-                ) , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_unbind_t_ ) ) . destination
-                as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_unbind_t_
-                ) , "::" , stringify ! ( destination ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_unbind_t_ ) ) . source as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_unbind_t_
-                ) , "::" , stringify ! ( source ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_unbind_t_ ) ) . routing_key
-                as * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_unbind_t_
-                ) , "::" , stringify ! ( routing_key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_unbind_t_ ) ) . nowait as *
-                const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_unbind_t_
-                ) , "::" , stringify ! ( nowait ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_unbind_t_ ) ) . arguments
-                as * const _ as usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_exchange_unbind_t_
-                ) , "::" , stringify ! ( arguments ) ));
-}
-impl Clone for amqp_exchange_unbind_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_unbind_t_>(),
+        80usize,
+        concat!("Size of: ", stringify!(amqp_exchange_unbind_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_unbind_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_unbind_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_unbind_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_unbind_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_unbind_t_)).destination as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_unbind_t_),
+            "::",
+            stringify!(destination)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_unbind_t_)).source as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_unbind_t_),
+            "::",
+            stringify!(source)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_unbind_t_)).routing_key as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_unbind_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_unbind_t_)).nowait as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_unbind_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_unbind_t_)).arguments as *const _ as usize },
+        64usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_unbind_t_),
+            "::",
+            stringify!(arguments)
+        )
+    );
 }
 pub type amqp_exchange_unbind_t = amqp_exchange_unbind_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_unbind_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_unbind_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_unbind_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_unbind_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_unbind_ok_t_>() , 1usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_unbind_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_unbind_ok_t_ ) ) . dummy as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_unbind_ok_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_exchange_unbind_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_unbind_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_exchange_unbind_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_unbind_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_unbind_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_unbind_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_unbind_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_exchange_unbind_ok_t = amqp_exchange_unbind_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_declare_t_ {
     pub ticket: u16,
     pub queue: amqp_bytes_t,
@@ -2168,59 +2817,100 @@ pub struct amqp_queue_declare_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_declare_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_declare_t_>() , 64usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_queue_declare_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_declare_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_declare_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . queue as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . passive as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( passive ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . durable as *
-                const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( durable ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . exclusive as
-                * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( exclusive ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . auto_delete
-                as * const _ as usize } , 36usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( auto_delete ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . nowait as *
-                const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( nowait ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_t_ ) ) . arguments as
-                * const _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_declare_t_ )
-                , "::" , stringify ! ( arguments ) ));
-}
-impl Clone for amqp_queue_declare_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_declare_t_>(),
+        64usize,
+        concat!("Size of: ", stringify!(amqp_queue_declare_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_declare_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_queue_declare_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).queue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).passive as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(passive)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).durable as *const _ as usize },
+        28usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(durable)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).exclusive as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(exclusive)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).auto_delete as *const _ as usize },
+        36usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(auto_delete)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).nowait as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_t_)).arguments as *const _ as usize },
+        48usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_t_),
+            "::",
+            stringify!(arguments)
+        )
+    );
 }
 pub type amqp_queue_declare_t = amqp_queue_declare_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_declare_ok_t_ {
     pub queue: amqp_bytes_t,
     pub message_count: u32,
@@ -2228,36 +2918,50 @@ pub struct amqp_queue_declare_ok_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_declare_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_declare_ok_t_>() , 24usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_queue_declare_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_declare_ok_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_declare_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_ok_t_ ) ) . queue as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_queue_declare_ok_t_ ) , "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_ok_t_ ) ) .
-                message_count as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_queue_declare_ok_t_ ) , "::" , stringify ! (
-                message_count ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_declare_ok_t_ ) ) .
-                consumer_count as * const _ as usize } , 20usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_queue_declare_ok_t_ ) , "::" , stringify ! (
-                consumer_count ) ));
-}
-impl Clone for amqp_queue_declare_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_declare_ok_t_>(),
+        24usize,
+        concat!("Size of: ", stringify!(amqp_queue_declare_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_declare_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_queue_declare_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_ok_t_)).queue as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_ok_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_ok_t_)).message_count as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_ok_t_),
+            "::",
+            stringify!(message_count)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_declare_ok_t_)).consumer_count as *const _ as usize },
+        20usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_declare_ok_t_),
+            "::",
+            stringify!(consumer_count)
+        )
+    );
 }
 pub type amqp_queue_declare_ok_t = amqp_queue_declare_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_bind_t_ {
     pub ticket: u16,
     pub queue: amqp_bytes_t,
@@ -2268,70 +2972,109 @@ pub struct amqp_queue_bind_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_bind_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_bind_t_>() , 80usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_queue_bind_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_bind_t_>() , 8usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_queue_bind_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_bind_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_bind_t_ ) ,
-                "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_bind_t_ ) ) . queue as * const
-                _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_bind_t_ ) ,
-                "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_bind_t_ ) ) . exchange as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_bind_t_ ) ,
-                "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_bind_t_ ) ) . routing_key as *
-                const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_bind_t_ ) ,
-                "::" , stringify ! ( routing_key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_bind_t_ ) ) . nowait as *
-                const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_bind_t_ ) ,
-                "::" , stringify ! ( nowait ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_bind_t_ ) ) . arguments as *
-                const _ as usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_bind_t_ ) ,
-                "::" , stringify ! ( arguments ) ));
-}
-impl Clone for amqp_queue_bind_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_bind_t_>(),
+        80usize,
+        concat!("Size of: ", stringify!(amqp_queue_bind_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_bind_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_queue_bind_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_bind_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_bind_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_bind_t_)).queue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_bind_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_bind_t_)).exchange as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_bind_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_bind_t_)).routing_key as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_bind_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_bind_t_)).nowait as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_bind_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_bind_t_)).arguments as *const _ as usize },
+        64usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_bind_t_),
+            "::",
+            stringify!(arguments)
+        )
+    );
 }
 pub type amqp_queue_bind_t = amqp_queue_bind_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_bind_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_bind_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_bind_ok_t_>() , 1usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_queue_bind_ok_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_bind_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_bind_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_bind_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_bind_ok_t_ )
-                , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_queue_bind_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_bind_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_queue_bind_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_bind_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_queue_bind_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_bind_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_bind_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_queue_bind_ok_t = amqp_queue_bind_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_purge_t_ {
     pub ticket: u16,
     pub queue: amqp_bytes_t,
@@ -2339,56 +3082,79 @@ pub struct amqp_queue_purge_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_purge_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_purge_t_>() , 32usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_queue_purge_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_purge_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_purge_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_purge_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_purge_t_ ) ,
-                "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_purge_t_ ) ) . queue as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_purge_t_ ) ,
-                "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_purge_t_ ) ) . nowait as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_purge_t_ ) ,
-                "::" , stringify ! ( nowait ) ));
-}
-impl Clone for amqp_queue_purge_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_purge_t_>(),
+        32usize,
+        concat!("Size of: ", stringify!(amqp_queue_purge_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_purge_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_queue_purge_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_purge_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_purge_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_purge_t_)).queue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_purge_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_purge_t_)).nowait as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_purge_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
 }
 pub type amqp_queue_purge_t = amqp_queue_purge_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_purge_ok_t_ {
     pub message_count: u32,
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_purge_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_purge_ok_t_>() , 4usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_queue_purge_ok_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_purge_ok_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_purge_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_purge_ok_t_ ) ) .
-                message_count as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_purge_ok_t_
-                ) , "::" , stringify ! ( message_count ) ));
-}
-impl Clone for amqp_queue_purge_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_purge_ok_t_>(),
+        4usize,
+        concat!("Size of: ", stringify!(amqp_queue_purge_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_purge_ok_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_queue_purge_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_purge_ok_t_)).message_count as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_purge_ok_t_),
+            "::",
+            stringify!(message_count)
+        )
+    );
 }
 pub type amqp_queue_purge_ok_t = amqp_queue_purge_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_delete_t_ {
     pub ticket: u16,
     pub queue: amqp_bytes_t,
@@ -2398,67 +3164,99 @@ pub struct amqp_queue_delete_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_delete_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_delete_t_>() , 40usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_queue_delete_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_delete_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_delete_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_delete_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_delete_t_ )
-                , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_delete_t_ ) ) . queue as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_delete_t_ )
-                , "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_delete_t_ ) ) . if_unused as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_delete_t_ )
-                , "::" , stringify ! ( if_unused ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_delete_t_ ) ) . if_empty as *
-                const _ as usize } , 28usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_delete_t_ )
-                , "::" , stringify ! ( if_empty ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_delete_t_ ) ) . nowait as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_delete_t_ )
-                , "::" , stringify ! ( nowait ) ));
-}
-impl Clone for amqp_queue_delete_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_delete_t_>(),
+        40usize,
+        concat!("Size of: ", stringify!(amqp_queue_delete_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_delete_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_queue_delete_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_delete_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_delete_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_delete_t_)).queue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_delete_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_delete_t_)).if_unused as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_delete_t_),
+            "::",
+            stringify!(if_unused)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_delete_t_)).if_empty as *const _ as usize },
+        28usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_delete_t_),
+            "::",
+            stringify!(if_empty)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_delete_t_)).nowait as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_delete_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
 }
 pub type amqp_queue_delete_t = amqp_queue_delete_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_delete_ok_t_ {
     pub message_count: u32,
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_delete_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_delete_ok_t_>() , 4usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_queue_delete_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_delete_ok_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_delete_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_delete_ok_t_ ) ) .
-                message_count as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_delete_ok_t_
-                ) , "::" , stringify ! ( message_count ) ));
-}
-impl Clone for amqp_queue_delete_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_delete_ok_t_>(),
+        4usize,
+        concat!("Size of: ", stringify!(amqp_queue_delete_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_delete_ok_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_queue_delete_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_delete_ok_t_)).message_count as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_delete_ok_t_),
+            "::",
+            stringify!(message_count)
+        )
+    );
 }
 pub type amqp_queue_delete_ok_t = amqp_queue_delete_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_unbind_t_ {
     pub ticket: u16,
     pub queue: amqp_bytes_t,
@@ -2468,67 +3266,99 @@ pub struct amqp_queue_unbind_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_unbind_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_unbind_t_>() , 72usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_queue_unbind_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_unbind_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_unbind_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_unbind_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_unbind_t_ )
-                , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_unbind_t_ ) ) . queue as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_unbind_t_ )
-                , "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_unbind_t_ ) ) . exchange as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_unbind_t_ )
-                , "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_unbind_t_ ) ) . routing_key as
-                * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_unbind_t_ )
-                , "::" , stringify ! ( routing_key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_unbind_t_ ) ) . arguments as *
-                const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_unbind_t_ )
-                , "::" , stringify ! ( arguments ) ));
-}
-impl Clone for amqp_queue_unbind_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_unbind_t_>(),
+        72usize,
+        concat!("Size of: ", stringify!(amqp_queue_unbind_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_unbind_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_queue_unbind_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_unbind_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_unbind_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_unbind_t_)).queue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_unbind_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_unbind_t_)).exchange as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_unbind_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_unbind_t_)).routing_key as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_unbind_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_unbind_t_)).arguments as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_unbind_t_),
+            "::",
+            stringify!(arguments)
+        )
+    );
 }
 pub type amqp_queue_unbind_t = amqp_queue_unbind_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_unbind_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_unbind_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_unbind_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_queue_unbind_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_unbind_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_unbind_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_unbind_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_queue_unbind_ok_t_
-                ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_queue_unbind_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_unbind_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_queue_unbind_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_unbind_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_queue_unbind_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_unbind_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_unbind_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_queue_unbind_ok_t = amqp_queue_unbind_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_qos_t_ {
     pub prefetch_size: u32,
     pub prefetch_count: u16,
@@ -2536,54 +3366,79 @@ pub struct amqp_basic_qos_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_qos_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_qos_t_>() , 12usize , concat !
-               ( "Size of: " , stringify ! ( amqp_basic_qos_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_qos_t_>() , 4usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_basic_qos_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_qos_t_ ) ) . prefetch_size as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_qos_t_ ) ,
-                "::" , stringify ! ( prefetch_size ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_qos_t_ ) ) . prefetch_count as
-                * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_qos_t_ ) ,
-                "::" , stringify ! ( prefetch_count ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_qos_t_ ) ) . global as * const
-                _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_qos_t_ ) ,
-                "::" , stringify ! ( global ) ));
-}
-impl Clone for amqp_basic_qos_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_qos_t_>(),
+        12usize,
+        concat!("Size of: ", stringify!(amqp_basic_qos_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_qos_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_basic_qos_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_qos_t_)).prefetch_size as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_qos_t_),
+            "::",
+            stringify!(prefetch_size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_qos_t_)).prefetch_count as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_qos_t_),
+            "::",
+            stringify!(prefetch_count)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_qos_t_)).global as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_qos_t_),
+            "::",
+            stringify!(global)
+        )
+    );
 }
 pub type amqp_basic_qos_t = amqp_basic_qos_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_qos_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_qos_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_qos_ok_t_>() , 1usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_basic_qos_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_qos_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_qos_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_qos_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_qos_ok_t_ )
-                , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_basic_qos_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_qos_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_basic_qos_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_qos_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_basic_qos_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_qos_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_qos_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_basic_qos_ok_t = amqp_basic_qos_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_consume_t_ {
     pub ticket: u16,
     pub queue: amqp_bytes_t,
@@ -2596,135 +3451,198 @@ pub struct amqp_basic_consume_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_consume_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_consume_t_>() , 72usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_consume_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_consume_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_consume_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . queue as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . consumer_tag
-                as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( consumer_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . no_local as *
-                const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( no_local ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . no_ack as *
-                const _ as usize } , 44usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( no_ack ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . exclusive as
-                * const _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( exclusive ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . nowait as *
-                const _ as usize } , 52usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( nowait ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_t_ ) ) . arguments as
-                * const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_consume_t_ )
-                , "::" , stringify ! ( arguments ) ));
-}
-impl Clone for amqp_basic_consume_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_consume_t_>(),
+        72usize,
+        concat!("Size of: ", stringify!(amqp_basic_consume_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_consume_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_consume_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).queue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).consumer_tag as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(consumer_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).no_local as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(no_local)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).no_ack as *const _ as usize },
+        44usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(no_ack)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).exclusive as *const _ as usize },
+        48usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(exclusive)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).nowait as *const _ as usize },
+        52usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_t_)).arguments as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_t_),
+            "::",
+            stringify!(arguments)
+        )
+    );
 }
 pub type amqp_basic_consume_t = amqp_basic_consume_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_consume_ok_t_ {
     pub consumer_tag: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_consume_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_consume_ok_t_>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_basic_consume_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_consume_ok_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_consume_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_consume_ok_t_ ) ) .
-                consumer_tag as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_consume_ok_t_ ) , "::" , stringify ! ( consumer_tag
-                ) ));
-}
-impl Clone for amqp_basic_consume_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_consume_ok_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_basic_consume_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_consume_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_consume_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_consume_ok_t_)).consumer_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_consume_ok_t_),
+            "::",
+            stringify!(consumer_tag)
+        )
+    );
 }
 pub type amqp_basic_consume_ok_t = amqp_basic_consume_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_cancel_t_ {
     pub consumer_tag: amqp_bytes_t,
     pub nowait: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_cancel_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_cancel_t_>() , 24usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_cancel_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_cancel_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_cancel_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_cancel_t_ ) ) . consumer_tag
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_cancel_t_ )
-                , "::" , stringify ! ( consumer_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_cancel_t_ ) ) . nowait as *
-                const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_cancel_t_ )
-                , "::" , stringify ! ( nowait ) ));
-}
-impl Clone for amqp_basic_cancel_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_cancel_t_>(),
+        24usize,
+        concat!("Size of: ", stringify!(amqp_basic_cancel_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_cancel_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_cancel_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_cancel_t_)).consumer_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_cancel_t_),
+            "::",
+            stringify!(consumer_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_cancel_t_)).nowait as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_cancel_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
 }
 pub type amqp_basic_cancel_t = amqp_basic_cancel_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_cancel_ok_t_ {
     pub consumer_tag: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_cancel_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_cancel_ok_t_>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_basic_cancel_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_cancel_ok_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_cancel_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_cancel_ok_t_ ) ) .
-                consumer_tag as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_cancel_ok_t_
-                ) , "::" , stringify ! ( consumer_tag ) ));
-}
-impl Clone for amqp_basic_cancel_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_cancel_ok_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_basic_cancel_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_cancel_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_cancel_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_cancel_ok_t_)).consumer_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_cancel_ok_t_),
+            "::",
+            stringify!(consumer_tag)
+        )
+    );
 }
 pub type amqp_basic_cancel_ok_t = amqp_basic_cancel_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_publish_t_ {
     pub ticket: u16,
     pub exchange: amqp_bytes_t,
@@ -2734,44 +3652,70 @@ pub struct amqp_basic_publish_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_publish_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_publish_t_>() , 48usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_publish_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_publish_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_publish_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_publish_t_ ) ) . ticket as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_publish_t_ )
-                , "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_publish_t_ ) ) . exchange as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_publish_t_ )
-                , "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_publish_t_ ) ) . routing_key
-                as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_publish_t_ )
-                , "::" , stringify ! ( routing_key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_publish_t_ ) ) . mandatory as
-                * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_publish_t_ )
-                , "::" , stringify ! ( mandatory ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_publish_t_ ) ) . immediate as
-                * const _ as usize } , 44usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_publish_t_ )
-                , "::" , stringify ! ( immediate ) ));
-}
-impl Clone for amqp_basic_publish_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_publish_t_>(),
+        48usize,
+        concat!("Size of: ", stringify!(amqp_basic_publish_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_publish_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_publish_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_publish_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_publish_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_publish_t_)).exchange as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_publish_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_publish_t_)).routing_key as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_publish_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_publish_t_)).mandatory as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_publish_t_),
+            "::",
+            stringify!(mandatory)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_publish_t_)).immediate as *const _ as usize },
+        44usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_publish_t_),
+            "::",
+            stringify!(immediate)
+        )
+    );
 }
 pub type amqp_basic_publish_t = amqp_basic_publish_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_return_t_ {
     pub reply_code: u16,
     pub reply_text: amqp_bytes_t,
@@ -2780,39 +3724,60 @@ pub struct amqp_basic_return_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_return_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_return_t_>() , 56usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_return_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_return_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_return_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_return_t_ ) ) . reply_code as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_return_t_ )
-                , "::" , stringify ! ( reply_code ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_return_t_ ) ) . reply_text as
-                * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_return_t_ )
-                , "::" , stringify ! ( reply_text ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_return_t_ ) ) . exchange as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_return_t_ )
-                , "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_return_t_ ) ) . routing_key as
-                * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_return_t_ )
-                , "::" , stringify ! ( routing_key ) ));
-}
-impl Clone for amqp_basic_return_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_return_t_>(),
+        56usize,
+        concat!("Size of: ", stringify!(amqp_basic_return_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_return_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_return_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_return_t_)).reply_code as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_return_t_),
+            "::",
+            stringify!(reply_code)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_return_t_)).reply_text as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_return_t_),
+            "::",
+            stringify!(reply_text)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_return_t_)).exchange as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_return_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_return_t_)).routing_key as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_return_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
 }
 pub type amqp_basic_return_t = amqp_basic_return_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_deliver_t_ {
     pub consumer_tag: amqp_bytes_t,
     pub delivery_tag: u64,
@@ -2822,44 +3787,70 @@ pub struct amqp_basic_deliver_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_deliver_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_deliver_t_>() , 64usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_deliver_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_deliver_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_deliver_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_deliver_t_ ) ) . consumer_tag
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_deliver_t_ )
-                , "::" , stringify ! ( consumer_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_deliver_t_ ) ) . delivery_tag
-                as * const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_deliver_t_ )
-                , "::" , stringify ! ( delivery_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_deliver_t_ ) ) . redelivered
-                as * const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_deliver_t_ )
-                , "::" , stringify ! ( redelivered ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_deliver_t_ ) ) . exchange as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_deliver_t_ )
-                , "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_deliver_t_ ) ) . routing_key
-                as * const _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_deliver_t_ )
-                , "::" , stringify ! ( routing_key ) ));
-}
-impl Clone for amqp_basic_deliver_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_deliver_t_>(),
+        64usize,
+        concat!("Size of: ", stringify!(amqp_basic_deliver_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_deliver_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_deliver_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_deliver_t_)).consumer_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_deliver_t_),
+            "::",
+            stringify!(consumer_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_deliver_t_)).delivery_tag as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_deliver_t_),
+            "::",
+            stringify!(delivery_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_deliver_t_)).redelivered as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_deliver_t_),
+            "::",
+            stringify!(redelivered)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_deliver_t_)).exchange as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_deliver_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_deliver_t_)).routing_key as *const _ as usize },
+        48usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_deliver_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
 }
 pub type amqp_basic_deliver_t = amqp_basic_deliver_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_get_t_ {
     pub ticket: u16,
     pub queue: amqp_bytes_t,
@@ -2867,32 +3858,50 @@ pub struct amqp_basic_get_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_get_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_get_t_>() , 32usize , concat !
-               ( "Size of: " , stringify ! ( amqp_basic_get_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_get_t_>() , 8usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_basic_get_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_t_ ) ) . ticket as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_t_ ) ,
-                "::" , stringify ! ( ticket ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_t_ ) ) . queue as * const
-                _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_t_ ) ,
-                "::" , stringify ! ( queue ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_t_ ) ) . no_ack as * const
-                _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_t_ ) ,
-                "::" , stringify ! ( no_ack ) ));
-}
-impl Clone for amqp_basic_get_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_get_t_>(),
+        32usize,
+        concat!("Size of: ", stringify!(amqp_basic_get_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_get_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_get_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_t_)).ticket as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_t_),
+            "::",
+            stringify!(ticket)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_t_)).queue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_t_),
+            "::",
+            stringify!(queue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_t_)).no_ack as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_t_),
+            "::",
+            stringify!(no_ack)
+        )
+    );
 }
 pub type amqp_basic_get_t = amqp_basic_get_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_get_ok_t_ {
     pub delivery_tag: u64,
     pub redelivered: amqp_boolean_t,
@@ -2902,194 +3911,266 @@ pub struct amqp_basic_get_ok_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_get_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_get_ok_t_>() , 56usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_get_ok_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_get_ok_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_get_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_ok_t_ ) ) . delivery_tag
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_ok_t_ )
-                , "::" , stringify ! ( delivery_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_ok_t_ ) ) . redelivered as
-                * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_ok_t_ )
-                , "::" , stringify ! ( redelivered ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_ok_t_ ) ) . exchange as *
-                const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_ok_t_ )
-                , "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_ok_t_ ) ) . routing_key as
-                * const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_ok_t_ )
-                , "::" , stringify ! ( routing_key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_ok_t_ ) ) . message_count
-                as * const _ as usize } , 48usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_ok_t_ )
-                , "::" , stringify ! ( message_count ) ));
-}
-impl Clone for amqp_basic_get_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_get_ok_t_>(),
+        56usize,
+        concat!("Size of: ", stringify!(amqp_basic_get_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_get_ok_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_get_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_ok_t_)).delivery_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_ok_t_),
+            "::",
+            stringify!(delivery_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_ok_t_)).redelivered as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_ok_t_),
+            "::",
+            stringify!(redelivered)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_ok_t_)).exchange as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_ok_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_ok_t_)).routing_key as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_ok_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_ok_t_)).message_count as *const _ as usize },
+        48usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_ok_t_),
+            "::",
+            stringify!(message_count)
+        )
+    );
 }
 pub type amqp_basic_get_ok_t = amqp_basic_get_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_get_empty_t_ {
     pub cluster_id: amqp_bytes_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_get_empty_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_get_empty_t_>() , 16usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_basic_get_empty_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_get_empty_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_get_empty_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_get_empty_t_ ) ) . cluster_id
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_get_empty_t_
-                ) , "::" , stringify ! ( cluster_id ) ));
-}
-impl Clone for amqp_basic_get_empty_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_get_empty_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_basic_get_empty_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_get_empty_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_get_empty_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_get_empty_t_)).cluster_id as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_get_empty_t_),
+            "::",
+            stringify!(cluster_id)
+        )
+    );
 }
 pub type amqp_basic_get_empty_t = amqp_basic_get_empty_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_ack_t_ {
     pub delivery_tag: u64,
     pub multiple: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_ack_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_ack_t_>() , 16usize , concat !
-               ( "Size of: " , stringify ! ( amqp_basic_ack_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_ack_t_>() , 8usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_basic_ack_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_ack_t_ ) ) . delivery_tag as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_ack_t_ ) ,
-                "::" , stringify ! ( delivery_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_ack_t_ ) ) . multiple as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_ack_t_ ) ,
-                "::" , stringify ! ( multiple ) ));
-}
-impl Clone for amqp_basic_ack_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_ack_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_basic_ack_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_ack_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_ack_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_ack_t_)).delivery_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_ack_t_),
+            "::",
+            stringify!(delivery_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_ack_t_)).multiple as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_ack_t_),
+            "::",
+            stringify!(multiple)
+        )
+    );
 }
 pub type amqp_basic_ack_t = amqp_basic_ack_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_reject_t_ {
     pub delivery_tag: u64,
     pub requeue: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_reject_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_reject_t_>() , 16usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_reject_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_reject_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_reject_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_reject_t_ ) ) . delivery_tag
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_reject_t_ )
-                , "::" , stringify ! ( delivery_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_reject_t_ ) ) . requeue as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_reject_t_ )
-                , "::" , stringify ! ( requeue ) ));
-}
-impl Clone for amqp_basic_reject_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_reject_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_basic_reject_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_reject_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_reject_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_reject_t_)).delivery_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_reject_t_),
+            "::",
+            stringify!(delivery_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_reject_t_)).requeue as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_reject_t_),
+            "::",
+            stringify!(requeue)
+        )
+    );
 }
 pub type amqp_basic_reject_t = amqp_basic_reject_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_recover_async_t_ {
     pub requeue: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_recover_async_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_recover_async_t_>() , 4usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_basic_recover_async_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_recover_async_t_>() , 4usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_recover_async_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_recover_async_t_ ) ) . requeue
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_recover_async_t_ ) , "::" , stringify ! ( requeue )
-                ));
-}
-impl Clone for amqp_basic_recover_async_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_recover_async_t_>(),
+        4usize,
+        concat!("Size of: ", stringify!(amqp_basic_recover_async_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_recover_async_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_basic_recover_async_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_recover_async_t_)).requeue as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_recover_async_t_),
+            "::",
+            stringify!(requeue)
+        )
+    );
 }
 pub type amqp_basic_recover_async_t = amqp_basic_recover_async_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_recover_t_ {
     pub requeue: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_recover_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_recover_t_>() , 4usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_basic_recover_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_recover_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_recover_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_recover_t_ ) ) . requeue as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_recover_t_ )
-                , "::" , stringify ! ( requeue ) ));
-}
-impl Clone for amqp_basic_recover_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_recover_t_>(),
+        4usize,
+        concat!("Size of: ", stringify!(amqp_basic_recover_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_recover_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_basic_recover_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_recover_t_)).requeue as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_recover_t_),
+            "::",
+            stringify!(requeue)
+        )
+    );
 }
 pub type amqp_basic_recover_t = amqp_basic_recover_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_recover_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_recover_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_recover_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_basic_recover_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_recover_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_recover_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_recover_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_recover_ok_t_ ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_basic_recover_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_recover_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_basic_recover_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_recover_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_basic_recover_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_recover_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_recover_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_basic_recover_ok_t = amqp_basic_recover_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_nack_t_ {
     pub delivery_tag: u64,
     pub multiple: amqp_boolean_t,
@@ -3097,366 +4178,482 @@ pub struct amqp_basic_nack_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_nack_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_nack_t_>() , 16usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_basic_nack_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_nack_t_>() , 8usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_basic_nack_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_nack_t_ ) ) . delivery_tag as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_nack_t_ ) ,
-                "::" , stringify ! ( delivery_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_nack_t_ ) ) . multiple as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_nack_t_ ) ,
-                "::" , stringify ! ( multiple ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_nack_t_ ) ) . requeue as *
-                const _ as usize } , 12usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_basic_nack_t_ ) ,
-                "::" , stringify ! ( requeue ) ));
-}
-impl Clone for amqp_basic_nack_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_nack_t_>(),
+        16usize,
+        concat!("Size of: ", stringify!(amqp_basic_nack_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_nack_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_nack_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_nack_t_)).delivery_tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_nack_t_),
+            "::",
+            stringify!(delivery_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_nack_t_)).multiple as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_nack_t_),
+            "::",
+            stringify!(multiple)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_nack_t_)).requeue as *const _ as usize },
+        12usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_nack_t_),
+            "::",
+            stringify!(requeue)
+        )
+    );
 }
 pub type amqp_basic_nack_t = amqp_basic_nack_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_tx_select_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_tx_select_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_tx_select_t_>() , 1usize , concat !
-               ( "Size of: " , stringify ! ( amqp_tx_select_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_tx_select_t_>() , 1usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_tx_select_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_select_t_ ) ) . dummy as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_select_t_ ) ,
-                "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_tx_select_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_tx_select_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_tx_select_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_tx_select_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_tx_select_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_select_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_select_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_tx_select_t = amqp_tx_select_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_tx_select_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_tx_select_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_tx_select_ok_t_>() , 1usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_tx_select_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_tx_select_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_tx_select_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_select_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_select_ok_t_ )
-                , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_tx_select_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_tx_select_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_tx_select_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_tx_select_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_tx_select_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_select_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_select_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_tx_select_ok_t = amqp_tx_select_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_tx_commit_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_tx_commit_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_tx_commit_t_>() , 1usize , concat !
-               ( "Size of: " , stringify ! ( amqp_tx_commit_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_tx_commit_t_>() , 1usize , concat
-                ! ( "Alignment of " , stringify ! ( amqp_tx_commit_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_commit_t_ ) ) . dummy as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_commit_t_ ) ,
-                "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_tx_commit_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_tx_commit_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_tx_commit_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_tx_commit_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_tx_commit_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_commit_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_commit_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_tx_commit_t = amqp_tx_commit_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_tx_commit_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_tx_commit_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_tx_commit_ok_t_>() , 1usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_tx_commit_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_tx_commit_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_tx_commit_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_commit_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_commit_ok_t_ )
-                , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_tx_commit_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_tx_commit_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_tx_commit_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_tx_commit_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_tx_commit_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_commit_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_commit_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_tx_commit_ok_t = amqp_tx_commit_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_tx_rollback_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_tx_rollback_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_tx_rollback_t_>() , 1usize , concat
-               ! ( "Size of: " , stringify ! ( amqp_tx_rollback_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_tx_rollback_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_tx_rollback_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_rollback_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_rollback_t_ ) ,
-                "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_tx_rollback_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_tx_rollback_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_tx_rollback_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_tx_rollback_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_tx_rollback_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_rollback_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_rollback_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_tx_rollback_t = amqp_tx_rollback_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_tx_rollback_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_tx_rollback_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_tx_rollback_ok_t_>() , 1usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_tx_rollback_ok_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_tx_rollback_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_tx_rollback_ok_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_rollback_ok_t_ ) ) . dummy as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_rollback_ok_t_
-                ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_tx_rollback_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_tx_rollback_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_tx_rollback_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_tx_rollback_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_tx_rollback_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_rollback_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_rollback_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_tx_rollback_ok_t = amqp_tx_rollback_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_confirm_select_t_ {
     pub nowait: amqp_boolean_t,
 }
 #[test]
 fn bindgen_test_layout_amqp_confirm_select_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_confirm_select_t_>() , 4usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_confirm_select_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_confirm_select_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_confirm_select_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_confirm_select_t_ ) ) . nowait as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_confirm_select_t_
-                ) , "::" , stringify ! ( nowait ) ));
-}
-impl Clone for amqp_confirm_select_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_confirm_select_t_>(),
+        4usize,
+        concat!("Size of: ", stringify!(amqp_confirm_select_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_confirm_select_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_confirm_select_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_confirm_select_t_)).nowait as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_confirm_select_t_),
+            "::",
+            stringify!(nowait)
+        )
+    );
 }
 pub type amqp_confirm_select_t = amqp_confirm_select_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_confirm_select_ok_t_ {
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_confirm_select_ok_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_confirm_select_ok_t_>() , 1usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_confirm_select_ok_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_confirm_select_ok_t_>() , 1usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_confirm_select_ok_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_confirm_select_ok_t_ ) ) . dummy as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_confirm_select_ok_t_ ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_confirm_select_ok_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_confirm_select_ok_t_>(),
+        1usize,
+        concat!("Size of: ", stringify!(amqp_confirm_select_ok_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_confirm_select_ok_t_>(),
+        1usize,
+        concat!("Alignment of ", stringify!(amqp_confirm_select_ok_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_confirm_select_ok_t_)).dummy as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_confirm_select_ok_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_confirm_select_ok_t = amqp_confirm_select_ok_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_properties_t_ {
     pub _flags: amqp_flags_t,
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_properties_t_>() , 8usize
-               , concat ! (
-               "Size of: " , stringify ! ( amqp_connection_properties_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_properties_t_>() ,
-                4usize , concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_properties_t_
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_properties_t_ ) ) .
-                _flags as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_properties_t_ ) , "::" , stringify ! ( _flags
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_properties_t_ ) ) . dummy
-                as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_connection_properties_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_connection_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_properties_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_connection_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_properties_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_connection_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_properties_t_)).dummy as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_properties_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_connection_properties_t = amqp_connection_properties_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_channel_properties_t_ {
     pub _flags: amqp_flags_t,
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_channel_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_channel_properties_t_>() , 8usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_channel_properties_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_channel_properties_t_>() , 4usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_channel_properties_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_properties_t_ ) ) . _flags
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_channel_properties_t_ ) , "::" , stringify ! ( _flags )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_channel_properties_t_ ) ) . dummy as
-                * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_channel_properties_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_channel_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_channel_properties_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_channel_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_channel_properties_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_channel_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_channel_properties_t_)).dummy as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_channel_properties_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_channel_properties_t = amqp_channel_properties_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_access_properties_t_ {
     pub _flags: amqp_flags_t,
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_access_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_access_properties_t_>() , 8usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_access_properties_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_access_properties_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_access_properties_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_properties_t_ ) ) . _flags as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_access_properties_t_ ) , "::" , stringify ! ( _flags )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_access_properties_t_ ) ) . dummy as
-                * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_access_properties_t_ ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_access_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_access_properties_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_access_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_access_properties_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_access_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_access_properties_t_)).dummy as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_access_properties_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_access_properties_t = amqp_access_properties_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_exchange_properties_t_ {
     pub _flags: amqp_flags_t,
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_exchange_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_exchange_properties_t_>() , 8usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_exchange_properties_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_exchange_properties_t_>() , 4usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_exchange_properties_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_properties_t_ ) ) . _flags
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_properties_t_ ) , "::" , stringify ! ( _flags )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_exchange_properties_t_ ) ) . dummy
-                as * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_exchange_properties_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_exchange_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_exchange_properties_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_exchange_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_exchange_properties_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_exchange_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_exchange_properties_t_)).dummy as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_exchange_properties_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_exchange_properties_t = amqp_exchange_properties_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_queue_properties_t_ {
     pub _flags: amqp_flags_t,
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_queue_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_queue_properties_t_>() , 8usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_queue_properties_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_queue_properties_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_queue_properties_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_properties_t_ ) ) . _flags as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_queue_properties_t_ ) , "::" , stringify ! ( _flags ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_queue_properties_t_ ) ) . dummy as *
-                const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_queue_properties_t_ ) , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_queue_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_queue_properties_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_queue_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_queue_properties_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_queue_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_queue_properties_t_)).dummy as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_queue_properties_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_queue_properties_t = amqp_queue_properties_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_basic_properties_t_ {
     pub _flags: amqp_flags_t,
     pub content_type: amqp_bytes_t,
@@ -3476,307 +4673,420 @@ pub struct amqp_basic_properties_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_basic_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_basic_properties_t_>() , 200usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_basic_properties_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_basic_properties_t_>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_basic_properties_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . _flags as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( _flags ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) .
-                content_type as * const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( content_type
-                ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) .
-                content_encoding as * const _ as usize } , 24usize , concat !
-                (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! (
-                content_encoding ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . headers as
-                * const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( headers )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) .
-                delivery_mode as * const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! (
-                delivery_mode ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . priority
-                as * const _ as usize } , 57usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( priority )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) .
-                correlation_id as * const _ as usize } , 64usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! (
-                correlation_id ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . reply_to
-                as * const _ as usize } , 80usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( reply_to )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . expiration
-                as * const _ as usize } , 96usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( expiration )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . message_id
-                as * const _ as usize } , 112usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( message_id )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . timestamp
-                as * const _ as usize } , 128usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( timestamp )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . type_ as *
-                const _ as usize } , 136usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( type_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . user_id as
-                * const _ as usize } , 152usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( user_id )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . app_id as
-                * const _ as usize } , 168usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( app_id ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_basic_properties_t_ ) ) . cluster_id
-                as * const _ as usize } , 184usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_basic_properties_t_ ) , "::" , stringify ! ( cluster_id )
-                ));
-}
-impl Clone for amqp_basic_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_basic_properties_t_>(),
+        200usize,
+        concat!("Size of: ", stringify!(amqp_basic_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_basic_properties_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_basic_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).content_type as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(content_type)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).content_encoding as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(content_encoding)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).headers as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(headers)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).delivery_mode as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(delivery_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).priority as *const _ as usize },
+        57usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(priority)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).correlation_id as *const _ as usize },
+        64usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(correlation_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).reply_to as *const _ as usize },
+        80usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(reply_to)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).expiration as *const _ as usize },
+        96usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(expiration)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).message_id as *const _ as usize },
+        112usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(message_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).timestamp as *const _ as usize },
+        128usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(timestamp)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).type_ as *const _ as usize },
+        136usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(type_)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).user_id as *const _ as usize },
+        152usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(user_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).app_id as *const _ as usize },
+        168usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(app_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_basic_properties_t_)).cluster_id as *const _ as usize },
+        184usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_basic_properties_t_),
+            "::",
+            stringify!(cluster_id)
+        )
+    );
 }
 pub type amqp_basic_properties_t = amqp_basic_properties_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_tx_properties_t_ {
     pub _flags: amqp_flags_t,
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_tx_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_tx_properties_t_>() , 8usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_tx_properties_t_ )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_tx_properties_t_>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_tx_properties_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_properties_t_ ) ) . _flags as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_properties_t_ )
-                , "::" , stringify ! ( _flags ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_tx_properties_t_ ) ) . dummy as *
-                const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_tx_properties_t_ )
-                , "::" , stringify ! ( dummy ) ));
-}
-impl Clone for amqp_tx_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_tx_properties_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_tx_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_tx_properties_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_tx_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_tx_properties_t_)).dummy as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_tx_properties_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_tx_properties_t = amqp_tx_properties_t_;
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_confirm_properties_t_ {
     pub _flags: amqp_flags_t,
     pub dummy: ::std::os::raw::c_char,
 }
 #[test]
 fn bindgen_test_layout_amqp_confirm_properties_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_confirm_properties_t_>() , 8usize ,
-               concat ! (
-               "Size of: " , stringify ! ( amqp_confirm_properties_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_confirm_properties_t_>() , 4usize
-                , concat ! (
-                "Alignment of " , stringify ! ( amqp_confirm_properties_t_ )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_confirm_properties_t_ ) ) . _flags
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_confirm_properties_t_ ) , "::" , stringify ! ( _flags )
-                ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_confirm_properties_t_ ) ) . dummy as
-                * const _ as usize } , 4usize , concat ! (
-                "Alignment of field: " , stringify ! (
-                amqp_confirm_properties_t_ ) , "::" , stringify ! ( dummy )
-                ));
-}
-impl Clone for amqp_confirm_properties_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_confirm_properties_t_>(),
+        8usize,
+        concat!("Size of: ", stringify!(amqp_confirm_properties_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_confirm_properties_t_>(),
+        4usize,
+        concat!("Alignment of ", stringify!(amqp_confirm_properties_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_confirm_properties_t_))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_confirm_properties_t_),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_confirm_properties_t_)).dummy as *const _ as usize },
+        4usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_confirm_properties_t_),
+            "::",
+            stringify!(dummy)
+        )
+    );
 }
 pub type amqp_confirm_properties_t = amqp_confirm_properties_t_;
 extern "C" {
-    pub fn amqp_channel_open(state: amqp_connection_state_t,
-                             channel: amqp_channel_t)
-     -> *mut amqp_channel_open_ok_t;
+    pub fn amqp_channel_open(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+    ) -> *mut amqp_channel_open_ok_t;
 }
 extern "C" {
-    pub fn amqp_channel_flow(state: amqp_connection_state_t,
-                             channel: amqp_channel_t, active: amqp_boolean_t)
-     -> *mut amqp_channel_flow_ok_t;
+    pub fn amqp_channel_flow(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        active: amqp_boolean_t,
+    ) -> *mut amqp_channel_flow_ok_t;
 }
 extern "C" {
-    pub fn amqp_exchange_declare(state: amqp_connection_state_t,
-                                 channel: amqp_channel_t,
-                                 exchange: amqp_bytes_t, type_: amqp_bytes_t,
-                                 passive: amqp_boolean_t,
-                                 durable: amqp_boolean_t,
-                                 auto_delete: amqp_boolean_t,
-                                 internal: amqp_boolean_t,
-                                 arguments: amqp_table_t)
-     -> *mut amqp_exchange_declare_ok_t;
+    pub fn amqp_exchange_declare(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        exchange: amqp_bytes_t,
+        type_: amqp_bytes_t,
+        passive: amqp_boolean_t,
+        durable: amqp_boolean_t,
+        auto_delete: amqp_boolean_t,
+        internal: amqp_boolean_t,
+        arguments: amqp_table_t,
+    ) -> *mut amqp_exchange_declare_ok_t;
 }
 extern "C" {
-    pub fn amqp_exchange_delete(state: amqp_connection_state_t,
-                                channel: amqp_channel_t,
-                                exchange: amqp_bytes_t,
-                                if_unused: amqp_boolean_t)
-     -> *mut amqp_exchange_delete_ok_t;
+    pub fn amqp_exchange_delete(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        exchange: amqp_bytes_t,
+        if_unused: amqp_boolean_t,
+    ) -> *mut amqp_exchange_delete_ok_t;
 }
 extern "C" {
-    pub fn amqp_exchange_bind(state: amqp_connection_state_t,
-                              channel: amqp_channel_t,
-                              destination: amqp_bytes_t, source: amqp_bytes_t,
-                              routing_key: amqp_bytes_t,
-                              arguments: amqp_table_t)
-     -> *mut amqp_exchange_bind_ok_t;
+    pub fn amqp_exchange_bind(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        destination: amqp_bytes_t,
+        source: amqp_bytes_t,
+        routing_key: amqp_bytes_t,
+        arguments: amqp_table_t,
+    ) -> *mut amqp_exchange_bind_ok_t;
 }
 extern "C" {
-    pub fn amqp_exchange_unbind(state: amqp_connection_state_t,
-                                channel: amqp_channel_t,
-                                destination: amqp_bytes_t,
-                                source: amqp_bytes_t,
-                                routing_key: amqp_bytes_t,
-                                arguments: amqp_table_t)
-     -> *mut amqp_exchange_unbind_ok_t;
+    pub fn amqp_exchange_unbind(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        destination: amqp_bytes_t,
+        source: amqp_bytes_t,
+        routing_key: amqp_bytes_t,
+        arguments: amqp_table_t,
+    ) -> *mut amqp_exchange_unbind_ok_t;
 }
 extern "C" {
-    pub fn amqp_queue_declare(state: amqp_connection_state_t,
-                              channel: amqp_channel_t, queue: amqp_bytes_t,
-                              passive: amqp_boolean_t,
-                              durable: amqp_boolean_t,
-                              exclusive: amqp_boolean_t,
-                              auto_delete: amqp_boolean_t,
-                              arguments: amqp_table_t)
-     -> *mut amqp_queue_declare_ok_t;
+    pub fn amqp_queue_declare(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        queue: amqp_bytes_t,
+        passive: amqp_boolean_t,
+        durable: amqp_boolean_t,
+        exclusive: amqp_boolean_t,
+        auto_delete: amqp_boolean_t,
+        arguments: amqp_table_t,
+    ) -> *mut amqp_queue_declare_ok_t;
 }
 extern "C" {
-    pub fn amqp_queue_bind(state: amqp_connection_state_t,
-                           channel: amqp_channel_t, queue: amqp_bytes_t,
-                           exchange: amqp_bytes_t, routing_key: amqp_bytes_t,
-                           arguments: amqp_table_t)
-     -> *mut amqp_queue_bind_ok_t;
+    pub fn amqp_queue_bind(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        queue: amqp_bytes_t,
+        exchange: amqp_bytes_t,
+        routing_key: amqp_bytes_t,
+        arguments: amqp_table_t,
+    ) -> *mut amqp_queue_bind_ok_t;
 }
 extern "C" {
-    pub fn amqp_queue_purge(state: amqp_connection_state_t,
-                            channel: amqp_channel_t, queue: amqp_bytes_t)
-     -> *mut amqp_queue_purge_ok_t;
+    pub fn amqp_queue_purge(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        queue: amqp_bytes_t,
+    ) -> *mut amqp_queue_purge_ok_t;
 }
 extern "C" {
-    pub fn amqp_queue_delete(state: amqp_connection_state_t,
-                             channel: amqp_channel_t, queue: amqp_bytes_t,
-                             if_unused: amqp_boolean_t,
-                             if_empty: amqp_boolean_t)
-     -> *mut amqp_queue_delete_ok_t;
+    pub fn amqp_queue_delete(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        queue: amqp_bytes_t,
+        if_unused: amqp_boolean_t,
+        if_empty: amqp_boolean_t,
+    ) -> *mut amqp_queue_delete_ok_t;
 }
 extern "C" {
-    pub fn amqp_queue_unbind(state: amqp_connection_state_t,
-                             channel: amqp_channel_t, queue: amqp_bytes_t,
-                             exchange: amqp_bytes_t,
-                             routing_key: amqp_bytes_t,
-                             arguments: amqp_table_t)
-     -> *mut amqp_queue_unbind_ok_t;
+    pub fn amqp_queue_unbind(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        queue: amqp_bytes_t,
+        exchange: amqp_bytes_t,
+        routing_key: amqp_bytes_t,
+        arguments: amqp_table_t,
+    ) -> *mut amqp_queue_unbind_ok_t;
 }
 extern "C" {
-    pub fn amqp_basic_qos(state: amqp_connection_state_t,
-                          channel: amqp_channel_t, prefetch_size: u32,
-                          prefetch_count: u16, global: amqp_boolean_t)
-     -> *mut amqp_basic_qos_ok_t;
+    pub fn amqp_basic_qos(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        prefetch_size: u32,
+        prefetch_count: u16,
+        global: amqp_boolean_t,
+    ) -> *mut amqp_basic_qos_ok_t;
 }
 extern "C" {
-    pub fn amqp_basic_consume(state: amqp_connection_state_t,
-                              channel: amqp_channel_t, queue: amqp_bytes_t,
-                              consumer_tag: amqp_bytes_t,
-                              no_local: amqp_boolean_t,
-                              no_ack: amqp_boolean_t,
-                              exclusive: amqp_boolean_t,
-                              arguments: amqp_table_t)
-     -> *mut amqp_basic_consume_ok_t;
+    pub fn amqp_basic_consume(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        queue: amqp_bytes_t,
+        consumer_tag: amqp_bytes_t,
+        no_local: amqp_boolean_t,
+        no_ack: amqp_boolean_t,
+        exclusive: amqp_boolean_t,
+        arguments: amqp_table_t,
+    ) -> *mut amqp_basic_consume_ok_t;
 }
 extern "C" {
-    pub fn amqp_basic_cancel(state: amqp_connection_state_t,
-                             channel: amqp_channel_t,
-                             consumer_tag: amqp_bytes_t)
-     -> *mut amqp_basic_cancel_ok_t;
+    pub fn amqp_basic_cancel(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        consumer_tag: amqp_bytes_t,
+    ) -> *mut amqp_basic_cancel_ok_t;
 }
 extern "C" {
-    pub fn amqp_basic_recover(state: amqp_connection_state_t,
-                              channel: amqp_channel_t,
-                              requeue: amqp_boolean_t)
-     -> *mut amqp_basic_recover_ok_t;
+    pub fn amqp_basic_recover(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        requeue: amqp_boolean_t,
+    ) -> *mut amqp_basic_recover_ok_t;
 }
 extern "C" {
-    pub fn amqp_tx_select(state: amqp_connection_state_t,
-                          channel: amqp_channel_t)
-     -> *mut amqp_tx_select_ok_t;
+    pub fn amqp_tx_select(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+    ) -> *mut amqp_tx_select_ok_t;
 }
 extern "C" {
-    pub fn amqp_tx_commit(state: amqp_connection_state_t,
-                          channel: amqp_channel_t)
-     -> *mut amqp_tx_commit_ok_t;
+    pub fn amqp_tx_commit(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+    ) -> *mut amqp_tx_commit_ok_t;
 }
 extern "C" {
-    pub fn amqp_tx_rollback(state: amqp_connection_state_t,
-                            channel: amqp_channel_t)
-     -> *mut amqp_tx_rollback_ok_t;
+    pub fn amqp_tx_rollback(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+    ) -> *mut amqp_tx_rollback_ok_t;
 }
 extern "C" {
-    pub fn amqp_confirm_select(state: amqp_connection_state_t,
-                               channel: amqp_channel_t)
-     -> *mut amqp_confirm_select_ok_t;
+    pub fn amqp_confirm_select(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+    ) -> *mut amqp_confirm_select_ok_t;
 }
 extern "C" {
-    #[link_name = "amqp_empty_bytes"]
-    pub static amqp_empty_bytes: amqp_bytes_t;
+    #[link_name = "\u{1}amqp_empty_bytes"]
+    pub static mut amqp_empty_bytes: amqp_bytes_t;
 }
 extern "C" {
-    #[link_name = "amqp_empty_table"]
-    pub static amqp_empty_table: amqp_table_t;
+    #[link_name = "\u{1}amqp_empty_table"]
+    pub static mut amqp_empty_table: amqp_table_t;
 }
 extern "C" {
-    #[link_name = "amqp_empty_array"]
-    pub static amqp_empty_array: amqp_array_t;
+    #[link_name = "\u{1}amqp_empty_array"]
+    pub static mut amqp_empty_array: amqp_array_t;
 }
 extern "C" {
     pub fn init_amqp_pool(pool: *mut amqp_pool_t, pagesize: usize);
@@ -3788,16 +5098,13 @@ extern "C" {
     pub fn empty_amqp_pool(pool: *mut amqp_pool_t);
 }
 extern "C" {
-    pub fn amqp_pool_alloc(pool: *mut amqp_pool_t, amount: usize)
-     -> *mut ::std::os::raw::c_void;
+    pub fn amqp_pool_alloc(pool: *mut amqp_pool_t, amount: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn amqp_pool_alloc_bytes(pool: *mut amqp_pool_t, amount: usize,
-                                 output: *mut amqp_bytes_t);
+    pub fn amqp_pool_alloc_bytes(pool: *mut amqp_pool_t, amount: usize, output: *mut amqp_bytes_t);
 }
 extern "C" {
-    pub fn amqp_cstring_bytes(cstr: *const ::std::os::raw::c_char)
-     -> amqp_bytes_t;
+    pub fn amqp_cstring_bytes(cstr: *const ::std::os::raw::c_char) -> amqp_bytes_t;
 }
 extern "C" {
     pub fn amqp_bytes_malloc_dup(src: amqp_bytes_t) -> amqp_bytes_t;
@@ -3812,45 +5119,40 @@ extern "C" {
     pub fn amqp_new_connection() -> amqp_connection_state_t;
 }
 extern "C" {
-    pub fn amqp_get_sockfd(state: amqp_connection_state_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_get_sockfd(state: amqp_connection_state_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_set_sockfd(state: amqp_connection_state_t,
-                           sockfd: ::std::os::raw::c_int);
+    pub fn amqp_set_sockfd(state: amqp_connection_state_t, sockfd: ::std::os::raw::c_int);
 }
 extern "C" {
-    pub fn amqp_tune_connection(state: amqp_connection_state_t,
-                                channel_max: ::std::os::raw::c_int,
-                                frame_max: ::std::os::raw::c_int,
-                                heartbeat: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_tune_connection(
+        state: amqp_connection_state_t,
+        channel_max: ::std::os::raw::c_int,
+        frame_max: ::std::os::raw::c_int,
+        heartbeat: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_get_channel_max(state: amqp_connection_state_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_get_channel_max(state: amqp_connection_state_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_get_frame_max(state: amqp_connection_state_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_get_frame_max(state: amqp_connection_state_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_get_heartbeat(state: amqp_connection_state_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_get_heartbeat(state: amqp_connection_state_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_destroy_connection(state: amqp_connection_state_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_destroy_connection(state: amqp_connection_state_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_handle_input(state: amqp_connection_state_t,
-                             received_data: amqp_bytes_t,
-                             decoded_frame: *mut amqp_frame_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_handle_input(
+        state: amqp_connection_state_t,
+        received_data: amqp_bytes_t,
+        decoded_frame: *mut amqp_frame_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_release_buffers_ok(state: amqp_connection_state_t)
-     -> amqp_boolean_t;
+    pub fn amqp_release_buffers_ok(state: amqp_connection_state_t) -> amqp_boolean_t;
 }
 extern "C" {
     pub fn amqp_release_buffers(state: amqp_connection_state_t);
@@ -3859,168 +5161,199 @@ extern "C" {
     pub fn amqp_maybe_release_buffers(state: amqp_connection_state_t);
 }
 extern "C" {
-    pub fn amqp_maybe_release_buffers_on_channel(state:
-                                                     amqp_connection_state_t,
-                                                 channel: amqp_channel_t);
+    pub fn amqp_maybe_release_buffers_on_channel(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+    );
 }
 extern "C" {
-    pub fn amqp_send_frame(state: amqp_connection_state_t,
-                           frame: *const amqp_frame_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_send_frame(
+        state: amqp_connection_state_t,
+        frame: *const amqp_frame_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_table_entry_cmp(entry1: *const ::std::os::raw::c_void,
-                                entry2: *const ::std::os::raw::c_void)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_table_entry_cmp(
+        entry1: *const ::std::os::raw::c_void,
+        entry2: *const ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_open_socket(hostname: *const ::std::os::raw::c_char,
-                            portnumber: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_open_socket(
+        hostname: *const ::std::os::raw::c_char,
+        portnumber: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_send_header(state: amqp_connection_state_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_send_header(state: amqp_connection_state_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_frames_enqueued(state: amqp_connection_state_t)
-     -> amqp_boolean_t;
+    pub fn amqp_frames_enqueued(state: amqp_connection_state_t) -> amqp_boolean_t;
 }
 extern "C" {
-    pub fn amqp_simple_wait_frame(state: amqp_connection_state_t,
-                                  decoded_frame: *mut amqp_frame_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_simple_wait_frame(
+        state: amqp_connection_state_t,
+        decoded_frame: *mut amqp_frame_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_simple_wait_frame_noblock(state: amqp_connection_state_t,
-                                          decoded_frame: *mut amqp_frame_t,
-                                          tv: *mut timeval)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_simple_wait_frame_noblock(
+        state: amqp_connection_state_t,
+        decoded_frame: *mut amqp_frame_t,
+        tv: *mut timeval,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_simple_wait_method(state: amqp_connection_state_t,
-                                   expected_channel: amqp_channel_t,
-                                   expected_method: amqp_method_number_t,
-                                   output: *mut amqp_method_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_simple_wait_method(
+        state: amqp_connection_state_t,
+        expected_channel: amqp_channel_t,
+        expected_method: amqp_method_number_t,
+        output: *mut amqp_method_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_send_method(state: amqp_connection_state_t,
-                            channel: amqp_channel_t, id: amqp_method_number_t,
-                            decoded: *mut ::std::os::raw::c_void)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_send_method(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        id: amqp_method_number_t,
+        decoded: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_simple_rpc(state: amqp_connection_state_t,
-                           channel: amqp_channel_t,
-                           request_id: amqp_method_number_t,
-                           expected_reply_ids: *mut amqp_method_number_t,
-                           decoded_request_method:
-                               *mut ::std::os::raw::c_void)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_simple_rpc(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        request_id: amqp_method_number_t,
+        expected_reply_ids: *mut amqp_method_number_t,
+        decoded_request_method: *mut ::std::os::raw::c_void,
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
-    pub fn amqp_simple_rpc_decoded(state: amqp_connection_state_t,
-                                   channel: amqp_channel_t,
-                                   request_id: amqp_method_number_t,
-                                   reply_id: amqp_method_number_t,
-                                   decoded_request_method:
-                                       *mut ::std::os::raw::c_void)
-     -> *mut ::std::os::raw::c_void;
+    pub fn amqp_simple_rpc_decoded(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        request_id: amqp_method_number_t,
+        reply_id: amqp_method_number_t,
+        decoded_request_method: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn amqp_get_rpc_reply(state: amqp_connection_state_t)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_get_rpc_reply(state: amqp_connection_state_t) -> amqp_rpc_reply_t;
 }
 extern "C" {
-    pub fn amqp_login(state: amqp_connection_state_t,
-                      vhost: *const ::std::os::raw::c_char,
-                      channel_max: ::std::os::raw::c_int,
-                      frame_max: ::std::os::raw::c_int,
-                      heartbeat: ::std::os::raw::c_int,
-                      sasl_method: amqp_sasl_method_enum, ...)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_login(
+        state: amqp_connection_state_t,
+        vhost: *const ::std::os::raw::c_char,
+        channel_max: ::std::os::raw::c_int,
+        frame_max: ::std::os::raw::c_int,
+        heartbeat: ::std::os::raw::c_int,
+        sasl_method: amqp_sasl_method_enum,
+        ...
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
-    pub fn amqp_login_with_properties(state: amqp_connection_state_t,
-                                      vhost: *const ::std::os::raw::c_char,
-                                      channel_max: ::std::os::raw::c_int,
-                                      frame_max: ::std::os::raw::c_int,
-                                      heartbeat: ::std::os::raw::c_int,
-                                      properties: *const amqp_table_t,
-                                      sasl_method: amqp_sasl_method_enum, ...)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_login_with_properties(
+        state: amqp_connection_state_t,
+        vhost: *const ::std::os::raw::c_char,
+        channel_max: ::std::os::raw::c_int,
+        frame_max: ::std::os::raw::c_int,
+        heartbeat: ::std::os::raw::c_int,
+        properties: *const amqp_table_t,
+        sasl_method: amqp_sasl_method_enum,
+        ...
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
-    pub fn amqp_basic_publish(state: amqp_connection_state_t,
-                              channel: amqp_channel_t, exchange: amqp_bytes_t,
-                              routing_key: amqp_bytes_t,
-                              mandatory: amqp_boolean_t,
-                              immediate: amqp_boolean_t,
-                              properties: *const amqp_basic_properties_t_,
-                              body: amqp_bytes_t) -> ::std::os::raw::c_int;
+    pub fn amqp_basic_publish(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        exchange: amqp_bytes_t,
+        routing_key: amqp_bytes_t,
+        mandatory: amqp_boolean_t,
+        immediate: amqp_boolean_t,
+        properties: *const amqp_basic_properties_t_,
+        body: amqp_bytes_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_channel_close(state: amqp_connection_state_t,
-                              channel: amqp_channel_t,
-                              code: ::std::os::raw::c_int)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_channel_close(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        code: ::std::os::raw::c_int,
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
-    pub fn amqp_connection_close(state: amqp_connection_state_t,
-                                 code: ::std::os::raw::c_int)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_connection_close(
+        state: amqp_connection_state_t,
+        code: ::std::os::raw::c_int,
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
-    pub fn amqp_basic_ack(state: amqp_connection_state_t,
-                          channel: amqp_channel_t, delivery_tag: u64,
-                          multiple: amqp_boolean_t) -> ::std::os::raw::c_int;
+    pub fn amqp_basic_ack(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        delivery_tag: u64,
+        multiple: amqp_boolean_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_basic_get(state: amqp_connection_state_t,
-                          channel: amqp_channel_t, queue: amqp_bytes_t,
-                          no_ack: amqp_boolean_t) -> amqp_rpc_reply_t;
+    pub fn amqp_basic_get(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        queue: amqp_bytes_t,
+        no_ack: amqp_boolean_t,
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
-    pub fn amqp_basic_reject(state: amqp_connection_state_t,
-                             channel: amqp_channel_t, delivery_tag: u64,
-                             requeue: amqp_boolean_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_basic_reject(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        delivery_tag: u64,
+        requeue: amqp_boolean_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_basic_nack(state: amqp_connection_state_t,
-                           channel: amqp_channel_t, delivery_tag: u64,
-                           multiple: amqp_boolean_t, requeue: amqp_boolean_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_basic_nack(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        delivery_tag: u64,
+        multiple: amqp_boolean_t,
+        requeue: amqp_boolean_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_data_in_buffer(state: amqp_connection_state_t)
-     -> amqp_boolean_t;
+    pub fn amqp_data_in_buffer(state: amqp_connection_state_t) -> amqp_boolean_t;
 }
 extern "C" {
-    pub fn amqp_error_string(err: ::std::os::raw::c_int)
-     -> *mut ::std::os::raw::c_char;
+    pub fn amqp_error_string(err: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn amqp_error_string2(err: ::std::os::raw::c_int)
-     -> *const ::std::os::raw::c_char;
+    pub fn amqp_error_string2(err: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn amqp_decode_table(encoded: amqp_bytes_t, pool: *mut amqp_pool_t,
-                             output: *mut amqp_table_t, offset: *mut usize)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_decode_table(
+        encoded: amqp_bytes_t,
+        pool: *mut amqp_pool_t,
+        output: *mut amqp_table_t,
+        offset: *mut usize,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_encode_table(encoded: amqp_bytes_t, input: *mut amqp_table_t,
-                             offset: *mut usize) -> ::std::os::raw::c_int;
+    pub fn amqp_encode_table(
+        encoded: amqp_bytes_t,
+        input: *mut amqp_table_t,
+        offset: *mut usize,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_table_clone(original: *const amqp_table_t,
-                            clone: *mut amqp_table_t, pool: *mut amqp_pool_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_table_clone(
+        original: *const amqp_table_t,
+        clone: *mut amqp_table_t,
+        pool: *mut amqp_pool_t,
+    ) -> ::std::os::raw::c_int;
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_message_t_ {
     pub properties: amqp_basic_properties_t,
     pub body: amqp_bytes_t,
@@ -4028,42 +5361,61 @@ pub struct amqp_message_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_message_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_message_t_>() , 280usize , concat !
-               ( "Size of: " , stringify ! ( amqp_message_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_message_t_>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( amqp_message_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_message_t_ ) ) . properties as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_message_t_ ) ,
-                "::" , stringify ! ( properties ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_message_t_ ) ) . body as * const _
-                as usize } , 200usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_message_t_ ) ,
-                "::" , stringify ! ( body ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_message_t_ ) ) . pool as * const _
-                as usize } , 216usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_message_t_ ) ,
-                "::" , stringify ! ( pool ) ));
-}
-impl Clone for amqp_message_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_message_t_>(),
+        280usize,
+        concat!("Size of: ", stringify!(amqp_message_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_message_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_message_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_message_t_)).properties as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_message_t_),
+            "::",
+            stringify!(properties)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_message_t_)).body as *const _ as usize },
+        200usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_message_t_),
+            "::",
+            stringify!(body)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_message_t_)).pool as *const _ as usize },
+        216usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_message_t_),
+            "::",
+            stringify!(pool)
+        )
+    );
 }
 pub type amqp_message_t = amqp_message_t_;
 extern "C" {
-    pub fn amqp_read_message(state: amqp_connection_state_t,
-                             channel: amqp_channel_t,
-                             message: *mut amqp_message_t,
-                             flags: ::std::os::raw::c_int)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_read_message(
+        state: amqp_connection_state_t,
+        channel: amqp_channel_t,
+        message: *mut amqp_message_t,
+        flags: ::std::os::raw::c_int,
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
     pub fn amqp_destroy_message(message: *mut amqp_message_t);
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_envelope_t_ {
     pub channel: amqp_channel_t,
     pub consumer_tag: amqp_bytes_t,
@@ -4075,62 +5427,101 @@ pub struct amqp_envelope_t_ {
 }
 #[test]
 fn bindgen_test_layout_amqp_envelope_t_() {
-    assert_eq!(::std::mem::size_of::<amqp_envelope_t_>() , 352usize , concat !
-               ( "Size of: " , stringify ! ( amqp_envelope_t_ ) ));
-    assert_eq! (::std::mem::align_of::<amqp_envelope_t_>() , 8usize , concat !
-                ( "Alignment of " , stringify ! ( amqp_envelope_t_ ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_envelope_t_ ) ) . channel as * const
-                _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_envelope_t_ ) ,
-                "::" , stringify ! ( channel ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_envelope_t_ ) ) . consumer_tag as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_envelope_t_ ) ,
-                "::" , stringify ! ( consumer_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_envelope_t_ ) ) . delivery_tag as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_envelope_t_ ) ,
-                "::" , stringify ! ( delivery_tag ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_envelope_t_ ) ) . redelivered as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_envelope_t_ ) ,
-                "::" , stringify ! ( redelivered ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_envelope_t_ ) ) . exchange as *
-                const _ as usize } , 40usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_envelope_t_ ) ,
-                "::" , stringify ! ( exchange ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_envelope_t_ ) ) . routing_key as *
-                const _ as usize } , 56usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_envelope_t_ ) ,
-                "::" , stringify ! ( routing_key ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_envelope_t_ ) ) . message as * const
-                _ as usize } , 72usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_envelope_t_ ) ,
-                "::" , stringify ! ( message ) ));
-}
-impl Clone for amqp_envelope_t_ {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_envelope_t_>(),
+        352usize,
+        concat!("Size of: ", stringify!(amqp_envelope_t_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_envelope_t_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_envelope_t_))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_envelope_t_)).channel as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_envelope_t_),
+            "::",
+            stringify!(channel)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_envelope_t_)).consumer_tag as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_envelope_t_),
+            "::",
+            stringify!(consumer_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_envelope_t_)).delivery_tag as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_envelope_t_),
+            "::",
+            stringify!(delivery_tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_envelope_t_)).redelivered as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_envelope_t_),
+            "::",
+            stringify!(redelivered)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_envelope_t_)).exchange as *const _ as usize },
+        40usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_envelope_t_),
+            "::",
+            stringify!(exchange)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_envelope_t_)).routing_key as *const _ as usize },
+        56usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_envelope_t_),
+            "::",
+            stringify!(routing_key)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_envelope_t_)).message as *const _ as usize },
+        72usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_envelope_t_),
+            "::",
+            stringify!(message)
+        )
+    );
 }
 pub type amqp_envelope_t = amqp_envelope_t_;
 extern "C" {
-    pub fn amqp_consume_message(state: amqp_connection_state_t,
-                                envelope: *mut amqp_envelope_t,
-                                timeout: *mut timeval,
-                                flags: ::std::os::raw::c_int)
-     -> amqp_rpc_reply_t;
+    pub fn amqp_consume_message(
+        state: amqp_connection_state_t,
+        envelope: *mut amqp_envelope_t,
+        timeout: *mut timeval,
+        flags: ::std::os::raw::c_int,
+    ) -> amqp_rpc_reply_t;
 }
 extern "C" {
     pub fn amqp_destroy_envelope(envelope: *mut amqp_envelope_t);
 }
 #[repr(C)]
-#[derive(Debug, Copy)]
+#[derive(Debug, Copy, Clone)]
 pub struct amqp_connection_info {
     pub user: *mut ::std::os::raw::c_char,
     pub password: *mut ::std::os::raw::c_char,
@@ -4141,137 +5532,163 @@ pub struct amqp_connection_info {
 }
 #[test]
 fn bindgen_test_layout_amqp_connection_info() {
-    assert_eq!(::std::mem::size_of::<amqp_connection_info>() , 40usize ,
-               concat ! ( "Size of: " , stringify ! ( amqp_connection_info )
-               ));
-    assert_eq! (::std::mem::align_of::<amqp_connection_info>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( amqp_connection_info ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_info ) ) . user as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_info )
-                , "::" , stringify ! ( user ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_info ) ) . password as *
-                const _ as usize } , 8usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_info )
-                , "::" , stringify ! ( password ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_info ) ) . host as *
-                const _ as usize } , 16usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_info )
-                , "::" , stringify ! ( host ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_info ) ) . vhost as *
-                const _ as usize } , 24usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_info )
-                , "::" , stringify ! ( vhost ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_info ) ) . port as *
-                const _ as usize } , 32usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_info )
-                , "::" , stringify ! ( port ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const amqp_connection_info ) ) . ssl as * const
-                _ as usize } , 36usize , concat ! (
-                "Alignment of field: " , stringify ! ( amqp_connection_info )
-                , "::" , stringify ! ( ssl ) ));
-}
-impl Clone for amqp_connection_info {
-    fn clone(&self) -> Self { *self }
+    assert_eq!(
+        ::std::mem::size_of::<amqp_connection_info>(),
+        40usize,
+        concat!("Size of: ", stringify!(amqp_connection_info))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<amqp_connection_info>(),
+        8usize,
+        concat!("Alignment of ", stringify!(amqp_connection_info))
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_info)).user as *const _ as usize },
+        0usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_info),
+            "::",
+            stringify!(user)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_info)).password as *const _ as usize },
+        8usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_info),
+            "::",
+            stringify!(password)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_info)).host as *const _ as usize },
+        16usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_info),
+            "::",
+            stringify!(host)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_info)).vhost as *const _ as usize },
+        24usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_info),
+            "::",
+            stringify!(vhost)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_info)).port as *const _ as usize },
+        32usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_info),
+            "::",
+            stringify!(port)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(0 as *const amqp_connection_info)).ssl as *const _ as usize },
+        36usize,
+        concat!(
+            "Alignment of field: ",
+            stringify!(amqp_connection_info),
+            "::",
+            stringify!(ssl)
+        )
+    );
 }
 extern "C" {
     pub fn amqp_default_connection_info(parsed: *mut amqp_connection_info);
 }
 extern "C" {
-    pub fn amqp_parse_url(url: *mut ::std::os::raw::c_char,
-                          parsed: *mut amqp_connection_info)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_parse_url(
+        url: *mut ::std::os::raw::c_char,
+        parsed: *mut amqp_connection_info,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_socket_open(self_: *mut amqp_socket_t,
-                            host: *const ::std::os::raw::c_char,
-                            port: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_socket_open(
+        self_: *mut amqp_socket_t,
+        host: *const ::std::os::raw::c_char,
+        port: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_socket_open_noblock(self_: *mut amqp_socket_t,
-                                    host: *const ::std::os::raw::c_char,
-                                    port: ::std::os::raw::c_int,
-                                    timeout: *mut timeval)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_socket_open_noblock(
+        self_: *mut amqp_socket_t,
+        host: *const ::std::os::raw::c_char,
+        port: ::std::os::raw::c_int,
+        timeout: *mut timeval,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_socket_get_sockfd(self_: *mut amqp_socket_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_socket_get_sockfd(self_: *mut amqp_socket_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_get_socket(state: amqp_connection_state_t)
-     -> *mut amqp_socket_t;
+    pub fn amqp_get_socket(state: amqp_connection_state_t) -> *mut amqp_socket_t;
 }
 extern "C" {
-    pub fn amqp_get_server_properties(state: amqp_connection_state_t)
-     -> *mut amqp_table_t;
+    pub fn amqp_get_server_properties(state: amqp_connection_state_t) -> *mut amqp_table_t;
 }
 extern "C" {
-    pub fn amqp_get_client_properties(state: amqp_connection_state_t)
-     -> *mut amqp_table_t;
+    pub fn amqp_get_client_properties(state: amqp_connection_state_t) -> *mut amqp_table_t;
 }
 extern "C" {
-    pub fn amqp_tcp_socket_new(state: amqp_connection_state_t)
-     -> *mut amqp_socket_t;
+    pub fn amqp_tcp_socket_new(state: amqp_connection_state_t) -> *mut amqp_socket_t;
 }
 extern "C" {
-    pub fn amqp_tcp_socket_set_sockfd(self_: *mut amqp_socket_t,
-                                      sockfd: ::std::os::raw::c_int);
+    pub fn amqp_tcp_socket_set_sockfd(self_: *mut amqp_socket_t, sockfd: ::std::os::raw::c_int);
 }
 extern "C" {
-    pub fn amqp_ssl_socket_new(state: amqp_connection_state_t)
-     -> *mut amqp_socket_t;
+    pub fn amqp_ssl_socket_new(state: amqp_connection_state_t) -> *mut amqp_socket_t;
 }
 extern "C" {
-    pub fn amqp_ssl_socket_set_cacert(self_: *mut amqp_socket_t,
-                                      cacert: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_ssl_socket_set_cacert(
+        self_: *mut amqp_socket_t,
+        cacert: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_ssl_socket_set_key(self_: *mut amqp_socket_t,
-                                   cert: *const ::std::os::raw::c_char,
-                                   key: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_ssl_socket_set_key(
+        self_: *mut amqp_socket_t,
+        cert: *const ::std::os::raw::c_char,
+        key: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_ssl_socket_set_key_buffer(self_: *mut amqp_socket_t,
-                                          cert: *const ::std::os::raw::c_char,
-                                          key: *const ::std::os::raw::c_void,
-                                          n: usize) -> ::std::os::raw::c_int;
+    pub fn amqp_ssl_socket_set_key_buffer(
+        self_: *mut amqp_socket_t,
+        cert: *const ::std::os::raw::c_char,
+        key: *const ::std::os::raw::c_void,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn amqp_ssl_socket_set_verify(self_: *mut amqp_socket_t,
-                                      verify: amqp_boolean_t);
+    pub fn amqp_ssl_socket_set_verify(self_: *mut amqp_socket_t, verify: amqp_boolean_t);
 }
 extern "C" {
-    pub fn amqp_ssl_socket_set_verify_peer(self_: *mut amqp_socket_t,
-                                           verify: amqp_boolean_t);
+    pub fn amqp_ssl_socket_set_verify_peer(self_: *mut amqp_socket_t, verify: amqp_boolean_t);
 }
 extern "C" {
-    pub fn amqp_ssl_socket_set_verify_hostname(self_: *mut amqp_socket_t,
-                                               verify: amqp_boolean_t);
+    pub fn amqp_ssl_socket_set_verify_hostname(self_: *mut amqp_socket_t, verify: amqp_boolean_t);
 }
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum amqp_tls_version_t {
-    AMQP_TLSv1 = 1,
-    AMQP_TLSv1_1 = 2,
-    AMQP_TLSv1_2 = 3,
-    AMQP_TLSvLATEST = 65535,
-}
+pub const amqp_tls_version_t_AMQP_TLSv1: amqp_tls_version_t = 1;
+pub const amqp_tls_version_t_AMQP_TLSv1_1: amqp_tls_version_t = 2;
+pub const amqp_tls_version_t_AMQP_TLSv1_2: amqp_tls_version_t = 3;
+pub const amqp_tls_version_t_AMQP_TLSvLATEST: amqp_tls_version_t = 65535;
+pub type amqp_tls_version_t = ::std::os::raw::c_uint;
 extern "C" {
-    pub fn amqp_ssl_socket_set_ssl_versions(self_: *mut amqp_socket_t,
-                                            min: amqp_tls_version_t,
-                                            max: amqp_tls_version_t)
-     -> ::std::os::raw::c_int;
+    pub fn amqp_ssl_socket_set_ssl_versions(
+        self_: *mut amqp_socket_t,
+        min: amqp_tls_version_t,
+        max: amqp_tls_version_t,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn amqp_set_initialize_ssl_library(do_initialize: amqp_boolean_t);

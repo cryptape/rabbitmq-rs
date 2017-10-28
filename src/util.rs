@@ -1,4 +1,4 @@
-use libc::{suseconds_t, time_t, timeval};
+use libc::timeval;
 use std::time::Duration;
 
 
