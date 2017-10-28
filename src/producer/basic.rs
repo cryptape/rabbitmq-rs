@@ -31,7 +31,7 @@ pub fn basic_publish(
         )
     };
 
-    if status != (raw_rabbitmq::amqp_status_enum::AMQP_STATUS_OK as i32) {
+    if status != (raw_rabbitmq::amqp_status_enum__AMQP_STATUS_OK as i32) {
         return Err(Error::Status(status));
     }
     Ok(())

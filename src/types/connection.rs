@@ -38,7 +38,7 @@ impl Connection {
 
         println!("status {:?}", status);
 
-        if status != (raw_rabbitmq::amqp_status_enum::AMQP_STATUS_OK as i32) {
+        if status != (raw_rabbitmq::amqp_status_enum__AMQP_STATUS_OK as i32) {
             return Err(Error::Status(status));
         }
 
@@ -76,14 +76,14 @@ impl Connection {
                 channel_max,
                 frame_max,
                 heartbeat,
-                raw_rabbitmq::amqp_sasl_method_enum::AMQP_SASL_METHOD_PLAIN,
+                raw_rabbitmq::amqp_sasl_method_enum__AMQP_SASL_METHOD_PLAIN,
                 login.as_ptr(),
                 password.as_ptr(),
             )
         };
 
         match login_reply.reply_type {
-            raw_rabbitmq::amqp_response_type_enum::AMQP_RESPONSE_NORMAL => Ok(()),
+            raw_rabbitmq::amqp_response_type_enum__AMQP_RESPONSE_NORMAL => Ok(()),
             _ => Err(Error::Reply),
         }
     }

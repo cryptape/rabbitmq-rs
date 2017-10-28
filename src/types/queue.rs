@@ -45,7 +45,7 @@ impl<'a> Queue<'a> {
         let reply = unsafe { raw_rabbitmq::amqp_get_rpc_reply(conn) };
 
         let _ = match reply.reply_type {
-            raw_rabbitmq::amqp_response_type_enum::AMQP_RESPONSE_NORMAL => Ok(()),
+            raw_rabbitmq::amqp_response_type_enum__AMQP_RESPONSE_NORMAL => Ok(()),
             _ => Err(Error::Reply),
         }?;
 
