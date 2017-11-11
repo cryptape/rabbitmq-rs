@@ -39,7 +39,7 @@ mod tests {
 
         let raw_props = props.raw;
 
-        let rpc = rpc::rpc_call("rpc_call", &reply_queue, "amq.direct", "1", "3");
+        let rpc = rpc::rpc_call("rpc_call", &reply_queue, "", "10", "3");
 
         // let status = unsafe {
         //     (*raw_props)._flags = raw_rabbitmq::AMQP_BASIC_CONTENT_TYPE_FLAG
