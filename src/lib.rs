@@ -1,11 +1,16 @@
+#![feature(optin_builtin_traits)]
+extern crate bytes;
+extern crate futures;
 extern crate libc;
 extern crate librabbitmq_sys as raw_rabbitmq;
+#[macro_use]
+extern crate log;
 
 mod util;
 mod error;
 mod types;
-mod producer;
 mod rpc;
+mod read_frame;
 
 #[cfg(test)]
 mod tests {
@@ -28,8 +33,9 @@ mod tests {
         assert!(channel.is_ok());
         let channel = channel.unwrap();
 
-        let reply_queue = types::queue::Queue::new(&channel, "rpc", false, false, true, false);
+        let ex = channel.default_exchange();
 
+        let reply_queue = channel.declare_queue("rpc".to_owned(), false, false, true, false);
 
         assert!(reply_queue.is_ok());
 
@@ -39,7 +45,19 @@ mod tests {
 
         let raw_props = props.raw;
 
-        let rpc = rpc::rpc_call("rpc_call", &reply_queue, "", "10", "3");
+
+        for i in 1..1_000_000 {
+            let rpc = rpc::rpc_call(
+                &channel,
+                &ex,
+                &reply_queue,
+                "rpc_call",
+                &format!("{}", i),
+                &format!("{}", i),
+            );
+            println!("{}-{:?}", i, rpc);
+        }
+
 
         // let status = unsafe {
         //     (*raw_props)._flags = raw_rabbitmq::AMQP_BASIC_CONTENT_TYPE_FLAG

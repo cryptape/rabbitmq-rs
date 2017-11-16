@@ -7,7 +7,9 @@ pub enum Error {
     Cstring(NulError),
     TCPSocket,
     Status(i32),
+    Decode,
     Reply,
+    Frame,
 }
 
 
@@ -26,6 +28,8 @@ impl StdError for Error {
             Status(ref code) => "creat TCP socket status",
             TCPSocket => "creat TCP socket error",
             Reply => "Reply error",
+            Decode => "Decode error",
+            Frame => "Frame error",
         }
     }
 }

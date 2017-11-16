@@ -6,3 +6,6 @@ authors = ["zhangsoledad <787953403@qq.com>"]
 [dependencies]
 librabbitmq-sys = { path = "librabbitmq-sys" }
 libc = "0.2"
+bytes = "0.4"
+log = "0.3"
+futures = "0.1"
