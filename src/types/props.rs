@@ -18,3 +18,12 @@ impl BasicProperties {
         BasicProperties { raw: raw }
     }
 }
+
+
+impl Drop for BasicProperties {
+    fn drop(&mut self) {
+        unsafe {
+            libc::free(self.raw as * mut _);
+        }
+    }
+}

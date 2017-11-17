@@ -77,12 +77,12 @@ pub fn rpc_call(
         raw_rabbitmq::amqp_maybe_release_buffers(conn);
         
         let resp = loop {
-            let method_frame = ReadFrame::new(conn);
+            let method_frame = ReadFrame::new(conn, frame);
             let method_frame = method_frame.wait();
             if method_frame.is_err() {
                 break None;
             }
-            let frame = method_frame.unwrap().ptr;
+            let frame = method_frame.unwrap();
 
             // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
             // println!("Result:{}", result);
@@ -109,11 +109,11 @@ pub fn rpc_call(
 
             // d = mem::transmute((*frame).payload.method.decoded);
 
-            let header_frame = ReadFrame::new(conn).wait();
+            let header_frame = ReadFrame::new(conn, frame).wait();
             if header_frame.is_err() {
                 break None;
             }
-            let frame = header_frame.unwrap().ptr;
+            let frame = header_frame.unwrap();
 
             // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
             // if result < 0 {
@@ -137,11 +137,11 @@ pub fn rpc_call(
                 //     break;
                 // }
 
-                let body_frame = ReadFrame::new(conn).wait();
+                let body_frame = ReadFrame::new(conn, frame).wait();
                 if body_frame.is_err() {
                     break;
                 }
-                let frame = body_frame.unwrap().ptr;
+                let frame = body_frame.unwrap();
 
                 if (*frame).frame_type != (raw_rabbitmq::AMQP_FRAME_BODY as u8) {
                     println!("Unexpected body!");
@@ -167,7 +167,7 @@ pub fn rpc_call(
 
             break Some(buf);
         };
-
+        libc::free(frame as *mut _);
         Ok(resp)
     }
 }
