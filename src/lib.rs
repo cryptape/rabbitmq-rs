@@ -10,12 +10,13 @@ mod util;
 mod error;
 mod types;
 mod rpc;
-mod read_frame;
+mod read_message;
 
 #[cfg(test)]
 mod tests {
     use std::time::Duration;
     use libc::c_char;
+    use futures::{stream, Stream, Future};
     use super::*;
 
     #[test]
@@ -46,17 +47,31 @@ mod tests {
         let raw_props = props.raw;
 
 
-        for i in 1..1_000_000 {
-            let rpc = rpc::rpc_call(
+        let futures =  stream::futures_ordered((1..1_000_000).collect::<Vec<u64>>().iter().map(|i| {
+            rpc::rpc_call(
                 &channel,
                 &ex,
                 &reply_queue,
                 "rpc_call",
                 &format!("{}", i),
                 &format!("{}", i),
-            );
-            println!("{}-{:?}", i, rpc);
-        }
+            ).unwrap()
+        }));
+        futures.collect().wait();
+        // .map(|future| future.wait() ).collect::<Vec<_>>();
+
+
+        // for i in 1..1_000_000 {
+        //     let rpc = rpc::rpc_call(
+        //         &channel,
+        //         &ex,
+        //         &reply_queue,
+        //         "rpc_call",
+        //         &format!("{}", i),
+        //         &format!("{}", i),
+        //     ).unwrap().wait();
+        //     println!("{}-{:?}", i, rpc);
+        // }
 
 
         // let status = unsafe {

@@ -23,7 +23,7 @@ impl BasicProperties {
 impl Drop for BasicProperties {
     fn drop(&mut self) {
         unsafe {
-            libc::free(self.raw as * mut _);
+            libc::free(self.raw as *mut _);
         }
     }
 }

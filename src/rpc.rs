@@ -10,7 +10,7 @@ use libc::{self, c_char};
 use std::ptr;
 use util::decode_raw_bytes;
 use bytes::{BufMut, BytesMut};
-use read_frame::ReadFrame;
+use read_message::ReadMessage;
 use futures::stream::Stream;
 use futures::Future;
 
@@ -23,7 +23,7 @@ pub fn rpc_call(
     routing_key: &str,
     correlation_id: &str,
     msg: &str,
-) -> Result<Option<BytesMut>, Error> {
+) -> Result<ReadMessage, Error> {
     let conn = channel.conn.ptr();
     let props = BasicProperties::new();
     let raw_props = props.raw;
@@ -68,106 +68,108 @@ pub fn rpc_call(
         raw_rabbitmq::amqp_get_rpc_reply(conn);
         raw_rabbitmq::amqp_bytes_free(reply_to_queue);
 
-        let frame: *mut raw_rabbitmq::amqp_frame_t = libc::malloc(
-            mem::size_of::<raw_rabbitmq::amqp_frame_t>(),
-        ) as *mut raw_rabbitmq::amqp_frame_t;
+        // let frame: *mut raw_rabbitmq::amqp_frame_t = libc::malloc(
+        //     mem::size_of::<raw_rabbitmq::amqp_frame_t>(),
+        // ) as *mut raw_rabbitmq::amqp_frame_t;
 
-        let mut body_target: u64 = 0;
-        let mut body_received: usize = 0;
+        // let mut body_target: u64 = 0;
+        // let mut body_received: usize = 0;
         raw_rabbitmq::amqp_maybe_release_buffers(conn);
-        
-        let resp = loop {
-            let method_frame = ReadFrame::new(conn, frame);
-            let method_frame = method_frame.wait();
-            if method_frame.is_err() {
-                break None;
-            }
-            let frame = method_frame.unwrap();
 
-            // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
-            // println!("Result:{}", result);
-            // if result < 0 {
-            //     break None;
-            // }
+        let resp = ReadMessage::new(conn);
+        // let resp = resp.wait().unwrap();
 
-            // println!(
-            //     "Frame type: {} channel: {}",
-            //     (*frame).frame_type,
-            //     (*frame).channel,
-            // );
-            if (*frame).frame_type != (raw_rabbitmq::AMQP_FRAME_METHOD as u8) {
-                continue;
-            }
+        // let resp = loop {
+        //     let method_frame = ReadFrame::new(conn, frame);
+        //     let method_frame = method_frame.wait();
+        //     if method_frame.is_err() {
+        //         break None;
+        //     }
+        //     let frame = method_frame.unwrap();
 
-            // println!(
-            //     "Method: {:?}",
-            //     raw_rabbitmq::amqp_method_name((*frame).payload.method.id)
-            // );
-            if (*frame).payload.method.id != (AMQP_BASIC_DELIVER_METHOD) {
-                continue;
-            }
+        //     // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
+        //     // println!("Result:{}", result);
+        //     // if result < 0 {
+        //     //     break None;
+        //     // }
 
-            // d = mem::transmute((*frame).payload.method.decoded);
+        //     // println!(
+        //     //     "Frame type: {} channel: {}",
+        //     //     (*frame).frame_type,
+        //     //     (*frame).channel,
+        //     // );
+        //     if (*frame).frame_type != (raw_rabbitmq::AMQP_FRAME_METHOD as u8) {
+        //         continue;
+        //     }
 
-            let header_frame = ReadFrame::new(conn, frame).wait();
-            if header_frame.is_err() {
-                break None;
-            }
-            let frame = header_frame.unwrap();
+        //     // println!(
+        //     //     "Method: {:?}",
+        //     //     raw_rabbitmq::amqp_method_name((*frame).payload.method.id)
+        //     // );
+        //     if (*frame).payload.method.id != (AMQP_BASIC_DELIVER_METHOD) {
+        //         continue;
+        //     }
 
-            // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
-            // if result < 0 {
-            //     break None;
-            // }
+        //     // d = mem::transmute((*frame).payload.method.decoded);
 
-            if (*frame).frame_type != (raw_rabbitmq::AMQP_FRAME_HEADER as u8) {
-                println!("Unexpected header!");
-                return Err(Error::Reply);
-            }
+        //     let header_frame = ReadFrame::new(conn, frame).wait();
+        //     if header_frame.is_err() {
+        //         break None;
+        //     }
+        //     let frame = header_frame.unwrap();
+
+        //     // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
+        //     // if result < 0 {
+        //     //     break None;
+        //     // }
+
+        //     if (*frame).frame_type != (raw_rabbitmq::AMQP_FRAME_HEADER as u8) {
+        //         println!("Unexpected header!");
+        //         return Err(Error::Reply);
+        //     }
 
 
+        //     body_target = (*frame).payload.properties.body_size;
 
-            body_target = (*frame).payload.properties.body_size;
+        //     let mut buf = BytesMut::with_capacity(body_target as usize);
 
-            let mut buf = BytesMut::with_capacity(body_target as usize);
+        //     while (body_received as u64) < body_target {
+        //         // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
+        //         // if result < 0 {
+        //         //     break;
+        //         // }
 
-            while (body_received as u64) < body_target {
-                // let result = raw_rabbitmq::amqp_simple_wait_frame(conn, frame);
-                // if result < 0 {
-                //     break;
-                // }
+        //         let body_frame = ReadFrame::new(conn, frame).wait();
+        //         if body_frame.is_err() {
+        //             break;
+        //         }
+        //         let frame = body_frame.unwrap();
 
-                let body_frame = ReadFrame::new(conn, frame).wait();
-                if body_frame.is_err() {
-                    break;
-                }
-                let frame = body_frame.unwrap();
+        //         if (*frame).frame_type != (raw_rabbitmq::AMQP_FRAME_BODY as u8) {
+        //             println!("Unexpected body!");
+        //             return Err(Error::Reply);
+        //         }
 
-                if (*frame).frame_type != (raw_rabbitmq::AMQP_FRAME_BODY as u8) {
-                    println!("Unexpected body!");
-                    return Err(Error::Reply);
-                }
+        //         body_received += (*frame).payload.body_fragment.len;
 
-                body_received += (*frame).payload.body_fragment.len;
+        //         // raw_rabbitmq::amqp_dump(
+        //         //     (*frame).payload.body_fragment.bytes,
+        //         //     (*frame).payload.body_fragment.len,
+        //         // );
 
-                // raw_rabbitmq::amqp_dump(
-                //     (*frame).payload.body_fragment.bytes,
-                //     (*frame).payload.body_fragment.len,
-                // );
+        //         let payload_body = decode_raw_bytes((*frame).payload.body_fragment);
+        //         buf.put(payload_body);
+        //     }
 
-                let payload_body = decode_raw_bytes((*frame).payload.body_fragment);
-                buf.put(payload_body);
-            }
+        //     if (body_received as u64) != body_target {
+        //         /* Can only happen when amqp_simple_wait_frame returns <= 0 */
+        //         /* We break here to close the connection */
+        //         break None;
+        //     }
 
-            if (body_received as u64) != body_target {
-                /* Can only happen when amqp_simple_wait_frame returns <= 0 */
-                /* We break here to close the connection */
-                break None;
-            }
-
-            break Some(buf);
-        };
-        libc::free(frame as *mut _);
+        //     break Some(buf);
+        // };
+        // libc::free(frame as *mut _);
         Ok(resp)
     }
 }
