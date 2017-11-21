@@ -15,18 +15,21 @@ const AMQP_BASIC_DELIVER_METHOD: u32 = 0x003C003C;
 
 type AmqpFrame = *mut raw_rabbitmq::amqp_frame_t;
 
-pub struct ReadMessage {
+pub struct RpcMessageFuture {
     conn: *mut raw_rabbitmq::amqp_connection_state_t_,
+    polled: bool,
     method_delivered: bool,
     body_target: Option<usize>,
     body_received: usize,
     buf: BytesMut,
     timeout: timeval,
     frame: AmqpFrame,
+    channel_id: u16,
+    reply_queue: raw_rabbitmq::amqp_bytes_t,
 }
 
-impl ReadMessage {
-    pub fn new(conn: *mut raw_rabbitmq::amqp_connection_state_t_) -> ReadMessage {
+impl RpcMessageFuture {
+    pub fn new(conn: *mut raw_rabbitmq::amqp_connection_state_t_, channel_id: u16, reply_queue: raw_rabbitmq::amqp_bytes_t) -> RpcMessageFuture {
         let timeout = timeval {
             tv_sec: 0,
             tv_usec: 0,
@@ -37,14 +40,17 @@ impl ReadMessage {
         };
         let buf = BytesMut::new();
 
-        ReadMessage {
+        RpcMessageFuture {
             conn: conn,
+            polled: false,
             method_delivered: false,
             body_received: 0,
             body_target: None,
             buf: buf,
             timeout: timeout,
             frame: frame,
+            channel_id: channel_id,
+            reply_queue: reply_queue,
         }
     }
 
@@ -54,16 +60,17 @@ impl ReadMessage {
     }
 }
 
-impl Drop for ReadMessage {
+impl Drop for RpcMessageFuture {
     fn drop(&mut self) {
         unsafe {
+            raw_rabbitmq::amqp_bytes_free(self.reply_queue);
             libc::free(self.frame as *mut _);
         }
     }
 }
 
 
-impl Future for ReadMessage {
+impl Future for RpcMessageFuture {
     type Item = BytesMut;
     type Error = Error;
 
@@ -71,8 +78,25 @@ impl Future for ReadMessage {
         let status = self.read_frame_noblock();
         // println!("poll!");
 
+        if !self.polled {
+            unsafe {
+                raw_rabbitmq::amqp_maybe_release_buffers(self.conn);
+                raw_rabbitmq::amqp_basic_consume(
+                    self.conn,
+                    self.channel_id,
+                    self.reply_queue,
+                    raw_rabbitmq::amqp_empty_bytes,
+                    0,
+                    1,
+                    0,
+                    raw_rabbitmq::amqp_empty_table,
+                );
+            }
+            self.polled = true;
+        }
+
         let status = match status {
-            amqp_status_enum__AMQP_STATUS_OK => unsafe {
+            raw_rabbitmq::amqp_status_enum__AMQP_STATUS_OK => unsafe {
                 if !self.method_delivered {
                     if (*self.frame).frame_type == (raw_rabbitmq::AMQP_FRAME_METHOD as u8)
                         && (*self.frame).payload.method.id == (AMQP_BASIC_DELIVER_METHOD)
@@ -106,7 +130,7 @@ impl Future for ReadMessage {
                     }
                 }
             },
-            amqp_status_enum__AMQP_STATUS_TIMEOUT => Ok(Async::NotReady),
+            raw_rabbitmq::amqp_status_enum__AMQP_STATUS_TIMEOUT => Ok(Async::NotReady),
             _ => Err(Error::Frame),
         };
 

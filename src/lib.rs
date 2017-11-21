@@ -5,12 +5,13 @@ extern crate libc;
 extern crate librabbitmq_sys as raw_rabbitmq;
 #[macro_use]
 extern crate log;
+extern crate time;
 
 mod util;
 mod error;
 mod types;
 mod rpc;
-mod read_message;
+mod rpc_message;
 
 #[cfg(test)]
 mod tests {
@@ -18,11 +19,13 @@ mod tests {
     use libc::c_char;
     use futures::{stream, Stream, Future};
     use super::*;
+    use time::{ PreciseTime};
+    use bytes::Bytes;
 
     #[test]
     fn basic() {
         let conn =
-            types::connection::Connection::new("localhost", 5672, Some(Duration::from_secs(1)));
+            types::connection::Connection::new("localhost", 5672, None);
 
         assert!(conn.is_ok());
         let conn = conn.unwrap();
@@ -42,64 +45,33 @@ mod tests {
 
         let reply_queue = reply_queue.unwrap();
 
-        let props = types::props::BasicProperties::new();
+        let props = types::props::BasicProperties::null();
 
-        let raw_props = props.raw;
-
-
-        let futures =  stream::futures_ordered((1..1_000_000).collect::<Vec<u64>>().iter().map(|i| {
-            rpc::rpc_call(
-                &channel,
-                &ex,
-                &reply_queue,
-                "rpc_call",
-                &format!("{}", i),
-                &format!("{}", i),
-            ).unwrap()
-        }));
-        futures.collect().wait();
-        // .map(|future| future.wait() ).collect::<Vec<_>>();
-
-
-        // for i in 1..1_000_000 {
-        //     let rpc = rpc::rpc_call(
+        let start = PreciseTime::now();
+        // for i in 1..10000000 {
+        //     let result = rpc::rpc_call(
         //         &channel,
         //         &ex,
         //         &reply_queue,
         //         "rpc_call",
         //         &format!("{}", i),
-        //         &format!("{}", i),
-        //     ).unwrap().wait();
-        //     println!("{}-{:?}", i, rpc);
+        //         Bytes::from(format!("{}", i).as_bytes()),
+        //     ).unwrap();
+
+        //     // ex.publish(&channel, "rpc_call", false, false, &props, Bytes::from(format!("{}", i).as_bytes()));
         // }
-
-
-        // let status = unsafe {
-        //     (*raw_props)._flags = raw_rabbitmq::AMQP_BASIC_CONTENT_TYPE_FLAG
-        //         | raw_rabbitmq::AMQP_BASIC_DELIVERY_MODE_FLAG;
-        //     // | raw_rabbitmq::AMQP_BASIC_REPLY_TO_FLAG
-        //     // | raw_rabbitmq::AMQP_BASIC_CORRELATION_ID_FLAG;
-
-        //     (*raw_props).content_type =
-        //         raw_rabbitmq::amqp_cstring_bytes(b"text/plain\0".as_ptr() as *const c_char);
-        //     (*raw_props).delivery_mode = 2;
-
-        //     // (*raw_props).reply_to = raw_rabbitmq::amqp_bytes_malloc_dup(queue.name_t);
-        //     // (*raw_props).correlation_id =
-        //     //     raw_rabbitmq::amqp_cstring_bytes(b"1\0".as_ptr() as *const c_char);
-
-        //     producer::basic::basic_publish(
-        //         &channel,
-        //         "amq.direct",
-        //         "test",
-        //         false,
-        //         false,
-        //         &props,
-        //         "hehe",
-        //     )
-        // };
-
-
-        // assert!(status.is_ok());
+        let futures =  (1..1000000).collect::<Vec<u64>>().iter().map(|i| {
+            (rpc::rpc_call(
+                &channel,
+                &ex,
+                &reply_queue,
+                "rpc_call",
+                &format!("{}", i),
+                Bytes::from(format!("{}", i).as_bytes()),
+            ).unwrap(),i)
+        }).map(|(future,i)| { let result = future.wait(); println!("{:?}{:?}",i, result); result }).collect::<Vec<_>>();
+        // futures.collect().wait();
+        let end = start.to(PreciseTime::now());
+        println!("{:?}", end);
     }
 }

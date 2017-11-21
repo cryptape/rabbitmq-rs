@@ -36,7 +36,7 @@ impl Connection {
         let status =
             unsafe { raw_rabbitmq::amqp_socket_open_noblock(socket, hostname.as_ptr(), port, tv) };
 
-        println!("status {:?}", status);
+        // println!("status {:?}", status);
 
         if status != (raw_rabbitmq::amqp_status_enum__AMQP_STATUS_OK as i32) {
             return Err(Error::Status(status));

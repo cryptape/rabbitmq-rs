@@ -21,6 +21,7 @@ fn main() {
         .define("ENABLE_SSL_SUPPORT", "ON")
         .define("ENABLE_THREAD_SAFETY", "ON")
         .define("BUILD_API_DOCS", "OFF")
+        .profile("Release")
         .register_dep("OPENSSL")
         .build();
 

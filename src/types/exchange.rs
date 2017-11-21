@@ -4,6 +4,8 @@ use std::ffi::{CStr, CString};
 use types::channel::Channel;
 use libc::c_char;
 use types::props::BasicProperties;
+use bytes::Bytes;
+use util::encode_bytes;
 
 #[derive(Debug)]
 pub enum ExchangeType {
@@ -104,11 +106,11 @@ impl Exchange {
         mandatory: bool,
         immediate: bool,
         props: &BasicProperties,
-        body: &str,
+        body: Bytes,
     ) -> Result<(), Error> {
         let conn = channel.conn.ptr();
         let routing_key = CString::new(routing_key)?;
-        let body = CString::new(body)?;
+        let body = encode_bytes(&body);
         let status = unsafe {
             raw_rabbitmq::amqp_basic_publish(
                 conn,
@@ -118,7 +120,7 @@ impl Exchange {
                 mandatory as i32,
                 immediate as i32,
                 props.raw,
-                raw_rabbitmq::amqp_cstring_bytes(body.as_ptr()),
+                body,
             )
         };
 

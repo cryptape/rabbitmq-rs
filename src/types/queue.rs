@@ -15,6 +15,13 @@ pub struct Queue {
     pub name_t: raw_rabbitmq::amqp_bytes_t,
 }
 
+impl Drop for Queue {
+    fn drop(&mut self) {
+        unsafe {
+            raw_rabbitmq::amqp_bytes_free(self.name_t);
+        }
+    }
+}
 
 impl Queue {
     // add code here
@@ -88,6 +95,22 @@ impl Queue {
         match reply.reply_type {
             raw_rabbitmq::amqp_response_type_enum__AMQP_RESPONSE_NORMAL => Ok(()),
             _ => Err(Error::Reply),
+        }
+    }
+
+    pub fn purge(&self, channel: &Channel) -> Result<u32, Error> {
+        let conn = channel.conn.ptr();
+        let purge_r = unsafe {
+            raw_rabbitmq::amqp_queue_purge(
+                conn,
+                channel.id,
+                self.name_t
+            )
+        };
+        if purge_r.is_null() {
+            Err(Error::Reply)
+        }else {
+            Ok(unsafe { (*purge_r).message_count })
         }
     }
 }

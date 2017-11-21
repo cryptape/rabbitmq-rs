@@ -46,7 +46,7 @@ func main() {
 	msgs, err := ch.Consume(
 		q.Name, // queue
 		"",     // consumer
-		false,  // auto-ack
+		true,  // auto-ack
 		false,  // exclusive
 		false,  // no-local
 		false,  // no-wait
@@ -55,9 +55,9 @@ func main() {
 	failOnError(err, "Failed to register a consumer")
 
 	forever := make(chan bool)
-
-	go func() {
-		for d := range msgs {
+	log.Printf(" [*] Awaiting RPC requests")
+	for d := range msgs {
+		go func(d amqp.Delivery) {
 			n, err := strconv.Atoi(string(d.Body))
 			failOnError(err, "Failed to convert body to integer")
 
@@ -76,10 +76,10 @@ func main() {
 				})
 			failOnError(err, "Failed to publish a message")
 
-			d.Ack(false)
-		}
-	}()
+			// d.Ack(false)
+		}(d)
+	}
 
-	log.Printf(" [*] Awaiting RPC requests")
+	
 	<-forever
 }
