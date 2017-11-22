@@ -61,7 +61,7 @@ func main() {
 			n, err := strconv.Atoi(string(d.Body))
 			failOnError(err, "Failed to convert body to integer")
 
-			log.Printf(" [.] fib(%d)", n)
+			log.Printf(" [.] fib(%d) %s %s %s", n, d.CorrelationId, d.ContentType, d.ReplyTo)
 			response := fib(n)
 
 			err = ch.Publish(

@@ -1,7 +1,7 @@
 use std::io;
 use futures::future::Future;
 use futures::stream::Stream;
-use futures::{Async, Poll, task};
+use futures::{task, Async, Poll};
 use types::connection::Connection;
 use raw_rabbitmq::{self, amqp_frame_t, amqp_status_enum_};
 use libc;
@@ -9,7 +9,7 @@ use error::Error;
 use std::mem;
 use libc::timeval;
 use util::decode_raw_bytes;
-use bytes::{BufMut, BytesMut};
+use bytes::{BufMut, Bytes, BytesMut};
 
 const AMQP_BASIC_DELIVER_METHOD: u32 = 0x003C003C;
 
@@ -25,11 +25,17 @@ pub struct RpcMessageFuture {
     timeout: timeval,
     frame: AmqpFrame,
     channel_id: u16,
+    correlation_id: Bytes,
     reply_queue: raw_rabbitmq::amqp_bytes_t,
 }
 
 impl RpcMessageFuture {
-    pub fn new(conn: *mut raw_rabbitmq::amqp_connection_state_t_, channel_id: u16, reply_queue: raw_rabbitmq::amqp_bytes_t) -> RpcMessageFuture {
+    pub fn new(
+        conn: *mut raw_rabbitmq::amqp_connection_state_t_,
+        channel_id: u16,
+        correlation_id: raw_rabbitmq::amqp_bytes_t,
+        reply_queue: raw_rabbitmq::amqp_bytes_t,
+    ) -> RpcMessageFuture {
         let timeout = timeval {
             tv_sec: 0,
             tv_usec: 0,
@@ -51,11 +57,12 @@ impl RpcMessageFuture {
             frame: frame,
             channel_id: channel_id,
             reply_queue: reply_queue,
+            correlation_id: decode_raw_bytes(correlation_id),
         }
     }
 
     pub fn read_frame_noblock(&mut self) -> amqp_status_enum_ {
-        let timeout = unsafe { mem::transmute(&self.timeout) };
+        let timeout = &self.timeout as *const libc::timeval as *mut raw_rabbitmq::timeval;
         unsafe { raw_rabbitmq::amqp_simple_wait_frame_noblock(self.conn, self.frame, timeout) }
     }
 }
@@ -110,18 +117,37 @@ impl Future for RpcMessageFuture {
                             println!("Unexpected body!");
                             return Err(Error::Frame);
                         }
-                        self.body_received += (*self.frame).payload.body_fragment.len;
-                        let body_fragment = decode_raw_bytes((*self.frame).payload.body_fragment);
-                        self.buf.put(body_fragment);
-                        if self.body_received < body_target {
+                        let props: *mut raw_rabbitmq::amqp_basic_properties_t
+                            = mem::transmute((*self.frame).payload.properties.decoded);
+
+                        let correlation_id = decode_raw_bytes((*props).correlation_id);
+                        // println!("BODY props id {:?}", correlation_id);
+
+                        if correlation_id != self.correlation_id {
                             Ok(Async::NotReady)
                         } else {
-                            Ok(Async::Ready(self.buf.take()))
+                            self.body_received += (*self.frame).payload.body_fragment.len;
+                            let body_fragment =
+                                decode_raw_bytes((*self.frame).payload.body_fragment);
+                            self.buf.put(body_fragment);
+                            if self.body_received < body_target {
+                                Ok(Async::NotReady)
+                            } else {
+                                Ok(Async::Ready(self.buf.take()))
+                            }
                         }
                     } else {
                         if (*self.frame).frame_type == (raw_rabbitmq::AMQP_FRAME_HEADER as u8) {
-                            self.body_target =
-                                Some((*self.frame).payload.properties.body_size as usize);
+                            let props: *mut raw_rabbitmq::amqp_basic_properties_t
+                                = mem::transmute((*self.frame).payload.properties.decoded);
+
+                            let correlation_id = decode_raw_bytes((*props).correlation_id);
+                            // println!("HEADER props id {:?}", correlation_id);
+
+                            if correlation_id == self.correlation_id {
+                                self.body_target =
+                                    Some((*self.frame).payload.properties.body_size as usize);
+                            }
                         } else {
                             println!("Unexpected header!");
                             return Err(Error::Frame);

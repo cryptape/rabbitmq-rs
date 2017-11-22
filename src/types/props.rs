@@ -1,6 +1,5 @@
 use raw_rabbitmq;
 use error::Error;
-use std::ffi::CString;
 use std::mem;
 use libc;
 use std::ptr;

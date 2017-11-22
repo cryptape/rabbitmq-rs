@@ -1,6 +1,5 @@
 use raw_rabbitmq;
 use error::Error;
-use std::ffi::CString;
 use types::connection::Connection;
 use types::queue::Queue;
 use types::exchange::{Exchange, ExchangeType};

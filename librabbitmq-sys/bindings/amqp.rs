@@ -909,6 +909,11 @@ fn bindgen_test_layout_amqp_field_value_t___bindgen_ty_1() {
         )
     );
 }
+impl ::std::fmt::Debug for amqp_field_value_t___bindgen_ty_1 {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(f, "amqp_field_value_t___bindgen_ty_1 {{ union }}")
+    }
+}
 #[test]
 fn bindgen_test_layout_amqp_field_value_t_() {
     assert_eq!(
@@ -941,6 +946,16 @@ fn bindgen_test_layout_amqp_field_value_t_() {
             stringify!(value)
         )
     );
+}
+impl ::std::fmt::Debug for amqp_field_value_t_ {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(
+            f,
+            "amqp_field_value_t_ {{ kind: {:?}, value: {:?} }}",
+            self.kind,
+            self.value
+        )
+    }
 }
 pub type amqp_field_value_t = amqp_field_value_t_;
 #[repr(C)]
@@ -981,6 +996,16 @@ fn bindgen_test_layout_amqp_table_entry_t_() {
             stringify!(value)
         )
     );
+}
+impl ::std::fmt::Debug for amqp_table_entry_t_ {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(
+            f,
+            "amqp_table_entry_t_ {{ key: {:?}, value: {:?} }}",
+            self.key,
+            self.value
+        )
+    }
 }
 pub type amqp_table_entry_t = amqp_table_entry_t_;
 pub const amqp_field_value_kind_t_AMQP_FIELD_KIND_BOOLEAN: amqp_field_value_kind_t = 116;
@@ -1393,6 +1418,11 @@ fn bindgen_test_layout_amqp_frame_t___bindgen_ty_1() {
         )
     );
 }
+impl ::std::fmt::Debug for amqp_frame_t___bindgen_ty_1 {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(f, "amqp_frame_t___bindgen_ty_1 {{ union }}")
+    }
+}
 #[test]
 fn bindgen_test_layout_amqp_frame_t_() {
     assert_eq!(
@@ -1435,6 +1465,17 @@ fn bindgen_test_layout_amqp_frame_t_() {
             stringify!(payload)
         )
     );
+}
+impl ::std::fmt::Debug for amqp_frame_t_ {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        write!(
+            f,
+            "amqp_frame_t_ {{ frame_type: {:?}, channel: {:?}, payload: {:?} }}",
+            self.frame_type,
+            self.channel,
+            self.payload
+        )
+    }
 }
 pub type amqp_frame_t = amqp_frame_t_;
 pub const amqp_response_type_enum__AMQP_RESPONSE_NONE: amqp_response_type_enum_ = 0;

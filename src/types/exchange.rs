@@ -17,11 +17,11 @@ pub enum ExchangeType {
 
 impl ExchangeType {
     pub fn to_cstr_bytes(&self) -> amqp_bytes_t {
-        let type_str = match self {
-            &ExchangeType::Fanout => "fanout\0",
-            &ExchangeType::Direct => "direct\0",
-            &ExchangeType::Topic => "topic\0",
-            &ExchangeType::Headers => "headers\0",
+        let type_str = match *self {
+            ExchangeType::Fanout => "fanout\0",
+            ExchangeType::Direct => "direct\0",
+            ExchangeType::Topic => "topic\0",
+            ExchangeType::Headers => "headers\0",
         };
 
         unsafe { raw_rabbitmq::amqp_cstring_bytes(type_str.as_bytes().as_ptr() as *const c_char) }
@@ -83,7 +83,7 @@ impl Exchange {
         };
         let reply = unsafe { raw_rabbitmq::amqp_get_rpc_reply(conn) };
 
-        let _ = match reply.reply_type {
+        match reply.reply_type {
             raw_rabbitmq::amqp_response_type_enum__AMQP_RESPONSE_NORMAL => Ok(()),
             _ => Err(Error::Reply),
         }?;

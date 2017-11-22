@@ -23,13 +23,13 @@ impl Connection {
         if socket.is_null() {
             return Err(Error::TCPSocket);
         }
-        println!("socket {:?}", socket);
+        // println!("socket {:?}", socket);
 
         let hostname = CString::new(hostname)?;
 
 
         let tv: *mut raw_rabbitmq::timeval = match timeout {
-            Some(dur) => unsafe { mem::transmute(&duration_to_timeval(dur)) },
+            Some(dur) => &duration_to_timeval(dur) as *const timeval as *mut raw_rabbitmq::timeval,
             None => ptr::null_mut(),
         };
 

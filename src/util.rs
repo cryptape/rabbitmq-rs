@@ -1,7 +1,7 @@
 use libc::timeval;
 use std::time::Duration;
 use bytes::Bytes;
-use raw_rabbitmq::amqp_bytes_t;
+use raw_rabbitmq::{self, amqp_bytes_t};
 use std::{mem, slice};
 use libc::{self, c_char};
 use error::Error;
@@ -9,7 +9,7 @@ use error::Error;
 pub fn duration_to_timeval(t: Duration) -> timeval {
     timeval {
         tv_sec: t.as_secs() as i64,
-        tv_usec: (t.subsec_nanos() / 1_000_000) as i64,
+        tv_usec: i64::from(t.subsec_nanos() / 1_000_000),
     }
 }
 
@@ -25,4 +25,10 @@ pub fn decode_raw_bytes(bytes: amqp_bytes_t) -> Bytes {
     let raw_ptr = bytes.bytes as *const u8;
     let slice = unsafe { slice::from_raw_parts(raw_ptr, len) };
     Bytes::from(slice)
+}
+
+pub fn cstring_bytes(s: &str) -> Vec<u8> {
+    let mut s = s.to_owned().into_bytes();
+    s.extend(&[0]);
+    s
 }

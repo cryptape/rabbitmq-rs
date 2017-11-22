@@ -1,4 +1,3 @@
-#![feature(optin_builtin_traits)]
 extern crate bytes;
 extern crate futures;
 extern crate libc;
@@ -17,15 +16,14 @@ mod rpc_message;
 mod tests {
     use std::time::Duration;
     use libc::c_char;
-    use futures::{stream, Stream, Future};
+    use futures::{stream, Future, Stream};
     use super::*;
-    use time::{ PreciseTime};
+    use time::PreciseTime;
     use bytes::Bytes;
 
     #[test]
     fn basic() {
-        let conn =
-            types::connection::Connection::new("localhost", 5672, None);
+        let conn = types::connection::Connection::new("localhost", 5672, None);
 
         assert!(conn.is_ok());
         let conn = conn.unwrap();
@@ -44,9 +42,6 @@ mod tests {
         assert!(reply_queue.is_ok());
 
         let reply_queue = reply_queue.unwrap();
-
-        let props = types::props::BasicProperties::null();
-
         let start = PreciseTime::now();
         // for i in 1..10000000 {
         //     let result = rpc::rpc_call(
@@ -58,18 +53,31 @@ mod tests {
         //         Bytes::from(format!("{}", i).as_bytes()),
         //     ).unwrap();
 
-        //     // ex.publish(&channel, "rpc_call", false, false, &props, Bytes::from(format!("{}", i).as_bytes()));
+        //     // ex.publish(&channel, "rpc_call", false, false, &props,
+        //      Bytes::from(format!("{}", i).as_bytes()));
         // }
-        let futures =  (1..1000000).collect::<Vec<u64>>().iter().map(|i| {
-            (rpc::rpc_call(
-                &channel,
-                &ex,
-                &reply_queue,
-                "rpc_call",
-                &format!("{}", i),
-                Bytes::from(format!("{}", i).as_bytes()),
-            ).unwrap(),i)
-        }).map(|(future,i)| { let result = future.wait(); println!("{:?}{:?}",i, result); result }).collect::<Vec<_>>();
+        let futures = (1..1000000)
+            .collect::<Vec<u64>>()
+            .iter()
+            .map(|i| {
+                (
+                    rpc::rpc_call(
+                        &channel,
+                        &ex,
+                        &reply_queue,
+                        "rpc_call",
+                        &format!("{}", i),
+                        Bytes::from(format!("{}", i).as_bytes()),
+                    ),
+                    i,
+                )
+            })
+            .map(|(future, i)| {
+                let result = future.wait();
+                println!("{:?}{:?}", i, result);
+                result
+            })
+            .collect::<Vec<_>>();
         // futures.collect().wait();
         let end = start.to(PreciseTime::now());
         println!("{:?}", end);

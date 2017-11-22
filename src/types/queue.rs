@@ -50,7 +50,7 @@ impl Queue {
         };
         let reply = unsafe { raw_rabbitmq::amqp_get_rpc_reply(conn) };
 
-        let _ = match reply.reply_type {
+        match reply.reply_type {
             raw_rabbitmq::amqp_response_type_enum__AMQP_RESPONSE_NORMAL => Ok(()),
             _ => Err(Error::Reply),
         }?;
@@ -80,7 +80,7 @@ impl Queue {
     ) -> Result<(), Error> {
         let bindingkey = CString::new(bindingkey)?;
         let conn = channel.conn.ptr();
-        let bind_r = unsafe {
+        unsafe {
             raw_rabbitmq::amqp_queue_bind(
                 conn,
                 channel.id,
@@ -89,7 +89,7 @@ impl Queue {
                 raw_rabbitmq::amqp_cstring_bytes(bindingkey.as_ptr()),
                 raw_rabbitmq::amqp_empty_table,
             );
-        };
+        }
 
         let reply = unsafe { raw_rabbitmq::amqp_get_rpc_reply(conn) };
         match reply.reply_type {
@@ -100,16 +100,10 @@ impl Queue {
 
     pub fn purge(&self, channel: &Channel) -> Result<u32, Error> {
         let conn = channel.conn.ptr();
-        let purge_r = unsafe {
-            raw_rabbitmq::amqp_queue_purge(
-                conn,
-                channel.id,
-                self.name_t
-            )
-        };
+        let purge_r = unsafe { raw_rabbitmq::amqp_queue_purge(conn, channel.id, self.name_t) };
         if purge_r.is_null() {
             Err(Error::Reply)
-        }else {
+        } else {
             Ok(unsafe { (*purge_r).message_count })
         }
     }
