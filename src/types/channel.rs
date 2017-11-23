@@ -4,21 +4,20 @@ use types::connection::Connection;
 use types::queue::Queue;
 use types::exchange::{Exchange, ExchangeType};
 
-#[derive(Debug)]
-pub struct Channel<'a> {
+#[derive(Clone, Copy)]
+pub struct Channel {
     pub id: u16,
-    pub conn: &'a Connection,
+    pub conn: Connection,
 }
 
-
-impl<'a> Channel<'a> {
-    pub fn new(conn: &Connection, id: u16) -> Result<Channel, Error> {
-        let channel_open_t = unsafe { raw_rabbitmq::amqp_channel_open(conn.ptr(), id) };
+impl Channel {
+    pub fn new(conn: Connection, id: u16) -> Result<Channel, Error> {
+        let channel_open_t = unsafe { raw_rabbitmq::amqp_channel_open(conn.raw_ptr(), id) };
         Ok(Channel { id: id, conn: conn })
     }
 
     pub fn declare_queue(
-        &self,
+        self,
         name: String,
         passive: bool,
         durable: bool,
@@ -29,7 +28,7 @@ impl<'a> Channel<'a> {
     }
 
     pub fn declare_exchange(
-        &self,
+        self,
         name: String,
         exchange_type: ExchangeType,
         passive: bool,
@@ -48,16 +47,14 @@ impl<'a> Channel<'a> {
         )
     }
 
-    pub fn default_exchange(&self) -> Exchange {
+    pub fn default_exchange(self) -> Exchange {
         Exchange::default()
     }
-}
 
-impl<'a> Drop for Channel<'a> {
-    fn drop(&mut self) {
+    pub fn close(&mut self) {
         unsafe {
             raw_rabbitmq::amqp_channel_close(
-                self.conn.ptr(),
+                self.conn.raw_ptr(),
                 self.id,
                 raw_rabbitmq::AMQP_REPLY_SUCCESS as i32,
             );

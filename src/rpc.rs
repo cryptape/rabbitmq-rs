@@ -18,14 +18,14 @@ use bytes::Bytes;
 const AMQP_BASIC_DELIVER_METHOD: u32 = 0x003C003C;
 
 pub fn rpc_call(
-    channel: &Channel,
+    channel: Channel,
     exchange: &Exchange,
     reply_queue: &Queue,
     routing_key: &str,
     correlation_id: &str,
     msg: Bytes,
 ) -> Box<Future<Item = BytesMut, Error = Error>> {
-    let conn = channel.conn.ptr();
+    let conn = channel.conn.raw_ptr();
     let props = BasicProperties::new();
     let raw_props = props.raw;
     let channel_id = channel.id;

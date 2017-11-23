@@ -26,14 +26,14 @@ impl Drop for Queue {
 impl Queue {
     // add code here
     pub fn new(
-        channel: &Channel,
+        channel: Channel,
         name: String,
         passive: bool,
         durable: bool,
         exclusive: bool,
         auto_delete: bool,
     ) -> Result<Queue, Error> {
-        let conn = channel.conn.ptr();
+        let conn = channel.conn.raw_ptr();
         let cstring_name = CString::new(name.as_str())?;
         let cstring_name_bytes = unsafe { raw_rabbitmq::amqp_cstring_bytes(cstring_name.as_ptr()) };
         let queue_declare_r = unsafe {
@@ -74,12 +74,12 @@ impl Queue {
 
     pub fn bind(
         &self,
-        channel: &Channel,
+        channel: Channel,
         exchange: &Exchange,
         bindingkey: &str,
     ) -> Result<(), Error> {
         let bindingkey = CString::new(bindingkey)?;
-        let conn = channel.conn.ptr();
+        let conn = channel.conn.raw_ptr();
         unsafe {
             raw_rabbitmq::amqp_queue_bind(
                 conn,
@@ -98,8 +98,8 @@ impl Queue {
         }
     }
 
-    pub fn purge(&self, channel: &Channel) -> Result<u32, Error> {
-        let conn = channel.conn.ptr();
+    pub fn purge(&self, channel: Channel) -> Result<u32, Error> {
+        let conn = channel.conn.raw_ptr();
         let purge_r = unsafe { raw_rabbitmq::amqp_queue_purge(conn, channel.id, self.name_t) };
         if purge_r.is_null() {
             Err(Error::Reply)

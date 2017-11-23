@@ -44,7 +44,7 @@ impl RpcMessageFuture {
             libc::malloc(mem::size_of::<raw_rabbitmq::amqp_frame_t>())
                 as *mut raw_rabbitmq::amqp_frame_t
         };
-        let buf = BytesMut::new();
+        let buf = BytesMut::with_capacity(4096);
 
         RpcMessageFuture {
             conn: conn,
@@ -111,49 +111,46 @@ impl Future for RpcMessageFuture {
                         self.method_delivered = true;
                     }
                     Ok(Async::NotReady)
-                } else {
-                    if let Some(body_target) = self.body_target {
-                        if (*self.frame).frame_type != (raw_rabbitmq::AMQP_FRAME_BODY as u8) {
-                            println!("Unexpected body!");
-                            return Err(Error::Frame);
+                } else if let Some(body_target) = self.body_target {
+                    if (*self.frame).frame_type != (raw_rabbitmq::AMQP_FRAME_BODY as u8) {
+                        println!("Unexpected body!");
+                        return Err(Error::Frame);
+                    }
+                    let props: *mut raw_rabbitmq::amqp_basic_properties_t =
+                        mem::transmute((*self.frame).payload.properties.decoded);
+
+                    let correlation_id = decode_raw_bytes((*props).correlation_id);
+                    // println!("BODY props id {:?}", correlation_id);
+
+                    if correlation_id != self.correlation_id {
+                        Ok(Async::NotReady)
+                    } else {
+                        self.body_received += (*self.frame).payload.body_fragment.len;
+                        let body_fragment = decode_raw_bytes((*self.frame).payload.body_fragment);
+                        self.buf.put(body_fragment);
+                        if self.body_received < body_target {
+                            Ok(Async::NotReady)
+                        } else {
+                            Ok(Async::Ready(self.buf.take()))
                         }
+                    }
+                } else {
+                    if (*self.frame).frame_type == (raw_rabbitmq::AMQP_FRAME_HEADER as u8) {
                         let props: *mut raw_rabbitmq::amqp_basic_properties_t
                             = mem::transmute((*self.frame).payload.properties.decoded);
 
                         let correlation_id = decode_raw_bytes((*props).correlation_id);
-                        // println!("BODY props id {:?}", correlation_id);
+                        // println!("HEADER props id {:?}", correlation_id);
 
-                        if correlation_id != self.correlation_id {
-                            Ok(Async::NotReady)
-                        } else {
-                            self.body_received += (*self.frame).payload.body_fragment.len;
-                            let body_fragment =
-                                decode_raw_bytes((*self.frame).payload.body_fragment);
-                            self.buf.put(body_fragment);
-                            if self.body_received < body_target {
-                                Ok(Async::NotReady)
-                            } else {
-                                Ok(Async::Ready(self.buf.take()))
-                            }
+                        if correlation_id == self.correlation_id {
+                            self.body_target =
+                                Some((*self.frame).payload.properties.body_size as usize);
                         }
                     } else {
-                        if (*self.frame).frame_type == (raw_rabbitmq::AMQP_FRAME_HEADER as u8) {
-                            let props: *mut raw_rabbitmq::amqp_basic_properties_t
-                                = mem::transmute((*self.frame).payload.properties.decoded);
-
-                            let correlation_id = decode_raw_bytes((*props).correlation_id);
-                            // println!("HEADER props id {:?}", correlation_id);
-
-                            if correlation_id == self.correlation_id {
-                                self.body_target =
-                                    Some((*self.frame).payload.properties.body_size as usize);
-                            }
-                        } else {
-                            println!("Unexpected header!");
-                            return Err(Error::Frame);
-                        }
-                        Ok(Async::NotReady)
+                        println!("Unexpected header!");
+                        return Err(Error::Frame);
                     }
+                    Ok(Async::NotReady)
                 }
             },
             raw_rabbitmq::amqp_status_enum__AMQP_STATUS_TIMEOUT => Ok(Async::NotReady),

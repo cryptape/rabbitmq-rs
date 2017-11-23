@@ -1,0 +1,11 @@
+[connection]
+hostname = "127.0.0.1"
+port = 5672
+
+[login]
+vhost = "/"
+channel_max = 0
+frame_max = 131072
+heartbeat = 0
+login = "guest"
+password =  "guest"

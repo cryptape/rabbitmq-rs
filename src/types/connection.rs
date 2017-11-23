@@ -3,16 +3,14 @@ use error::Error;
 use std::ffi::CString;
 use std::time::Duration;
 use libc::timeval;
-use std::ptr;
+use std::ptr::{self, Shared};
 use util::duration_to_timeval;
 use std::mem;
 
-#[derive(Debug)]
+#[derive(Clone, Copy)]
 pub struct Connection {
-    raw_ptr: *mut raw_rabbitmq::amqp_connection_state_t_,
-    socket: *mut raw_rabbitmq::amqp_socket_t,
+    ptr: Shared<raw_rabbitmq::amqp_connection_state_t_>,
 }
-
 
 impl Connection {
     pub fn new(hostname: &str, port: i32, timeout: Option<Duration>) -> Result<Connection, Error> {
@@ -42,10 +40,11 @@ impl Connection {
             return Err(Error::Status(status));
         }
 
-        Ok(Connection {
-            raw_ptr: raw_ptr,
-            socket: socket,
-        })
+        if let Some(ptr) = Shared::new(raw_ptr) {
+            Ok(Connection { ptr: ptr })
+        } else {
+            Err(Error::TCPSocket)
+        }
     }
 
     // pub fn amqp_login(state: amqp_connection_state_t,
@@ -71,7 +70,7 @@ impl Connection {
 
         let login_reply = unsafe {
             raw_rabbitmq::amqp_login(
-                self.raw_ptr,
+                self.raw_ptr(),
                 vhost.as_ptr(),
                 channel_max,
                 frame_max,
@@ -88,23 +87,17 @@ impl Connection {
         }
     }
 
-    pub fn ptr(&self) -> *mut raw_rabbitmq::amqp_connection_state_t_ {
-        self.raw_ptr
+    pub fn raw_ptr(&self) -> *mut raw_rabbitmq::amqp_connection_state_t_ {
+        self.ptr.as_ptr()
     }
 
-    pub fn close(&mut self, code: i32) {
+    pub fn close(&mut self) {
         unsafe {
-            raw_rabbitmq::amqp_connection_close(self.raw_ptr, code);
-        }
-    }
-}
-
-
-impl Drop for Connection {
-    fn drop(&mut self) {
-        unsafe {
-            self.close(raw_rabbitmq::AMQP_REPLY_SUCCESS as i32);
-            raw_rabbitmq::amqp_destroy_connection(self.raw_ptr);
+            raw_rabbitmq::amqp_connection_close(
+                self.ptr.as_ptr(),
+                raw_rabbitmq::AMQP_REPLY_SUCCESS as i32,
+            );
+            raw_rabbitmq::amqp_destroy_connection(self.ptr.as_ptr());
         }
     }
 }

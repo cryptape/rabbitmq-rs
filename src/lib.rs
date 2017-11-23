@@ -1,16 +1,24 @@
+#![feature(shared)]
 extern crate bytes;
+extern crate config as configlib;
 extern crate futures;
 extern crate libc;
 extern crate librabbitmq_sys as raw_rabbitmq;
 #[macro_use]
 extern crate log;
+extern crate serde;
+#[macro_use]
+extern crate serde_derive;
 extern crate time;
+extern crate tokio_core;
 
 mod util;
 mod error;
 mod types;
 mod rpc;
 mod rpc_message;
+mod config;
+mod consumer;
 
 #[cfg(test)]
 mod tests {
@@ -20,20 +28,21 @@ mod tests {
     use super::*;
     use time::PreciseTime;
     use bytes::Bytes;
+    use consumer::Consumer;
 
     #[test]
     fn basic() {
         let conn = types::connection::Connection::new("localhost", 5672, None);
 
         assert!(conn.is_ok());
-        let conn = conn.unwrap();
+        let mut conn = conn.unwrap();
         let login = conn.login("/", 0, 131072, 0, "guest", "guest");
         assert!(login.is_ok());
 
-        let channel = types::channel::Channel::new(&conn, 10);
+        let channel = types::channel::Channel::new(conn, 10);
 
         assert!(channel.is_ok());
-        let channel = channel.unwrap();
+        let mut channel = channel.unwrap();
 
         let ex = channel.default_exchange();
 
@@ -56,16 +65,16 @@ mod tests {
         //     // ex.publish(&channel, "rpc_call", false, false, &props,
         //      Bytes::from(format!("{}", i).as_bytes()));
         // }
-        let futures = (1..1000000)
+        let futures = (1..2)
             .collect::<Vec<u64>>()
             .iter()
             .map(|i| {
                 (
                     rpc::rpc_call(
-                        &channel,
+                        channel,
                         &ex,
                         &reply_queue,
-                        "rpc_call",
+                        "rpc2",
                         &format!("{}", i),
                         Bytes::from(format!("{}", i).as_bytes()),
                     ),
@@ -81,5 +90,14 @@ mod tests {
         // futures.collect().wait();
         let end = start.to(PreciseTime::now());
         println!("{:?}", end);
+
+        channel.close();
+        conn.close();
+    }
+
+
+    fn consumer() {
+        let consumer = Consumer::new();
+        consumer.start();
     }
 }

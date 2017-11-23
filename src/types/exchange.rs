@@ -7,7 +7,7 @@ use types::props::BasicProperties;
 use bytes::Bytes;
 use util::encode_bytes;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub enum ExchangeType {
     Fanout,
     Direct,
@@ -28,7 +28,7 @@ impl ExchangeType {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Exchange {
     pub name: String,
     pub exchange_type: ExchangeType,
@@ -56,7 +56,7 @@ impl Default for Exchange {
 impl Exchange {
     // add code here
     pub fn new(
-        channel: &Channel,
+        channel: Channel,
         name: String,
         exchange_type: ExchangeType,
         passive: bool,
@@ -64,7 +64,7 @@ impl Exchange {
         auto_delete: bool,
         internal: bool,
     ) -> Result<Exchange, Error> {
-        let conn = channel.conn.ptr();
+        let conn = channel.conn.raw_ptr();
         let cstring_name = CString::new(name.as_str())?;
         let cstring_name_bytes = unsafe { raw_rabbitmq::amqp_cstring_bytes(cstring_name.as_ptr()) };
 
@@ -101,14 +101,14 @@ impl Exchange {
 
     pub fn publish(
         &self,
-        channel: &Channel,
+        channel: Channel,
         routing_key: &str,
         mandatory: bool,
         immediate: bool,
         props: &BasicProperties,
         body: Bytes,
     ) -> Result<(), Error> {
-        let conn = channel.conn.ptr();
+        let conn = channel.conn.raw_ptr();
         let routing_key = CString::new(routing_key)?;
         let body = encode_bytes(&body);
         let status = unsafe {
