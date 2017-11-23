@@ -46,7 +46,7 @@ mod tests {
 
         let ex = channel.default_exchange();
 
-        let reply_queue = channel.declare_queue("rpc".to_owned(), false, false, true, false);
+        let reply_queue = channel.declare_queue("rpc", false, false, true, false);
 
         assert!(reply_queue.is_ok());
 
@@ -65,7 +65,7 @@ mod tests {
         //     // ex.publish(&channel, "rpc_call", false, false, &props,
         //      Bytes::from(format!("{}", i).as_bytes()));
         // }
-        let futures = (1..2)
+        let futures = (1..1_000_000)
             .collect::<Vec<u64>>()
             .iter()
             .map(|i| {
@@ -74,7 +74,7 @@ mod tests {
                         channel,
                         &ex,
                         &reply_queue,
-                        "rpc2",
+                        "rpc_call",
                         &format!("{}", i),
                         Bytes::from(format!("{}", i).as_bytes()),
                     ),

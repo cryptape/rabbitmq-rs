@@ -44,8 +44,7 @@ impl RpcMessageFuture {
             libc::malloc(mem::size_of::<raw_rabbitmq::amqp_frame_t>())
                 as *mut raw_rabbitmq::amqp_frame_t
         };
-        let buf = BytesMut::with_capacity(4096);
-
+        let buf = BytesMut::with_capacity(1024);
         RpcMessageFuture {
             conn: conn,
             polled: false,

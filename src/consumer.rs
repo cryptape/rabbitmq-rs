@@ -87,7 +87,7 @@ impl Consumer {
                 let mut channel = channel.unwrap();
                 let ex = channel.default_exchange();
                 let queue = channel
-                    .declare_queue("rpc2".to_owned(), false, false, true, false)
+                    .declare_queue("rpc2", false, false, true, false)
                     .unwrap();
                 poll_loop(channel, &ex, &queue, sender, poll_stop);
                 channel.close();

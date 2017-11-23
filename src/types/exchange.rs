@@ -6,6 +6,7 @@ use libc::c_char;
 use types::props::BasicProperties;
 use bytes::Bytes;
 use util::encode_bytes;
+use std::mem;
 
 #[derive(Debug, Clone)]
 pub enum ExchangeType {
@@ -30,34 +31,43 @@ impl ExchangeType {
 
 #[derive(Debug, Clone)]
 pub struct Exchange {
-    pub name: String,
     pub exchange_type: ExchangeType,
     pub passive: bool,
     pub durable: bool,
     pub auto_delete: bool,
     pub internal: bool,
     pub name_t: amqp_bytes_t,
+    _cstring_name: CString,
 }
 
 impl Default for Exchange {
     fn default() -> Exchange {
+        let name = CString::new("").unwrap();
         Exchange {
-            name: "".to_owned(),
             exchange_type: ExchangeType::Direct,
             passive: false,
             durable: false,
             auto_delete: false,
             internal: false,
-            name_t: unsafe { raw_rabbitmq::amqp_cstring_bytes(b"\0".as_ptr() as *const c_char) },
+            name_t: unsafe { raw_rabbitmq::amqp_cstring_bytes(name.as_ptr() as *const c_char) },
+            _cstring_name: name,
         }
     }
 }
+
+// impl Drop for Exchange {
+//     fn drop(&mut self) {
+//         unsafe {
+//             raw_rabbitmq::amqp_bytes_free(self.name_t);
+//         }
+//     }
+// }
 
 impl Exchange {
     // add code here
     pub fn new(
         channel: Channel,
-        name: String,
+        name: &str,
         exchange_type: ExchangeType,
         passive: bool,
         durable: bool,
@@ -65,7 +75,7 @@ impl Exchange {
         internal: bool,
     ) -> Result<Exchange, Error> {
         let conn = channel.conn.raw_ptr();
-        let cstring_name = CString::new(name.as_str())?;
+        let cstring_name = CString::new(name)?;
         let cstring_name_bytes = unsafe { raw_rabbitmq::amqp_cstring_bytes(cstring_name.as_ptr()) };
 
         let amqp_exchange_declare_ok_t = unsafe {
@@ -89,13 +99,13 @@ impl Exchange {
         }?;
 
         Ok(Exchange {
-            name: name,
             exchange_type: exchange_type,
             passive: passive,
             durable: durable,
             auto_delete: auto_delete,
             internal: internal,
             name_t: cstring_name_bytes,
+            _cstring_name: cstring_name,
         })
     }
 

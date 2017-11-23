@@ -18,7 +18,7 @@ impl Channel {
 
     pub fn declare_queue(
         self,
-        name: String,
+        name: &str,
         passive: bool,
         durable: bool,
         exclusive: bool,
@@ -29,7 +29,7 @@ impl Channel {
 
     pub fn declare_exchange(
         self,
-        name: String,
+        name: &str,
         exchange_type: ExchangeType,
         passive: bool,
         durable: bool,

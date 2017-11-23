@@ -5,14 +5,13 @@ use types::channel::Channel;
 use types::exchange::Exchange;
 use libc::c_char;
 
-#[derive(Debug)]
 pub struct Queue {
-    pub name: String,
     pub passive: bool,
     pub durable: bool,
     pub exclusive: bool,
     pub auto_delete: bool,
     pub name_t: raw_rabbitmq::amqp_bytes_t,
+    _cstring_name: CString,
 }
 
 impl Drop for Queue {
@@ -27,14 +26,14 @@ impl Queue {
     // add code here
     pub fn new(
         channel: Channel,
-        name: String,
+        name: &str,
         passive: bool,
         durable: bool,
         exclusive: bool,
         auto_delete: bool,
     ) -> Result<Queue, Error> {
         let conn = channel.conn.raw_ptr();
-        let cstring_name = CString::new(name.as_str())?;
+        let cstring_name = CString::new(name)?;
         let cstring_name_bytes = unsafe { raw_rabbitmq::amqp_cstring_bytes(cstring_name.as_ptr()) };
         let queue_declare_r = unsafe {
             raw_rabbitmq::amqp_queue_declare(
@@ -62,12 +61,12 @@ impl Queue {
         }
 
         Ok(Queue {
-            name: name,
             passive: passive,
             durable: durable,
             exclusive: exclusive,
             auto_delete: auto_delete,
             name_t: queue_name,
+            _cstring_name: cstring_name,
         })
     }
 
