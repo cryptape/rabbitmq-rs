@@ -2,8 +2,6 @@ extern crate libc;
 
 mod bindings;
 
-use libc::{c_char, c_int, c_uchar, c_uint, c_void, size_t};
-use std::ptr;
 pub use bindings::*;
 
 
@@ -12,6 +10,8 @@ mod tests {
     use super::*;
     use std::mem;
     use std::ffi::{CStr, CString};
+    use libc::{c_char, c_int, c_uchar, c_uint, c_void, size_t};
+    use std::ptr;
 
     // #[test]
     // fn amqp_sendstring() {

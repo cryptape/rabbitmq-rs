@@ -7,13 +7,12 @@ use types::channel::Channel;
 use types::exchange::Exchange;
 use types::queue::Queue;
 use util::decode_raw_bytes;
-use bytes::Bytes;
 use std::sync::Arc;
 use std::sync::atomic::{AtomicBool, AtomicPtr, Ordering};
 use std::thread::{self, JoinHandle};
 use std::mem;
 use futures::Stream;
-use futures::{future, Future, IntoFuture};
+use futures::{future, Future};
 use tokio_core::reactor::Core;
 
 use raw_rabbitmq::{self, amqp_basic_consume, amqp_consume_message, amqp_destroy_envelope,
@@ -26,10 +25,10 @@ use raw_rabbitmq::{self, amqp_basic_consume, amqp_consume_message, amqp_destroy_
                    amqp_status_enum__AMQP_STATUS_UNEXPECTED_STATE, AMQP_FRAME_METHOD};
 
 
-const AMQP_BASIC_ACK_METHOD: u32 = 0x003C0050;
-const AMQP_BASIC_RETURN_METHOD: u32 = 0x003C0032;
-const AMQP_CHANNEL_CLOSE_METHOD: u32 = 0x00140028;
-const AMQP_CONNECTION_CLOSE_METHOD: u32 = 0x000A0032;
+const AMQP_BASIC_ACK_METHOD: u32 = 0x003C_0050;
+const AMQP_BASIC_RETURN_METHOD: u32 = 0x003C_0032;
+const AMQP_CHANNEL_CLOSE_METHOD: u32 = 0x0014_0028;
+const AMQP_CONNECTION_CLOSE_METHOD: u32 = 0x000A_0032;
 
 #[derive(Debug)]
 pub struct Envelope {
@@ -70,14 +69,14 @@ pub struct Consumer {
 impl Consumer {
     pub fn new() -> Consumer {
         let config: Config = Config::new().unwrap();
-        let (sender, receiver) = mpsc::channel(65535);
+        let (sender, receiver) = mpsc::channel(65_535);
         let should_stop = Arc::new(AtomicBool::new(false));
 
-        let poll_stop = should_stop.clone();
+        let poll_stop = Arc::clone(&should_stop);
         let handle = thread::Builder::new()
             .name("consumer_poll".to_string())
             .spawn(move || {
-                let conn = Connection::new("localhost", 5672, None);
+                let conn = Connection::new("localhost", 5672);
                 assert!(conn.is_ok());
                 let mut conn = conn.unwrap();
                 let login = conn.login("/", 0, 131072, 0, "guest", "guest");
@@ -155,15 +154,14 @@ fn poll_loop(
 
             let ret = amqp_consume_message(conn, envelope, ptr::null_mut(), 0);
             if (amqp_response_type_enum__AMQP_RESPONSE_NORMAL != ret.reply_type) {
-                if (amqp_response_type_enum__AMQP_RESPONSE_LIBRARY_EXCEPTION == ret.reply_type
-                    && amqp_status_enum__AMQP_STATUS_UNEXPECTED_STATE == ret.library_error)
+                if amqp_response_type_enum__AMQP_RESPONSE_LIBRARY_EXCEPTION == ret.reply_type
+                    && amqp_status_enum__AMQP_STATUS_UNEXPECTED_STATE == ret.library_error
                 {
-                    if (amqp_status_enum__AMQP_STATUS_OK != amqp_simple_wait_frame(conn, frame)) {
+                    if amqp_status_enum__AMQP_STATUS_OK != amqp_simple_wait_frame(conn, frame) {
                         // TODO: error handle
                         return;
                     }
-
-                    if (AMQP_FRAME_METHOD == (*frame).frame_type as u32) {
+                    if AMQP_FRAME_METHOD == u32::from((*frame).frame_type) {
                         match (*frame).payload.method.id {
                             // if we've turned publisher confirms on, and we've published a message
                             // here is a message being confirmed
@@ -184,11 +182,7 @@ fn poll_loop(
                                 amqp_destroy_message(message);
                             }
 
-                            AMQP_CHANNEL_CLOSE_METHOD => {
-                                return;
-                            }
-
-                            AMQP_CONNECTION_CLOSE_METHOD => {
+                            AMQP_CHANNEL_CLOSE_METHOD | AMQP_CONNECTION_CLOSE_METHOD => {
                                 return;
                             }
                             _ => {
@@ -201,7 +195,7 @@ fn poll_loop(
                     }
                 }
             } else {
-                sender.try_send(Envelope::new(envelope));
+                let _ = sender.try_send(Envelope::new(envelope));
             }
         }
     }

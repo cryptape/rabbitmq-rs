@@ -1,12 +1,11 @@
 use raw_rabbitmq::{self, amqp_bytes_t};
 use error::Error;
-use std::ffi::{CStr, CString};
+use std::ffi::CString;
 use types::channel::Channel;
 use libc::c_char;
 use types::props::BasicProperties;
 use bytes::Bytes;
 use util::encode_bytes;
-use std::mem;
 
 #[derive(Debug, Clone)]
 pub enum ExchangeType {
@@ -54,14 +53,6 @@ impl Default for Exchange {
         }
     }
 }
-
-// impl Drop for Exchange {
-//     fn drop(&mut self) {
-//         unsafe {
-//             raw_rabbitmq::amqp_bytes_free(self.name_t);
-//         }
-//     }
-// }
 
 impl Exchange {
     // add code here

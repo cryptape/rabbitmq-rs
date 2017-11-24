@@ -1,14 +1,11 @@
-use std::env;
 use configlib::{Config as ConfiBuilder, ConfigError, File, FileFormat};
-use std::time::Duration;
 
-static DefaultConfig: &str = include_str!("res/default.toml");
+static DEFAULT_CONFIG: &str = include_str!("res/default.toml");
 
 #[derive(Debug, Deserialize)]
 struct Connection {
     hostname: String,
     port: i32,
-    timeout: Option<Duration>,
 }
 
 
@@ -32,7 +29,7 @@ pub struct Config {
 impl Config {
     pub fn new() -> Result<Config, ConfigError> {
         let mut s = ConfiBuilder::new();
-        s.merge(File::from_str(DefaultConfig, FileFormat::Toml))?;
+        s.merge(File::from_str(DEFAULT_CONFIG, FileFormat::Toml))?;
         s.try_into()
     }
 }

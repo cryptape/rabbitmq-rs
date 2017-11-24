@@ -29,10 +29,11 @@ mod tests {
     use time::PreciseTime;
     use bytes::Bytes;
     use consumer::Consumer;
+    use types::props::BasicProperties;
 
     #[test]
     fn basic() {
-        let conn = types::connection::Connection::new("localhost", 5672, None);
+        let conn = types::connection::Connection::new("localhost", 5672);
 
         assert!(conn.is_ok());
         let mut conn = conn.unwrap();
@@ -51,19 +52,27 @@ mod tests {
         assert!(reply_queue.is_ok());
 
         let reply_queue = reply_queue.unwrap();
+
+        let props = BasicProperties::null();
         let start = PreciseTime::now();
         // for i in 1..10000000 {
-        //     let result = rpc::rpc_call(
-        //         &channel,
-        //         &ex,
-        //         &reply_queue,
-        //         "rpc_call",
-        //         &format!("{}", i),
-        //         Bytes::from(format!("{}", i).as_bytes()),
-        //     ).unwrap();
+        //     // let result = rpc::rpc_call(
+        //     //     &channel,
+        //     //     &ex,
+        //     //     &reply_queue,
+        //     //     "rpc_call",
+        //     //     &format!("{}", i),
+        //     //     Bytes::from(format!("{}", i).as_bytes()),
+        //     // ).unwrap();
 
-        //     // ex.publish(&channel, "rpc_call", false, false, &props,
-        //      Bytes::from(format!("{}", i).as_bytes()));
+        //     ex.publish(
+        //         channel,
+        //         "rpc_call",
+        //         false,
+        //         false,
+        //         &props,
+        //         Bytes::from(format!("{}", i).as_bytes()),
+        //     );
         // }
         let futures = (1..1_000_000)
             .collect::<Vec<u64>>()

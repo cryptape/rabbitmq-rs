@@ -1,9 +1,7 @@
-use std::io;
 use futures::future::Future;
 use futures::stream::Stream;
 use futures::{task, Async, Poll};
-use types::connection::Connection;
-use raw_rabbitmq::{self, amqp_frame_t, amqp_status_enum_};
+use raw_rabbitmq::{self, amqp_status_enum_};
 use libc;
 use error::Error;
 use std::mem;
@@ -11,7 +9,7 @@ use libc::timeval;
 use util::decode_raw_bytes;
 use bytes::{BufMut, Bytes, BytesMut};
 
-const AMQP_BASIC_DELIVER_METHOD: u32 = 0x003C003C;
+const AMQP_BASIC_DELIVER_METHOD: u32 = 0x003C_003C;
 
 type AmqpFrame = *mut raw_rabbitmq::amqp_frame_t;
 
@@ -33,9 +31,10 @@ impl RpcMessageFuture {
     pub fn new(
         conn: *mut raw_rabbitmq::amqp_connection_state_t_,
         channel_id: u16,
-        correlation_id: raw_rabbitmq::amqp_bytes_t,
+        correlation_id: String,
         reply_queue: raw_rabbitmq::amqp_bytes_t,
     ) -> RpcMessageFuture {
+        let correlation_id = Bytes::from(correlation_id);
         let timeout = timeval {
             tv_sec: 0,
             tv_usec: 0,
@@ -56,7 +55,7 @@ impl RpcMessageFuture {
             frame: frame,
             channel_id: channel_id,
             reply_queue: reply_queue,
-            correlation_id: decode_raw_bytes(correlation_id),
+            correlation_id: correlation_id,
         }
     }
 
@@ -69,7 +68,6 @@ impl RpcMessageFuture {
 impl Drop for RpcMessageFuture {
     fn drop(&mut self) {
         unsafe {
-            raw_rabbitmq::amqp_bytes_free(self.reply_queue);
             libc::free(self.frame as *mut _);
         }
     }

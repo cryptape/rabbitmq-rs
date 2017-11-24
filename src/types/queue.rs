@@ -1,9 +1,8 @@
 use raw_rabbitmq;
 use error::Error;
-use std::ffi::{CStr, CString};
+use std::ffi::CString;
 use types::channel::Channel;
 use types::exchange::Exchange;
-use libc::c_char;
 
 pub struct Queue {
     pub passive: bool,
@@ -23,7 +22,6 @@ impl Drop for Queue {
 }
 
 impl Queue {
-    // add code here
     pub fn new(
         channel: Channel,
         name: &str,
