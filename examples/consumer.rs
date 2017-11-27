@@ -37,6 +37,8 @@ fn main() {
     let ex = Arc::new(channel.default_exchange());
     let consumer = Consumer::new(config, 12, ex, vec!["test".to_owned()], "test_consumer");
     consumer.start(process);
+    channel.close();
+    conn.close();
 }
 
 

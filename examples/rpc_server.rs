@@ -71,4 +71,6 @@ fn main() {
         }));
         call
     });
+    channel.close();
+    conn.close();
 }

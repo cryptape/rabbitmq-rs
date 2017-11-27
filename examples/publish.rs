@@ -33,11 +33,6 @@ fn main() {
 
     let ex = channel.default_exchange();
 
-    let reply_queue = channel.declare_queue("rpc", false, false, true, false);
-
-    assert!(reply_queue.is_ok());
-
-    let reply_queue = reply_queue.unwrap();
     let props = BasicProperties::null();
 
     let start = PreciseTime::now();
