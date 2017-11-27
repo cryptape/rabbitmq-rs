@@ -61,7 +61,10 @@ impl RpcMessageFuture {
 
     pub fn read_frame_noblock(&mut self) -> amqp_status_enum_ {
         let timeout = &self.timeout as *const libc::timeval as *mut raw_rabbitmq::timeval;
-        unsafe { raw_rabbitmq::amqp_simple_wait_frame_noblock(self.conn, self.frame, timeout) }
+        unsafe {
+            raw_rabbitmq::amqp_maybe_release_buffers(self.conn);
+            raw_rabbitmq::amqp_simple_wait_frame_noblock(self.conn, self.frame, timeout)
+        }
     }
 }
 
@@ -84,7 +87,6 @@ impl Future for RpcMessageFuture {
 
         if !self.polled {
             unsafe {
-                raw_rabbitmq::amqp_maybe_release_buffers(self.conn);
                 raw_rabbitmq::amqp_basic_consume(
                     self.conn,
                     self.channel_id,

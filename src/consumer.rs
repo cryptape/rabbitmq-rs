@@ -1,10 +1,10 @@
 use libc;
 use std::ptr;
-use config::Config;
+use config::{ConfiBuilder, Config};
 use futures::sync::mpsc;
 use types::connection::Connection;
 use types::channel::Channel;
-use types::exchange::Exchange;
+use types::exchange::{Exchange, ExchangeType};
 use types::queue::Queue;
 use util::decode_raw_bytes;
 use std::sync::Arc;
@@ -54,71 +54,105 @@ impl Envelope {
 impl Drop for Envelope {
     fn drop(&mut self) {
         unsafe {
-            amqp_destroy_envelope(self.raw_ptr());
+            let raw = self.raw_ptr();
+            amqp_destroy_envelope(raw);
+            libc::free(raw as *mut _);
         }
     }
 }
 
 #[derive(Debug)]
 pub struct Consumer {
-    receiver: mpsc::Receiver<Envelope>,
+    receiver: Option<mpsc::Receiver<Envelope>>,
     should_stop: Arc<AtomicBool>,
     handle: Option<JoinHandle<()>>,
 }
 
+type Fp = Box<Fn(Envelope) -> Box<Future<Item = (), Error = ()>>>;
+
+struct Closure {
+    fp: Fp,
+}
+
+impl Closure {
+    fn call(&self, envelope: Envelope) -> Box<Future<Item = (), Error = ()>> {
+        (*self.fp)(envelope)
+    }
+}
+
 impl Consumer {
-    pub fn new() -> Consumer {
-        let config: Config = Config::new().unwrap();
-        let (sender, receiver) = mpsc::channel(65_535);
+    pub fn new(
+        config: Config,
+        channel_id: u16,
+        exchange: Arc<Exchange>,
+        routing_keys: Vec<String>,
+        consumer_tag: &str,
+    ) -> Consumer {
+        let (sender, receiver) = mpsc::channel(65536);
         let should_stop = Arc::new(AtomicBool::new(false));
+        let consumer_tag = consumer_tag.to_owned();
 
         let poll_stop = Arc::clone(&should_stop);
         let handle = thread::Builder::new()
             .name("consumer_poll".to_string())
             .spawn(move || {
-                let conn = Connection::new("localhost", 5672);
-                assert!(conn.is_ok());
-                let mut conn = conn.unwrap();
-                let login = conn.login("/", 0, 131072, 0, "guest", "guest");
-                assert!(login.is_ok());
-                let channel = Channel::new(conn, 1);
-                assert!(channel.is_ok());
-                let mut channel = channel.unwrap();
-                let ex = channel.default_exchange();
+                let mut conn = Connection::new(&config.connection.hostname, config.connection.port)
+                    .expect("open amqp connect");
+
+                conn.login(
+                    &config.login.vhost,
+                    config.login.channel_max,
+                    config.login.frame_max,
+                    config.login.heartbeat,
+                    &config.login.login,
+                    &config.login.password,
+                ).expect("login broker");
+
+                let mut channel = Channel::new(conn, channel_id).expect("open amqp channel");
                 let queue = channel
-                    .declare_queue("rpc2", false, false, true, false)
-                    .unwrap();
-                poll_loop(channel, &ex, &queue, sender, poll_stop);
+                    .declare_queue(&consumer_tag, false, false, false, false)
+                    .expect("declare queue");
+                if exchange.exchange_type == ExchangeType::Topic {
+                    for key in routing_keys {
+                        queue.bind(channel, &exchange, &key).expect("bind queue");
+                    }
+                }
+
+
+                poll_loop(channel, &exchange, &queue, sender, poll_stop);
                 channel.close();
-                conn.close()
+                conn.close();
             })
             .expect("Failed to start polling thread");
 
         Consumer {
-            receiver: receiver,
+            receiver: Some(receiver),
             should_stop: should_stop,
             handle: Some(handle),
         }
     }
 
-    pub fn start(self) {
+    pub fn start<F>(mut self, f: F)
+    where
+        F: Fn(Envelope) -> Box<Future<Item = (), Error = ()>> + 'static,
+    {
         let mut core = Core::new().unwrap();
         let handle = core.handle();
-        let server = self.receiver.for_each(|envelope| {
-            handle.spawn(process(envelope));
+        let closure = Closure { fp: Box::new(f) };
+        let server = self.receiver.take().unwrap().for_each(move |envelope| {
+            handle.spawn(closure.call(envelope));
             Ok(())
         });
         core.run(server).unwrap();
     }
 }
 
-fn process(envelope: Envelope) -> Box<Future<Item = (), Error = ()>> {
-    Box::new(future::lazy(move || {
-        println!("{:?}", decode_raw_bytes(envelope.load().message.body));
-        future::ok(())
-    }))
-}
-
+// impl Drop for Consumer {
+//     fn drop(&mut self) {
+//         self.should_stop.store(true, Ordering::Relaxed);
+//         self.handle.take().unwrap().join();
+//     }
+// }
 
 fn poll_loop(
     channel: Channel,
@@ -133,14 +167,13 @@ fn poll_loop(
         amqp_basic_consume(
             conn,
             channel_id,
-            queue.name_t,
+            queue.name(),
             amqp_empty_bytes,
             0,
             1,
             0,
             amqp_empty_table,
         );
-        amqp_maybe_release_buffers(conn);
     }
     let frame: *mut raw_rabbitmq::amqp_frame_t = unsafe {
         libc::malloc(mem::size_of::<raw_rabbitmq::amqp_frame_t>())
@@ -151,9 +184,9 @@ fn poll_loop(
         unsafe {
             let envelope: *mut amqp_envelope_t =
                 libc::malloc(mem::size_of::<amqp_envelope_t>()) as *mut amqp_envelope_t;
-
+            amqp_maybe_release_buffers(conn);
             let ret = amqp_consume_message(conn, envelope, ptr::null_mut(), 0);
-            if (amqp_response_type_enum__AMQP_RESPONSE_NORMAL != ret.reply_type) {
+            if amqp_response_type_enum__AMQP_RESPONSE_NORMAL != ret.reply_type {
                 if amqp_response_type_enum__AMQP_RESPONSE_LIBRARY_EXCEPTION == ret.reply_type
                     && amqp_status_enum__AMQP_STATUS_UNEXPECTED_STATE == ret.library_error
                 {
@@ -174,14 +207,13 @@ fn poll_loop(
                                     libc::malloc(mem::size_of::<amqp_message_t>())
                                         as *mut amqp_message_t;
                                 let ret = amqp_read_message(conn, (*frame).channel, message, 0);
-                                if (amqp_response_type_enum__AMQP_RESPONSE_NORMAL != ret.reply_type)
-                                {
+                                if amqp_response_type_enum__AMQP_RESPONSE_NORMAL != ret.reply_type {
                                     return;
                                     // TODO: error handle
                                 }
                                 amqp_destroy_message(message);
+                                libc::free(message as *mut _);
                             }
-
                             AMQP_CHANNEL_CLOSE_METHOD | AMQP_CONNECTION_CLOSE_METHOD => {
                                 return;
                             }
@@ -194,9 +226,14 @@ fn poll_loop(
                         }
                     }
                 }
+                amqp_destroy_envelope(envelope);
+                libc::free(envelope as *mut _);
             } else {
                 let _ = sender.try_send(Envelope::new(envelope));
             }
         }
+    }
+    unsafe {
+        libc::free(frame as *mut _);
     }
 }

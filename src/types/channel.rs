@@ -12,8 +12,15 @@ pub struct Channel {
 
 impl Channel {
     pub fn new(conn: Connection, id: u16) -> Result<Channel, Error> {
-        let channel_open_t = unsafe { raw_rabbitmq::amqp_channel_open(conn.raw_ptr(), id) };
-        Ok(Channel { id: id, conn: conn })
+        let raw = conn.raw_ptr();
+        let channel_open_t = unsafe { raw_rabbitmq::amqp_channel_open(raw, id) };
+        let reply = unsafe { raw_rabbitmq::amqp_get_rpc_reply(raw) };
+        match reply.reply_type {
+            raw_rabbitmq::amqp_response_type_enum__AMQP_RESPONSE_NORMAL => {
+                Ok(Channel { id: id, conn: conn })
+            }
+            _ => Err(Error::Reply),
+        }
     }
 
     pub fn declare_queue(

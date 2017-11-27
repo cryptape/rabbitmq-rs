@@ -9,9 +9,11 @@ pub struct Queue {
     pub durable: bool,
     pub exclusive: bool,
     pub auto_delete: bool,
-    pub name_t: raw_rabbitmq::amqp_bytes_t,
+    name_t: raw_rabbitmq::amqp_bytes_t,
     _cstring_name: CString,
 }
+
+// unsafe impl Sync for Queue { }
 
 impl Drop for Queue {
     fn drop(&mut self) {
@@ -68,6 +70,9 @@ impl Queue {
         })
     }
 
+    pub fn name(&self) -> raw_rabbitmq::amqp_bytes_t {
+        self.name_t
+    }
 
     pub fn bind(
         &self,
@@ -82,7 +87,7 @@ impl Queue {
                 conn,
                 channel.id,
                 self.name_t,
-                exchange.name_t,
+                exchange.name(),
                 raw_rabbitmq::amqp_cstring_bytes(bindingkey.as_ptr()),
                 raw_rabbitmq::amqp_empty_table,
             );

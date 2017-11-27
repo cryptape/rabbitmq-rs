@@ -2,6 +2,7 @@ use raw_rabbitmq;
 use error::Error;
 use std::ffi::CString;
 use std::ptr::Shared;
+use libc;
 
 #[derive(Clone, Copy)]
 pub struct Connection {
@@ -81,11 +82,9 @@ impl Connection {
 
     pub fn close(&mut self) {
         unsafe {
-            raw_rabbitmq::amqp_connection_close(
-                self.ptr.as_ptr(),
-                raw_rabbitmq::AMQP_REPLY_SUCCESS as i32,
-            );
-            raw_rabbitmq::amqp_destroy_connection(self.ptr.as_ptr());
+            let raw = self.ptr.as_ptr();
+            raw_rabbitmq::amqp_connection_close(raw, raw_rabbitmq::AMQP_REPLY_SUCCESS as i32);
+            raw_rabbitmq::amqp_destroy_connection(raw);
         }
     }
 }

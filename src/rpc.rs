@@ -27,17 +27,16 @@ pub fn rpc_call(
     let channel_id = channel.id;
 
     let publish_future = unsafe {
-        let reply_queue = raw_rabbitmq::amqp_bytes_malloc_dup(reply_queue.name_t);
-        let exchange = raw_rabbitmq::amqp_bytes_malloc_dup(exchange.name_t);
+        let reply_queue = raw_rabbitmq::amqp_bytes_malloc_dup(reply_queue.name());
+        let exchange = raw_rabbitmq::amqp_bytes_malloc_dup(exchange.name());
         let correlation_id = CString::new(correlation_id).unwrap();
         let routing_key = CString::new(routing_key).unwrap();
 
         future::lazy(move || {
             let props = BasicProperties::new();
             let raw_props = props.raw;
-            let content_type = unsafe {
-                raw_rabbitmq::amqp_cstring_bytes(b"text/plain\0".as_ptr() as *const c_char)
-            };
+            let content_type =
+                raw_rabbitmq::amqp_cstring_bytes(b"text/plain\0".as_ptr() as *const c_char);
 
             (*raw_props)._flags = raw_rabbitmq::AMQP_BASIC_CONTENT_TYPE_FLAG
             // | raw_rabbitmq::AMQP_BASIC_DELIVERY_MODE_FLAG
@@ -75,7 +74,7 @@ pub fn rpc_call(
         conn,
         channel_id,
         correlation_id.to_owned(),
-        reply_queue.name_t,
+        reply_queue.name(),
     );
 
     let resp = publish_future.and_then(|_| read_message);

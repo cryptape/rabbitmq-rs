@@ -7,7 +7,7 @@ use types::props::BasicProperties;
 use bytes::Bytes;
 use util::encode_bytes;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum ExchangeType {
     Fanout,
     Direct,
@@ -28,6 +28,7 @@ impl ExchangeType {
     }
 }
 
+
 #[derive(Debug, Clone)]
 pub struct Exchange {
     pub exchange_type: ExchangeType,
@@ -35,9 +36,12 @@ pub struct Exchange {
     pub durable: bool,
     pub auto_delete: bool,
     pub internal: bool,
-    pub name_t: amqp_bytes_t,
+    name_t: amqp_bytes_t,
     _cstring_name: CString,
 }
+
+unsafe impl Sync for Exchange {}
+unsafe impl Send for Exchange {}
 
 impl Default for Exchange {
     fn default() -> Exchange {
@@ -98,6 +102,10 @@ impl Exchange {
             name_t: cstring_name_bytes,
             _cstring_name: cstring_name,
         })
+    }
+
+    pub fn name(&self) -> amqp_bytes_t {
+        self.name_t
     }
 
     pub fn publish(
