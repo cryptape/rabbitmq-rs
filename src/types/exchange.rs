@@ -110,7 +110,7 @@ impl Exchange {
 
     pub fn publish(
         &self,
-        channel: Channel,
+        channel: &Channel,
         routing_key: &str,
         mandatory: bool,
         immediate: bool,

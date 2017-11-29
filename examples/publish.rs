@@ -38,7 +38,7 @@ fn main() {
     let start = PreciseTime::now();
     for i in 1..10_000_000 {
         ex.publish(
-            channel,
+            &channel,
             "test_consumer",
             false,
             false,

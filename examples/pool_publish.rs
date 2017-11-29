@@ -17,7 +17,7 @@ use rabbitmq::config::{ConfiBuilder, Config};
 use futures::{future, Future, IntoFuture};
 use rabbitmq::util::decode_raw_bytes;
 use std::sync::Arc;
-use rabbitmq::rpc;
+use rabbitmq::channel_pool::ChannelPool;
 
 fn main() {
     let conn = Connection::new("localhost", 5672);
@@ -27,43 +27,29 @@ fn main() {
     let login = conn.login("/", 0, 131072, 0, "guest", "guest");
     assert!(login.is_ok());
 
-    let channel = Channel::new(conn, 10);
+    let channel = Channel::new(conn, 1002);
 
     assert!(channel.is_ok());
     let mut channel = channel.unwrap();
 
     let ex = channel.default_exchange();
 
-    let reply_queue = channel.declare_queue("rpc_call", false, false, true, false);
-
-    assert!(reply_queue.is_ok());
-
-    let reply_queue = reply_queue.unwrap();
     let props = BasicProperties::null();
 
+    let pool = ChannelPool::new(conn, 3).unwrap();
+
     let start = PreciseTime::now();
-    let futures = (1..1_00_000)
-        .collect::<Vec<u64>>()
-        .iter()
-        .map(|i| {
-            (
-                rpc::rpc_call(
-                    &channel,
-                    &ex,
-                    &reply_queue,
-                    "rpc_server",
-                    &format!("{}", i),
-                    Bytes::from(format!("{}", i).as_bytes()),
-                ),
-                i,
-            )
-        })
-        .map(|(future, i)| {
-            let result = future.wait();
-            println!("{:?}{:?}", i, result);
-            result
-        })
-        .collect::<Vec<_>>();
+    for i in 1..10_000_000 {
+        let ch = pool.get();
+        ex.publish(
+            &ch,
+            "test_consumer",
+            false,
+            false,
+            &props,
+            Bytes::from(format!("{}", i).as_bytes()),
+        );
+    }
 
     let end = start.to(PreciseTime::now());
     println!("{:?}", end);

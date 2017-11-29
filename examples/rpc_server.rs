@@ -66,7 +66,7 @@ fn main() {
                 (*raw_props).content_type = content_type;
                 (*raw_props).correlation_id = correlation_id;
             }
-            ex.publish(channel, reply_to, false, false, &props, body);
+            ex.publish(&channel, reply_to, false, false, &props, body);
             future::ok(())
         }));
         call

@@ -6,6 +6,7 @@ extern crate libc;
 extern crate librabbitmq_sys as raw_rabbitmq;
 #[macro_use]
 extern crate log;
+extern crate parking_lot;
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;
@@ -13,12 +14,12 @@ extern crate time;
 extern crate tokio_core;
 
 pub mod util;
-mod error;
+pub mod error;
 pub mod types;
 pub mod rpc;
-mod rpc_message;
 pub mod config;
 pub mod consumer;
+pub mod channel_pool;
 
 #[cfg(test)]
 mod tests {
