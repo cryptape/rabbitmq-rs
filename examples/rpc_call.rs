@@ -42,7 +42,7 @@ fn main() {
     let props = BasicProperties::null();
 
     let start = PreciseTime::now();
-    let futures = (1..1_00_000)
+    let futures = (1..100_000)
         .collect::<Vec<u64>>()
         .iter()
         .map(|i| {

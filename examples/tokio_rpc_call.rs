@@ -25,6 +25,7 @@ use futures::stream;
 use futures::Stream;
 use futures::{future, Future, IntoFuture};
 use rabbitmq::channel_pool::ChannelPool;
+use futures::future::join_all;
 
 
 fn main() {
@@ -61,24 +62,38 @@ fn main() {
 
     let start = PreciseTime::now();
     {
-        let rpc_call = calls.for_each(move |i| {
-            let ch = pool.get();
-            let rpc = rpc::rpc_call(
-                        &ch,
-                        &ex,
-                        &reply_queue,
-                        "rpc_server",
-                        &format!("{}", i),
-                        Bytes::from(format!("{}", i).as_bytes()),
-                    ).map(|bytes| {
-                        println!("{:?}", bytes);
-                        ()
-                    }).map_err(|_| ());
-            handle.spawn(rpc);
-            Ok(()) 
+        let rpc_call = futures::lazy(|| {
+            join_all((0..100_000).map(move |i| {
+                let ch = pool.get();
+                rpc::rpc_call(
+                            &ch,
+                            &ex,
+                            &reply_queue,
+                            "rpc_server",
+                            &format!("{}", i),
+                            Bytes::from(format!("{}", i).as_bytes()),
+                    )
+            }))
         });
 
-        let _ = core.run(rpc_call.join(stopped.map_err(|_| ())));
+        // let rpc_call = calls.for_each(move |i| {
+        //     let ch = pool.get();
+        //     let rpc = rpc::rpc_call(
+        //                 &ch,
+        //                 &ex,
+        //                 &reply_queue,
+        //                 "rpc_server",
+        //                 &format!("{}", i),
+        //                 Bytes::from(format!("{}", i).as_bytes()),
+        //             ).map(|bytes| {
+        //                 println!("{:?}", bytes);
+        //                 ()
+        //             }).map_err(|_| ());
+        //     handle.spawn(rpc);
+        //     Ok(()) 
+        // });
+
+        let _ = core.run(rpc_call);
     }
 
     let end = start.to(PreciseTime::now());
