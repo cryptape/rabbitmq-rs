@@ -16,7 +16,7 @@ extern crate tokio_core;
 pub mod util;
 pub mod error;
 pub mod types;
-pub mod rpc;
+// pub mod rpc;
 pub mod config;
 pub mod consumer;
 pub mod channel_pool;
@@ -49,83 +49,24 @@ mod tests {
 
         assert!(channel.is_ok());
         let mut channel = channel.unwrap();
-
         let ex = channel.default_exchange();
-
-        let reply_queue = channel.declare_queue("rpc", false, false, true, false);
-
-        assert!(reply_queue.is_ok());
-
-        let reply_queue = reply_queue.unwrap();
 
         let props = BasicProperties::null();
         let start = PreciseTime::now();
-        // for i in 1..10_000_000 {
-        //     // let result = rpc::rpc_call(
-        //     //     &channel,
-        //     //     &ex,
-        //     //     &reply_queue,
-        //     //     "rpc_call",
-        //     //     &format!("{}", i),
-        //     //     Bytes::from(format!("{}", i).as_bytes()),
-        //     // ).unwrap();
-
-        //     ex.publish(
-        //         channel,
-        //         "test_consumer",
-        //         false,
-        //         false,
-        //         &props,
-        //         Bytes::from(format!("{}", i).as_bytes()),
-        //     );
-        // }
-        let futures = (1..1_000_000)
-            .collect::<Vec<u64>>()
-            .iter()
-            .map(|i| {
-                (
-                    rpc::rpc_call(
-                        channel,
-                        &ex,
-                        &reply_queue,
-                        "rpc_call",
-                        &format!("{}", i),
-                        Bytes::from(format!("{}", i).as_bytes()),
-                    ),
-                    i,
-                )
-            })
-            .map(|(future, i)| {
-                let result = future.wait();
-                println!("{:?}{:?}", i, result);
-                result
-            })
-            .collect::<Vec<_>>();
-        // futures.collect().wait();
+        for i in 1..10_000_000 {
+            ex.publish(
+                &channel,
+                "test_consumer",
+                false,
+                false,
+                &props,
+                Bytes::from(format!("{}", i).as_bytes()),
+            );
+        }
         let end = start.to(PreciseTime::now());
         println!("{:?}", end);
 
         channel.close();
         conn.close();
-    }
-
-    #[test]
-    fn consumer() {
-        let config_builder: ConfiBuilder = Config::new().expect("config init");
-        let config: Config = config_builder.try_into().expect("config init");
-        let conn = types::connection::Connection::new("localhost", 5672);
-
-        assert!(conn.is_ok());
-        let mut conn = conn.unwrap();
-        let login = conn.login("/", 0, 131072, 0, "guest", "guest");
-        assert!(login.is_ok());
-
-        let channel = types::channel::Channel::new(conn, 10);
-
-        assert!(channel.is_ok());
-        let mut channel = channel.unwrap();
-        let ex = Arc::new(channel.default_exchange());
-        let consumer = Consumer::new(config, 12, ex, vec!["test".to_owned()], "test_consumer");
-        consumer.start();
     }
 }
